@@ -1,0 +1,35 @@
+* {
+
+}
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,textarea,p {
+    margin:0px;
+    padding:0px;
+    font-size:13px;
+    font-family:Tahoma;
+}
+body {
+    background: #f4f4f4;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+.warn {
+    border: 1px solid #e4e4e4;
+    margin: 10px 0;
+    text-align: center;
+    padding: 30px;
+    color:#666;
+}
+.warn .pic_question {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(small.png) -60px 0 no-repeat;
+}
