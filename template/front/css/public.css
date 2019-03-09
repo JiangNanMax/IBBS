@@ -106,8 +106,8 @@ body {
     border-top: 1px solid #d3d3d3;
     text-align: center;
     padding-top: 20px;
-    /* 暂时占位 */
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 #footer a {
     color: #666;

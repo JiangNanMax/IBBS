@@ -1,4 +1,5 @@
 #hot {
+    margin-top: 10px;
     background: #fff;
     padding: 0 0 10px 0;
 }
@@ -37,5 +38,33 @@
 }
 .box .classlist {
     background: #ffffff;
-    padding: 10px 15px;
+    padding: 0 15px;
+}
+.box .classlist .childBox {
+    width: 264px;
+    height: 51px;
+    float: left;
+    padding: 10px 0 10px 46px;
+    border-bottom: 1px dashed #e4e4e4;
+    color: #444444;
+}
+.box .classlist .childBox h2 {
+    padding-bottom: 3px;
+}
+.box .classlist .childBox h2 a {
+    color: #333;
+    font-weight: bold;
+}
+.box .classlist .childBox h2 span {
+    color: #ff5500;
+    font-weight: normal;
+}
+.box .classlist .new {
+    background: url(new.gif) 0px center no-repeat;
+}
+.box .classlist .old {
+    background: url(old.gif) 0px center no-repeat;
+}
+.box .classlist .lock {
+    background: url(lock.gif) 0px center no-repeat;
 }
