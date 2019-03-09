@@ -1,3 +1,4 @@
+/* 基本格式 */
 * {
 
 }
@@ -19,6 +20,7 @@ a {
 a:hover {
     text-decoration: none;
 }
+/* *** */
 .warn {
     border: 1px solid #e4e4e4;
     margin: 10px 0;
