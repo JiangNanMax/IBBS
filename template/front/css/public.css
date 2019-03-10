@@ -98,6 +98,7 @@ body {
 }
 #header .login a {
     color: #fff;
+    cursor: pointer;
 }
 .place-holder {
     margin-top: 55px;
