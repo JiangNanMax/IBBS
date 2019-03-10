@@ -28,7 +28,7 @@ a:hover {
     width: 100%;
     height: 46px;
     line-height: 46px;
-    background: url(bg.jpg);
+    background: #488fce;
 }
 #top .logo {
     float: left;

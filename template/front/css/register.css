@@ -1,0 +1,48 @@
+#register {
+    background: #fff;
+}
+#register h2 {
+    color: #666;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-bottom: 1px solid #ededed;
+}
+#register form {
+
+}
+#register form label {
+    display: block;
+    font-size: 14px;
+    line-height: 25px;
+    margin: 40px 345px 0 0;
+    float: right;
+}
+#register form label input {
+    width: 230px;
+    height: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 2px #f0f0f0 inset;
+    background-color: #fff;
+    padding: 4px;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 20px;
+    margin: 0;
+    vertical-align: middle;
+}
+#register img.vcode {
+    display: block;
+    float: left;
+    margin: 20px 0 0 430px;
+    cursor: pointer;
+}
+#register .btn {
+    margin: 20px 0 60px 375px;
+    color: #fff;
+    background: url(btn.png) 0 -120px;
+    padding: 6px 18px;
+    border: 1px solid #b1aeae;
+    border-radius: 3px;
+    cursor: pointer;
+}
