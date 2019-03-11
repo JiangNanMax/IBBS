@@ -28,6 +28,15 @@ body {
     width: 960px;
     margin: 0 auto;
 }
+#position {
+    background: url(style_icon.png) 0px -60px no-repeat;
+    text-indent: 20px;
+    line-height: 14px;
+    font-size: 14px;
+}
+#position a{
+    color: #666;
+}
 /* *** */
 .header_wrap {
     position: fixed;
