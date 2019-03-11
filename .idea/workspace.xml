@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4529fdc7-afbe-48d4-99f2-6055f1c6af08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/template/front/reply.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/front/css/bbs32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/front/quote.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/front/css/publish.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/front/css/publish.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/front/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/front/css/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/front/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/front/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/front/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/front/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/front/publish.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/front/publish.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/front/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/front/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/front/reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/front/reply.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,42 +90,42 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="4684" />
-          <entry key="html" value="1615" />
+          <entry key="css" value="4803" />
+          <entry key="html" value="1920" />
           <entry key="php" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="4684" />
-          <entry key="HTML" value="1615" />
+          <entry key="CSS" value="4803" />
+          <entry key="HTML" value="1920" />
           <entry key="PHP" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="21" />
+          <entry key="css" value="23" />
           <entry key="gif" value="1" />
-          <entry key="html" value="15" />
-          <entry key="png" value="1" />
+          <entry key="html" value="22" />
+          <entry key="png" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="21" />
-          <entry key="HTML" value="15" />
-          <entry key="Image" value="2" />
+          <entry key="CSS" value="23" />
+          <entry key="HTML" value="22" />
+          <entry key="Image" value="4" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/template/front/publish.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/front/quote.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+            <state relative-caret-position="398">
+              <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
               <folding>
                 <element signature="e#832#838#0" expanded="true" />
               </folding>
@@ -128,14 +133,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/front/reply.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/template/front/css/publish.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-              <folding>
-                <element signature="e#832#838#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="143">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -163,14 +165,15 @@
         <option value="$PROJECT_DIR$/admin/father_module.php" />
         <option value="$PROJECT_DIR$/template/admin/css/warn.css" />
         <option value="$PROJECT_DIR$/template/front/css/index.css" />
-        <option value="$PROJECT_DIR$/template/front/index.html" />
-        <option value="$PROJECT_DIR$/template/front/register.html" />
-        <option value="$PROJECT_DIR$/template/front/login.html" />
         <option value="$PROJECT_DIR$/template/admin/css/index.css" />
-        <option value="$PROJECT_DIR$/template/front/publish.html" />
         <option value="$PROJECT_DIR$/template/front/css/public.css" />
         <option value="$PROJECT_DIR$/template/front/css/register.css" />
         <option value="$PROJECT_DIR$/template/front/reply.html" />
+        <option value="$PROJECT_DIR$/template/front/register.html" />
+        <option value="$PROJECT_DIR$/template/front/publish.html" />
+        <option value="$PROJECT_DIR$/template/front/login.html" />
+        <option value="$PROJECT_DIR$/template/front/index.html" />
+        <option value="$PROJECT_DIR$/template/front/quote.html" />
         <option value="$PROJECT_DIR$/template/front/css/publish.css" />
       </list>
     </option>
@@ -182,9 +185,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1" />
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="646" />
-    <option name="width" value="634" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="x" value="1189" />
+    <option name="width" value="91" />
     <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -269,18 +272,18 @@
       <workItem from="1552021518930" duration="6847000" />
       <workItem from="1552101231432" duration="15330000" />
       <workItem from="1552229553912" duration="1521000" />
-      <workItem from="1552277588915" duration="1333000" />
+      <workItem from="1552277588915" duration="3288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39128000" />
+    <option name="totallyTimeSpent" value="41083000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="543" y="0" width="737" height="800" extended-state="0" />
+    <frame x="298" y="0" width="982" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49452055" visible="true" weight="0.28057554" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49452055" weight="0.34354195" />
       <window_info id="Structure" order="1" sideWeight="0.50547945" side_tool="true" weight="0.19547658" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -367,27 +370,6 @@
     <entry file="file://$PROJECT_DIR$/template/front/css/new.gif">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/front/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/front/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/front/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="160" column="10" selection-start-line="160" selection-start-column="10" selection-end-line="160" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/front/css/bg.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -422,37 +404,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/front/css/register.css">
+    <entry file="file://$PROJECT_DIR$/template/front/css/bbs32.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/front/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        <state relative-caret-position="75">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/front/css/publish.css">
+    <entry file="file://$PROJECT_DIR$/template/front/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/front/reply.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding>
-            <element signature="e#832#838#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/front/publish.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        <state relative-caret-position="75">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
           <folding>
             <element signature="e#832#838#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/front/register.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/front/reply.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="33" column="10" lean-forward="true" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/front/css/register.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/front/quote.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+          <folding>
+            <element signature="e#832#838#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/front/css/publish.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
         </state>
       </provider>
     </entry>
