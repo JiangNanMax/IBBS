@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4529fdc7-afbe-48d4-99f2-6055f1c6af08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/template/front/css/publish.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/front/publish.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/front/reply.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/front/css/public.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/front/css/public.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/front/css/publish.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/front/css/publish.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/front/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/front/css/register.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,30 +85,30 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="4655" />
-          <entry key="html" value="1524" />
+          <entry key="css" value="4684" />
+          <entry key="html" value="1615" />
           <entry key="php" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="4655" />
-          <entry key="HTML" value="1524" />
+          <entry key="CSS" value="4684" />
+          <entry key="HTML" value="1615" />
           <entry key="PHP" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="19" />
+          <entry key="css" value="21" />
           <entry key="gif" value="1" />
-          <entry key="html" value="10" />
+          <entry key="html" value="15" />
           <entry key="png" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="19" />
-          <entry key="HTML" value="10" />
+          <entry key="CSS" value="21" />
+          <entry key="HTML" value="15" />
           <entry key="Image" value="2" />
         </counts>
       </usages-collector>
@@ -119,8 +119,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/template/front/publish.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+            <state relative-caret-position="555">
+              <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
               <folding>
                 <element signature="e#832#838#0" expanded="true" />
               </folding>
@@ -129,10 +129,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/front/css/publish.css">
+        <entry file="file://$PROJECT_DIR$/template/front/reply.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+            <state relative-caret-position="240">
+              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+              <folding>
+                <element signature="e#832#838#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,8 +145,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -163,10 +166,11 @@
         <option value="$PROJECT_DIR$/template/front/index.html" />
         <option value="$PROJECT_DIR$/template/front/register.html" />
         <option value="$PROJECT_DIR$/template/front/login.html" />
-        <option value="$PROJECT_DIR$/template/front/css/register.css" />
         <option value="$PROJECT_DIR$/template/admin/css/index.css" />
         <option value="$PROJECT_DIR$/template/front/publish.html" />
         <option value="$PROJECT_DIR$/template/front/css/public.css" />
+        <option value="$PROJECT_DIR$/template/front/css/register.css" />
+        <option value="$PROJECT_DIR$/template/front/reply.html" />
         <option value="$PROJECT_DIR$/template/front/css/publish.css" />
       </list>
     </option>
@@ -178,10 +182,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1" />
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="736" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="646" />
+    <option name="width" value="634" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -197,6 +201,24 @@
             <path>
               <item name="IBBS" type="b2602c69:ProjectViewProjectNode" />
               <item name="IBBS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IBBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IBBS" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IBBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IBBS" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IBBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IBBS" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -247,18 +269,18 @@
       <workItem from="1552021518930" duration="6847000" />
       <workItem from="1552101231432" duration="15330000" />
       <workItem from="1552229553912" duration="1521000" />
-      <workItem from="1552277588915" duration="381000" />
+      <workItem from="1552277588915" duration="1333000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38176000" />
+    <option name="totallyTimeSpent" value="39128000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="283" y="0" width="997" height="800" extended-state="6" />
+    <frame x="543" y="0" width="737" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49452055" weight="0.2816754" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49452055" visible="true" weight="0.28057554" />
       <window_info id="Structure" order="1" sideWeight="0.50547945" side_tool="true" weight="0.19547658" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -380,6 +402,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="38" column="8" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+          <folding>
+            <element signature="e#454#458#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -397,24 +422,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/front/css/publish.css">
+    <entry file="file://$PROJECT_DIR$/template/front/css/register.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+        <state relative-caret-position="458">
+          <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/front/css/register.css">
+    <entry file="file://$PROJECT_DIR$/template/front/css/publish.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        <state relative-caret-position="330">
+          <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/front/reply.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding>
+            <element signature="e#832#838#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/front/publish.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        <state relative-caret-position="555">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
           <folding>
             <element signature="e#832#838#0" expanded="true" />
           </folding>

@@ -16,7 +16,7 @@
     height: 25px;
     border: 1px solid #ccc;
     font-family: Tahoma;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 #publish textarea.content {
     width: 100%;
@@ -24,8 +24,9 @@
     border: 1px solid #ccc;
     font-size: 14px;
     font-family: Tahoma;
+    margin-top: 10px;
 }
-input.publish {
+input.publish, input.reply{
     margin: 20px 0 60px 0;
     color: #fff;
     background: url(btn.png) 0 -120px;
