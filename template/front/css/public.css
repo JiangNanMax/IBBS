@@ -18,7 +18,7 @@ a {
     text-decoration: none;
 }
 a:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
 body {
     background: #f4f4f4;

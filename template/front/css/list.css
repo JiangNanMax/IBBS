@@ -1,7 +1,41 @@
 #main {
     height: 500px;
-    background: pink;
     margin-top: 12px;
     border: 1px solid #cccccc;
     border-radius: 3px;
+    background: #ffffff;
+}
+#main #left {
+    width: 640px;
+    height: 500px;
+    float: left;
+    padding: 8px 20px;
+}
+#main #left .box_wrap {
+    color: #666;
+    line-height: 22px;
+}
+#main #left .box_wrap h3 {
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
+}
+#main #left div.num span {
+    color: black;
+    font-weight: bold;
+}
+#main #left div.moderator span {
+    color: #666;
+}
+
+
+
+
+
+
+#main #right {
+    width: 280px;
+    height: 500px;
+    background: #488fce;
+    float: left;
 }
