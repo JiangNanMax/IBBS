@@ -1,13 +1,12 @@
 #main {
-    height: 500px;
     margin-top: 12px;
     border: 1px solid #cccccc;
     border-radius: 3px;
-    background: #ffffff;
+    background:url(main_bg.png) repeat-y;
+    padding-bottom: 50px;
 }
 #main #left {
     width: 640px;
-    height: 500px;
     float: left;
     padding: 8px 20px;
 }
@@ -35,7 +34,46 @@
 
 #main #right {
     width: 280px;
-    height: 500px;
-    background: #488fce;
-    float: left;
+    float: right;
 }
+#main #right .classList .title {
+    width: 260px;
+    padding: 8px 0;
+    text-indent: 12px;
+    color: #666;
+    font-weight: bold;
+    font-size: 13px;
+    border-bottom: 1px solid #e8e8e8;
+}
+#main #right .classList ul.listWrap {
+    width: 230px;
+    margin: 10px auto;
+}
+#main #right .classList ul.listWrap li h2 a {
+    color: #333;
+    font-weight: bold;
+}
+#main #right .classList ul.listWrap li ul {
+    margin: 2px 0 8px 0;
+}
+#main #right .classList ul.listWrap li ul li {
+    background: url(style_icon.png) 0 -389px no-repeat;
+    padding-left: 10px;
+    line-height: 26px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

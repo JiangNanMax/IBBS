@@ -8,6 +8,9 @@ body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h4,h6,form,input,textarea,p {
     font-size: 13px;
     font-family: Tahoma;
 }
+div {
+    display: block;
+}
 ul {
     list-style: none;
 }
