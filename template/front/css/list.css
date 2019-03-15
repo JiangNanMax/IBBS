@@ -42,8 +42,9 @@
     float: left;
 }
 
-
-
+#main #left div.pages_wrap {
+    margin-top: 20px;
+}
 
 #main #right {
     width: 280px;
