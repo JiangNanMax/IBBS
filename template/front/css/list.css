@@ -77,6 +77,10 @@
 #main ul.postList li div.count p span {
     font-weight: bold;
 }
+#main #left div.moderator span {
+    font-weight: normal;
+    color: #000;
+}
 #main #right {
     width: 280px;
     float: right;
