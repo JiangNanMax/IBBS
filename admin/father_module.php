@@ -7,10 +7,31 @@
  */
 include_once '../inc/config.inc.php';
 include_once '../inc/mysql.inc.php';
-
 $conn = connect();
-$query = 'select * from ibbs_father_module';
-$result = execute($conn, $query);
-exit($query);
-close($conn);
 ?>
+<?php include 'inc/header.inc.php'?>
+<div id="main">
+    <div class="title">父版块列表</div>
+    <table class="list">
+        <tr>
+            <th>排序</th>
+            <th>版块</th>
+            <th>操作</th>
+        </tr>
+        <?php
+            $query = 'select * from ibbs_father_module';
+            $result = execute($conn, $query);
+            while($data = mysqli_fetch_assoc($result)) {
+$html=<<<JN
+        <tr>
+            <td><input type="text" class="sort" name="sort"></td>
+            <td>{$data['module_name']}&nbsp;[id:&nbsp;{$data['id']}]</td>
+            <td><a href="#">[访问]</a>&nbsp;&nbsp;<a href="#">[编辑]</a>&nbsp;&nbsp;<a href="father_module_delete.php?id={$data['id']}">[删除]</a></td>
+        </tr>
+JN;
+                echo $html;
+            }
+        ?>
+    </table>
+</div>
+<?php include 'inc/footer.inc.php'?>

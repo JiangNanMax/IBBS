@@ -42,7 +42,7 @@ function execute_multi() {
 function get_num($conn, $query) {
     $result = execute($conn, $query);
     $num = mysqli_fetch_row($result);
-    return num[0];
+    return $num[0];
 }
 
 //断开数据库连接
