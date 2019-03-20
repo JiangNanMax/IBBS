@@ -18,7 +18,7 @@ $html = <<<JN
                 <link rel="stylesheet" type="text/css" href="css/warn.css">
             </head>
             <body>
-                <div class="warn"><span class="pic {$pic}"></span>{$message} <a href="{$url}">3秒后自动跳转!</a></div>
+                <div class="warn"><span class="pic {$pic}"></span>&nbsp;{$message} <a href="{$url}">3秒后自动跳转!</a></div>
             </body>
         </html>
 JN;
