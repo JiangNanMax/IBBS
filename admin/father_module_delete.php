@@ -10,7 +10,6 @@ include_once '../inc/mysql.inc.php';
 $conn = connect();
 ?>
 <?php
-    //exit($_GET['id']);
     $query = "delete from ibbs_father_module where id={$_GET['id']}";
     execute($conn, $query);
     if (mysqli_affected_rows($conn) == 1) {

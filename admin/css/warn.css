@@ -28,10 +28,21 @@ a:hover {
     padding: 30px;
     color:#666;
 }
-.warn .pic_question {
+.warn .pic {
     width: 16px;
     height: 16px;
     display: inline-block;
     vertical-align: middle;
-    background: url(small.png) -60px 0 no-repeat;
+}
+.warn .ok {
+    background:url(small.png) -40px -20px no-repeat;
+}
+.warn .error {
+    background:url(small.png) -20px -40px no-repeat;
+}
+.warn .attention {
+    background:url(small.png) 0 -60px no-repeat;
+}
+div.warn .ask {
+    background:url(small.png) -60px 0px no-repeat;
 }
