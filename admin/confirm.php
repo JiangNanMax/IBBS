@@ -15,6 +15,7 @@ if (!isset($_GET['url']) || !isset($_GET['message']) || !isset($_GET['return_url
     <head>
         <meta charset="UTF-8">
         <title>确认操作</title>
+        <link rel="shortcut icon" href="css/bbs32.png">
         <link rel="stylesheet" href="css/warn.css">
     </head>
     <body>

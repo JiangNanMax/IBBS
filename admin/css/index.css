@@ -97,8 +97,7 @@ a:hover {
 }
 #main {
     width: 86%;
-    margin: 57px 0 0 160px;
-    height: 1000px;
+    margin: 57px 0 50px 160px;
 }
 #main .title {
     width: 100%;
@@ -150,4 +149,37 @@ input.btn {
     border: 0px;
     color: #fff;
     background: url(btn.png) 0 -120px;
+}
+table.list tr {
+    height:50px;
+    background:url(hr.png) 0px bottom repeat-x;
+}
+table.list tr th {
+    padding-right:40px;
+    text-align:left;
+}
+table.list tr td {
+    padding-right:40px;
+    text-align:left;
+}
+table.au input {
+    width:300px;
+    height:25px;
+}
+table.au textarea {
+    width:300px;
+    height:100px;
+}
+table.au tr {
+    background:url(hr.png) 0px bottom repeat-x;
+}
+table.au tr td {
+    text-align:left;
+    padding:10px 40px 20px 0;
+}
+table.au tr td.condition {
+    color:#999;
+}
+table.au tr td.note {
+    color: #999;
 }

@@ -10,8 +10,13 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>IBBS后台管理</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title><?php echo $template['title'] ?></title>
+    <link rel="shortcut icon" href="css/bbs32.png">
+    <?php
+        foreach ($template['css']  as $val) {
+            echo "<link rel='stylesheet' type='text/css' href='{$val}'>";
+        }
+    ?>
 </head>
 <body>
 <div id="top">
@@ -43,8 +48,8 @@
         <li>
             <div class="small_title">内容管理</div>
             <ul class="child">
-                <li><a href="#" class="current">父版块列表</a></li>
-                <li><a href="#">添加父版块</a></li>
+                <li><a href="father_module.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'father_module.php') {echo "current";} ?>">父版块列表</a></li>
+                <li><a href="father_module_add.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'father_module_add.php') {echo "current";} ?>">添加父版块</a></li>
                 <li><a href="#">子版块列表</a></li>
                 <li><a href="#">添加子版块</a></li>
                 <li><a href="#">帖子管理</a></li>
