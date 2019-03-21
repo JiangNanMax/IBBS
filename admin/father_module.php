@@ -35,7 +35,7 @@ $html=<<<JN
         <tr>
             <td><input type="text" class="sort" name="sort"></td>
             <td>{$data['module_name']}&nbsp;[id:&nbsp;{$data['id']}]</td>
-            <td><a href="#">[访问]</a>&nbsp;&nbsp;<a href="#">[编辑]</a>&nbsp;&nbsp;<a href="$delete_url">[删除]</a></td>
+            <td><a href="#">[访问]</a>&nbsp;&nbsp;<a href="father_module_update.php?id={$data['id']}">[编辑]</a>&nbsp;&nbsp;<a href="$delete_url">[删除]</a></td>
         </tr>
 JN;
                 echo $html;

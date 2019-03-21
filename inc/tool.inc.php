@@ -15,6 +15,7 @@ $html = <<<JN
                 <meta charset="UTF-8">
                 <meta http-equiv="refresh" content="3;URL={$url}">
                 <title>正在跳转...</title>
+                <link rel="shortcut icon" href="css/bbs32.png">
                 <link rel="stylesheet" type="text/css" href="css/warn.css">
             </head>
             <body>
