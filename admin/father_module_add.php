@@ -12,6 +12,8 @@ $template['title'] = '添加父版块';
 $template['css'] = array('css/index.css');
 if (isset($_POST['submit'])) {
     $conn = connect();
+    $check_type = 'add';
+    include 'inc/father_module_check.inc.php';
     $query = "insert into ibbs_father_module (module_name, sort) values ('{$_POST['module_name']}', '{$_POST['sort']}')";
     execute($conn, $query);
     if (mysqli_affected_rows($conn) == 1) {

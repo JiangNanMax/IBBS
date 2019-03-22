@@ -45,6 +45,20 @@ function get_num($conn, $query) {
     return $num[0];
 }
 
+//数据入库之前进行转义，确保，数据能够顺利的入库
+function escape($link, $data){
+    if(is_string($data)){
+        return mysqli_real_escape_string($link,$data);
+    }
+    if(is_array($data)){
+        foreach ($data as $key=>$val){
+            $data[$key]=escape($link,$val);
+        }
+    }
+    return $data;
+    //mysqli_real_escape_string($link,$data);
+}
+
 //断开数据库连接
 function close($conn) {
     mysqli_close($conn);

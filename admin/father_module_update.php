@@ -20,6 +20,8 @@ if (!mysqli_num_rows($result)) {
     skip('father_module.php', 'error', '该板块不存在！');
 }
 if (isset($_POST['submit'])) {
+    $check_type = 'update';
+    include 'inc/father_module_check.inc.php';
     $query = "update ibbs_father_module set module_name='{$_POST['module_name']}',sort={$_POST['sort']} where id={$_GET['id']}";
     //echo $query;
     //exit();
