@@ -50,8 +50,13 @@
             <ul class="child">
                 <li><a href="father_module.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'father_module.php') {echo "current";} ?>">父版块列表</a></li>
                 <li><a href="father_module_add.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'father_module_add.php') {echo "current";} ?>">添加父版块</a></li>
+                <?php
+                    if (basename($_SERVER['SCRIPT_NAME']) == 'father_module_update.php') {
+                        echo '<li><a href="" class="current">修改父版块</a></li>';
+                    }
+                ?>
                 <li><a href="#">子版块列表</a></li>
-                <li><a href="#">添加子版块</a></li>
+                <li><a href="son_module_add.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'son_module_add.php') {echo "current";} ?>">添加子版块</a></li>
                 <li><a href="#">帖子管理</a></li>
             </ul>
         </li>
