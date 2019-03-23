@@ -13,10 +13,17 @@ $template['css'] = array('css/index.css');
 
 $conn = connect();
 if (isset($_POST['submit'])) {
+    //验证
+    $check_type = 'add';
+    include 'inc/son_module_check.php';
     $query = "insert into ibbs_son_module(father_module_id,module_name,info,member_id,sort) values({$_POST['father_module_id']},'{$_POST['module_name']}','{$_POST['info']}',{$_POST['member_id']},{$_POST['sort']})";
-    echo $query;
     execute($conn, $query);
-    exit();
+    if (mysqli_affected_rows($conn) == 1) {
+        skip('son_module.php', 'ok', '子版块添加成功！');
+    }
+    else {
+        skip('son_module_add.php', 'error', '子版块添加失败，请重试！');
+    }
 }
 ?>
 <?php include 'inc/header.inc.php' ?>

@@ -8,10 +8,10 @@
 ?>
 <?php
     if (empty($_POST['module_name'])) {
-        skip('father_module_add.php', 'error', '版块名称不能为空！');
+        skip('father_module_add.php', 'error', '父版块名称不能为空！');
     }
     if (mb_strlen($_POST['module_name']) > 50) {
-        skip('father_module_add.php', 'error', '版块名称最长为50个字符！');
+        skip('father_module_add.php', 'error', '父版块名称最长为50个字符！');
     }
     if (!is_numeric($_POST['sort'])) {
         skip('father_module_add.php', 'error', '请用数字来表示排序优先级！');
@@ -29,6 +29,6 @@
     }
     $result = execute($conn, $query);
     if (mysqli_num_rows($result)) {
-        skip('father_module_add.php', 'error', '该版块已存在！');
+        skip('father_module_add.php', 'error', '该父版块已存在！');
     }
 ?>

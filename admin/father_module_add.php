@@ -17,10 +17,10 @@ if (isset($_POST['submit'])) {
     $query = "insert into ibbs_father_module (module_name, sort) values ('{$_POST['module_name']}', '{$_POST['sort']}')";
     execute($conn, $query);
     if (mysqli_affected_rows($conn) == 1) {
-        skip('father_module.php', 'ok', '添加父版块成功！');
+        skip('father_module.php', 'ok', '父版块添加成功！');
     }
     else {
-        skip('father_module_add.php', 'error', '添加父版块失败，请重试！');
+        skip('father_module_add.php', 'error', '父版块添加失败，请重试！');
     }
 }
 ?>
