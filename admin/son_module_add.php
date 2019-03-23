@@ -15,7 +15,7 @@ $conn = connect();
 if (isset($_POST['submit'])) {
     //验证
     $check_type = 'add';
-    include 'inc/son_module_check.php';
+    include 'inc/son_module_check.inc.php';
     $query = "insert into ibbs_son_module(father_module_id,module_name,info,member_id,sort) values({$_POST['father_module_id']},'{$_POST['module_name']}','{$_POST['info']}',{$_POST['member_id']},{$_POST['sort']})";
     execute($conn, $query);
     if (mysqli_affected_rows($conn) == 1) {

@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4529fdc7-afbe-48d4-99f2-6055f1c6af08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/inc/son_module_check.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/son_module.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/father_module_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/father_module_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/inc/father_module_check.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inc/father_module_check.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/inc/header.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inc/header.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/inc/son_module_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inc/son_module_check.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/son_module.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/son_module.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/son_module_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/son_module_add.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,14 +93,14 @@
         <counts>
           <entry key="css" value="8170" />
           <entry key="html" value="3762" />
-          <entry key="php" value="7846" />
+          <entry key="php" value="8385" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="8170" />
-          <entry key="HTML" value="3785" />
-          <entry key="PHP" value="7823" />
+          <entry key="HTML" value="3796" />
+          <entry key="PHP" value="8351" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -110,7 +109,7 @@
           <entry key="gif" value="1" />
           <entry key="html" value="43" />
           <entry key="jpg" value="1" />
-          <entry key="php" value="62" />
+          <entry key="php" value="68" />
           <entry key="php___jb_tmp___" value="1" />
           <entry key="png" value="7" />
           <entry key="rnc" value="1" />
@@ -121,7 +120,7 @@
           <entry key="CSS" value="47" />
           <entry key="HTML" value="43" />
           <entry key="Image" value="9" />
-          <entry key="PHP" value="62" />
+          <entry key="PHP" value="68" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="RNG Compact" value="1" />
         </counts>
@@ -131,60 +130,39 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/father_module.php">
+        <entry file="file://$PROJECT_DIR$/admin/son_module.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/father_module_add.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/inc/father_module_check.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/son_module_add.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+            <state relative-caret-position="279">
+              <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
               <folding>
-                <element signature="e#594#621#0#HTML" expanded="true" />
-                <element signature="e#2177#2547#0#PHP" expanded="true" />
-                <element signature="e#2975#3032#0#HTML" expanded="true" />
+                <element signature="e#144#150#0" expanded="true" />
+                <element signature="e#154#160#0" expanded="true" />
+                <element signature="e#287#293#0" expanded="true" />
+                <element signature="e#293#299#0" expanded="true" />
+                <element signature="e#362#368#0" expanded="true" />
+                <element signature="e#368#374#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/inc/son_module_check.php">
+        <entry file="file://$PROJECT_DIR$/admin/inc/header.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+            <state relative-caret-position="129">
+              <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/son_module.php">
+        <entry file="file://$PROJECT_DIR$/admin/father_module.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+              <folding>
+                <element signature="e#201#207#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -236,12 +214,12 @@
         <option value="$PROJECT_DIR$/inc/mysql.inc.php" />
         <option value="$PROJECT_DIR$/admin/confirm.php" />
         <option value="$PROJECT_DIR$/admin/father_module.php" />
-        <option value="$PROJECT_DIR$/admin/inc/header.inc.php" />
-        <option value="$PROJECT_DIR$/admin/son_module.php" />
         <option value="$PROJECT_DIR$/admin/father_module_add.php" />
         <option value="$PROJECT_DIR$/admin/inc/father_module_check.inc.php" />
         <option value="$PROJECT_DIR$/admin/inc/son_module_check.php" />
         <option value="$PROJECT_DIR$/admin/son_module_add.php" />
+        <option value="$PROJECT_DIR$/admin/inc/header.inc.php" />
+        <option value="$PROJECT_DIR$/admin/son_module.php" />
       </list>
     </option>
   </component>
@@ -288,25 +266,6 @@
               <item name="IBBS" type="b2602c69:ProjectViewProjectNode" />
               <item name="IBBS" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IBBS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IBBS" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IBBS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IBBS" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IBBS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IBBS" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -379,12 +338,12 @@
       <workItem from="1553240047124" duration="12000" />
       <workItem from="1553240379038" duration="5697000" />
       <workItem from="1553308188532" duration="1819000" />
-      <workItem from="1553321699912" duration="3760000" />
+      <workItem from="1553321699912" duration="5727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95009000" />
+    <option name="totallyTimeSpent" value="96976000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -403,7 +362,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32876712" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.6676971" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.6657534" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -618,13 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/inc/header.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/father_module_update.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2">
@@ -653,17 +605,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/son_module.php">
+    <entry file="file://$PROJECT_DIR$/admin/father_module_add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/inc/son_module_check.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+        <state relative-caret-position="315">
+          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -674,29 +619,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/son_module_add.php">
+    <entry file="file://$PROJECT_DIR$/admin/inc/son_module_check.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-          <folding>
-            <element signature="e#594#621#0#HTML" expanded="true" />
-            <element signature="e#2177#2547#0#PHP" expanded="true" />
-            <element signature="e#2975#3032#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/father_module_add.php">
+    <entry file="file://$PROJECT_DIR$/admin/son_module_add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        <state relative-caret-position="255">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/inc/header.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/father_module.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+          <folding>
+            <element signature="e#201#207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/son_module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding>
+            <element signature="e#144#150#0" expanded="true" />
+            <element signature="e#154#160#0" expanded="true" />
+            <element signature="e#287#293#0" expanded="true" />
+            <element signature="e#293#299#0" expanded="true" />
+            <element signature="e#362#368#0" expanded="true" />
+            <element signature="e#368#374#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
