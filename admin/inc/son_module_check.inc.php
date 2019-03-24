@@ -5,6 +5,7 @@
  * Date: 2019/3/23
  * Time: 14:53
  */
+    //这里有一个问题，不论是add还是update，失败的话都跳转到添加页面，需要进行改进，update失败的话应该跳转到列表页或者修改页
     if (!is_numeric($_POST['father_module_id'])) {
         skip('son_module_add.php', 'error', '所选的父版块不合法！');
     }
@@ -32,6 +33,7 @@
             $query = "select * from ibbs_son_module where module_name='{$_POST['module_name']}'";
             break;
         case 'update':
+            $query = "select * from ibbs_son_module where module_name='{$_POST['module_name']}' and id!={$_GET['id']}";
             break;
         default:
             skip('son_module_add.php', 'error', '内部参数发生错误！请联系上层管理员！');

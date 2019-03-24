@@ -7,6 +7,7 @@
  */
 ?>
 <?php
+    //这里有一个问题，不论是add还是update，失败的话都跳转到添加页面，需要进行改进，update失败的话应该跳转到列表页或者修改页
     if (empty($_POST['module_name'])) {
         skip('father_module_add.php', 'error', '父版块名称不能为空！');
     }
