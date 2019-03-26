@@ -10,6 +10,7 @@ include_once 'inc/mysql.inc.php';
 include_once 'inc/tool.inc.php';
 if (isset($_POST['submit'])) {
     $conn = connect();
+    include 'inc/register_check.php';
     $query = "insert into ibbs_member(username,password,photo,register_time,last_login_time) values('{$_POST['username']}',md5('{$_POST['password']}'),'',now(),now())";
     execute($conn, $query);
     if (mysqli_affected_rows($conn) == 1) {
