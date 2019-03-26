@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
         <div class="login">
             <a href="">登陆</a>
             &nbsp;
-            <a href="">注册</a>
+            <a href="register.php">注册</a>
         </div>
     </div>
 </div>
