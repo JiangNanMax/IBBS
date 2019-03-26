@@ -15,7 +15,6 @@ function generate_vcode($width=120, $height=40, $fontSize=30, $countElement=4, $
 
     $img = imagecreatetruecolor($width, $height);
     $colorBackground = imagecolorallocate($img, rand(200, 255), rand(200, 255), rand(200, 255));
-    $colorBorder = imagecolorallocate($img, rand(200, 255), rand(200, 255), rand(200, 255));
     $colorString = imagecolorallocate($img, rand(10, 100), rand(10, 100), rand(10, 100));
     imagefill($img, 0, 0, $colorBackground);
 

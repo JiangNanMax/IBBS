@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
         <label>密码：<input type="password" name="password"><span class="note">&nbsp;- 为保障安全,密码不能少于6位&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
         <label>确认密码：<input type="password" name="confirm_password"><span class="note">&nbsp;- 请重新输入密码，确认一致&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
         <label>验证码：<input type="text" name="vcode"><span class="note">&nbsp;- 请正确输入下图中的验证码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
-        <img src="css/show_code.php.jpg" class="vcode" alt="">
+        <img src="show_vcode.php" class="vcode" alt="">
         <div style="clear:both;"></div>
         <input type="submit" name="submit" class="btn" value="注册">
     </form>
