@@ -5,6 +5,7 @@
  * Date: 2019/3/7
  * Time: 16:02
  */
+session_start();
 header('Content-type:text/html;charset=utf-8');
 define('DB_HOST', 'localhost');
 define('DB_PORT', 3306);

@@ -26,4 +26,20 @@ JN;
         echo $html;
         exit();
     }
+
+    function is_login($conn) {
+        if (isset($_COOKIE['ibbs']['username']) && isset($_COOKIE['ibbs']['password'])) {
+            $query = "select * from ibbs_member where name='{$_COOKIE['ibbs']['username']}' and sha1(password)='{$_COOKIE['ibbs']['password']}'";
+            $result = execute($conn, $query);
+            if (mysqli_num_rows($result) == 1) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        else {
+            return false;
+        }
+    }
 ?>

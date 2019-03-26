@@ -8,12 +8,18 @@
 include_once 'inc/config.inc.php';
 include_once 'inc/mysql.inc.php';
 include_once 'inc/tool.inc.php';
+
+$conn = connect();
+if (is_login($conn)) {
+    skip('index.php', 'error', '你已登录，请勿重复注册！');
+}
 if (isset($_POST['submit'])) {
-    $conn = connect();
     include 'inc/register_check.php';
     $query = "insert into ibbs_member(username,password,photo,register_time,last_login_time) values('{$_POST['username']}',md5('{$_POST['password']}'),'',now(),now())";
     execute($conn, $query);
     if (mysqli_affected_rows($conn) == 1) {
+        setcookie('ibbs[username]', $_POST['username']);
+        setcookie('ibbs[password]', $_POST['password']);
         skip('index.php', 'ok', '注册成功！');
     }
     else {
