@@ -5,6 +5,9 @@
  * Date: 2019/3/25
  * Time: 20:21
  */
+if (strtolower($_POST['vcode']) != strtolower($_SESSION['vcode'])) {
+    skip('register.php', 'error', '验证码输入错误！');
+}
 if (empty($_POST['username'])) {
     skip('register.php', 'error', '用户名不能为空！');
 }
