@@ -27,12 +27,15 @@ JN;
         exit();
     }
 
+    //cookie设置失败？？？原因待查
+    //本地浏览器的cookie设置成功了啊，问题在哪？？？
     function is_login($conn) {
         if (isset($_COOKIE['ibbs']['username']) && isset($_COOKIE['ibbs']['password'])) {
-            $query = "select * from ibbs_member where name='{$_COOKIE['ibbs']['username']}' and sha1(password)='{$_COOKIE['ibbs']['password']}'";
+            $query = "select * from ibbs_member where username='{$_COOKIE['ibbs']['username']}' and sha1(password)='{$_COOKIE['ibbs']['password']}'";
             $result = execute($conn, $query);
             if (mysqli_num_rows($result) == 1) {
-                return true;
+                $data = mysqli_fetch_assoc($result);
+                return $data['id'];
             }
             else {
                 return false;
