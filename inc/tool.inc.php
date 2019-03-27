@@ -31,8 +31,8 @@ JN;
     //本地浏览器的cookie设置成功了啊，问题在哪？？？
     function is_login($conn) {
         //return true;
-        if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
-            $query = "select * from ibbs_member where username='{$_COOKIE['username']}";
+        if (isset($_COOKIE['username'])) {
+            $query = "select * from ibbs_member where username='{$_COOKIE['username']}'";
             $result = execute($conn, $query);
             if (mysqli_num_rows($result) == 1) {
                 return true;
