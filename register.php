@@ -9,6 +9,9 @@ include_once 'inc/config.inc.php';
 include_once 'inc/mysql.inc.php';
 include_once 'inc/tool.inc.php';
 
+$template['title'] = '注册';
+$template['css'] = array('css/public.css', 'css/register.css');
+
 $conn = connect();
 if (is_login($conn)) {
     skip('index.php', 'error', '你已登录，请勿重复注册！');
@@ -18,7 +21,7 @@ if (isset($_POST['submit'])) {
     $query = "insert into ibbs_member(username,password,photo,register_time,last_login_time) values('{$_POST['username']}',md5('{$_POST['password']}'),'',now(),now())";
     execute($conn, $query);
     if (mysqli_affected_rows($conn) == 1) {
-        //设置cookie，有效时间3个小时
+        //设置cookie，默认有效时间3个小时
         setcookie('username', $_POST['username'], time() + 10800);
         //setcookie('password', sha1(md5($_POST['password'])));
         skip('index.php', 'ok', '注册成功！');
@@ -28,38 +31,7 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册</title>
-    <link rel="shortcut icon" href="css/bbs32.png">
-    <link rel="stylesheet" href="css/public.css">
-    <link rel="stylesheet" href="css/register.css">
-</head>
-<body>
-<div class="header_wrap">
-    <div id="header" class="auto">
-        <div class="logo">IBBS</div>
-        <div class="nav">
-            <a href="#" class="hover">首页</a>
-            <a href="#">话题</a>
-            <a href="#">热门</a>
-        </div>
-        <div class="search">
-            <form action="">
-                <input type="text" class="keyword" name="keyword" placeholder="输入你想搜索的内容">
-                <input type="submit" class="submit" name="submit" value="">
-            </form>
-        </div>
-        <div class="login">
-            <a href="">登录</a>
-            &nbsp;
-            <a href="register.php">注册</a>
-        </div>
-    </div>
-</div>
-<div class="place-holder"></div>
+<?php include 'inc/header.inc.php';?>
 <div id="register" class="auto">
     <h2>欢迎注册成为IBBS的用户!</h2>
     <form method="post">
@@ -72,11 +44,4 @@ if (isset($_POST['submit'])) {
         <input type="submit" name="submit" class="btn" value="注册">
     </form>
 </div>
-<div id="footer" class="auto">
-    <div class="bottom">
-        <a href="#">IBBS</a>
-    </div>
-    <div class="copyright">Powered by JiangNanMax ©2019</div>
-</div>
-</body>
-</html>
+<?php include 'inc/footer.inc.php';?>

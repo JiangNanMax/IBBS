@@ -37,6 +37,13 @@ span.note {
     color: #999;
     font-size: 12px;
 }
+#register label.free_login {
+    display: block;
+    font-size: 14px;
+    line-height: 25px;
+    margin: 40px 358px 0 0;
+    float: right;
+}
 #register img.vcode {
     display: block;
     float: left;

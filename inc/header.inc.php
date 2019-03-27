@@ -34,9 +34,9 @@
             </form>
         </div>
         <div class="login">
-            <a href="">登录</a>
+            <a href="login.php">登录</a>
             &nbsp;
-            <a href="">注册</a>
+            <a href="register.php">注册</a>
         </div>
     </div>
 </div>
