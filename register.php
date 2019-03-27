@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
             </form>
         </div>
         <div class="login">
-            <a href="">登陆</a>
+            <a href="">登录</a>
             &nbsp;
             <a href="register.php">注册</a>
         </div>
