@@ -18,8 +18,8 @@ if (isset($_POST['submit'])) {
     $query = "insert into ibbs_member(username,password,photo,register_time,last_login_time) values('{$_POST['username']}',md5('{$_POST['password']}'),'',now(),now())";
     execute($conn, $query);
     if (mysqli_affected_rows($conn) == 1) {
-        setcookie('ibbs[username]', $_POST['username']);
-        setcookie('ibbs[password]', sha1(md5($_POST['password'])));
+        setcookie('username', $_POST['username'], time() + 30);
+        //setcookie('password', sha1(md5($_POST['password'])));
         skip('index.php', 'ok', '注册成功！');
     }
     else {
