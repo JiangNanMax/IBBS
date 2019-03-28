@@ -33,24 +33,26 @@
                 <input type="submit" class="submit" name="submit" value="">
             </form>
         </div>
-        <div class="login">
-            <?php
-                if ($member_id) {
+        <?php
+        if ($member_id) {
 $note=<<<JN
-                    <a>你好！{$_COOKIE['username']}</a>
+            <div class="username">
+            <a>{$_COOKIE['username']}</a>
+            </div>
 JN;
-                    echo ($note);
-                }
-                else {
+            echo ($note);
+        }
+        else {
 $note=<<<JN
-                    <a href="login.php">登录</a>
-                    &nbsp;
-                    <a href="register.php">注册</a>
+            <div class="login">
+                <a href="login.php">登录</a>
+                &nbsp;
+                <a href="register.php">注册</a>
+            </div>
 JN;
-                    echo ($note);
-                }
-            ?>
-        </div>
+            echo ($note);
+        }
+        ?>
     </div>
 </div>
 <div class="place-holder"></div>

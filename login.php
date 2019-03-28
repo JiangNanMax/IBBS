@@ -13,7 +13,8 @@ $template['title'] = '登录';
 $template['css'] = array('css/public.css', 'css/register.css');
 
 $conn = connect();
-if (is_login($conn)) {
+$member_id = is_login($conn);
+if ($member_id) {
     skip('index.php', 'error', '你已经登录，请勿重复登录！');
 }
 if (isset($_POST['submit'])) {

@@ -36,7 +36,10 @@ JN;
             $query = "select * from ibbs_member where username='{$_COOKIE['username']}'";
             $result = execute($conn, $query);
             if (mysqli_num_rows($result) == 1) {
-                return $result['id'];
+                $data=mysqli_fetch_assoc($result);
+                return $data['id'];
+                //Cannot use object of type mysqli_result as array in C:\website\data\web\webroot\IBBS\inc\tool.inc.php on line 39
+                //return $result['id'];
             }
             else {
                 return false;
