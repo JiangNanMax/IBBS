@@ -16,7 +16,7 @@ $conn = connect();
 if (is_login($conn)) {
     skip('index.php', 'error', '你已经登录，请勿重复登录！');
 }
-if (isset($_POST)) {
+if (isset($_POST['submit'])) {
     $_POST = escape($conn, $_POST);
     $query = "select * from ibbs_member where username='{$_POST['username']}' and password=md5('{$_POST['password']}')";
     $result = execute($conn, $query);
@@ -32,7 +32,7 @@ if (isset($_POST)) {
 <?php include 'inc/header.inc.php' ?>
 <div id="register" class="auto">
     <h2>欢迎登录!</h2>
-    <form>
+    <form method="post">
         <label>用户名：<input type="text" name="username"><span class="note">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
         <label>密码：<input type="password" name="password">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <label class="free_login">
