@@ -5,8 +5,15 @@
  * Date: 2019/3/25
  * Time: 20:21
  */
+include_once 'inc/config.inc.php';
+include_once 'inc/mysql.inc.php';
+include_once 'inc/tool.inc.php';
+
 $template['title'] = 'IBBS';
 $template['css'] = array('css/public.css', 'css/index.css');
+
+$conn = connect();
+$member_id = is_login($conn);
 ?>
 <?php include 'inc/header.inc.php'; ?>
     <div id="hot" class="auto">
