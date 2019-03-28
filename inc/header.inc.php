@@ -23,7 +23,7 @@
     <div id="header" class="auto">
         <div class="logo">IBBS</div>
         <div class="nav">
-            <a href="#" class="hover">首页</a>
+            <a href="index.php" class="hover">首页</a>
             <a href="#">话题</a>
             <a href="#">热门</a>
         </div>
@@ -34,9 +34,22 @@
             </form>
         </div>
         <div class="login">
-            <a href="login.php">登录</a>
-            &nbsp;
-            <a href="register.php">注册</a>
+            <?php
+                if ($member_id) {
+$note=<<<JN
+                    <a>你好！{$_COOKIE['username']}</a>
+JN;
+                    echo ($note);
+                }
+                else {
+$note=<<<JN
+                    <a href="login.php">登录</a>
+                    &nbsp;
+                    <a href="register.php">注册</a>
+JN;
+                    echo ($note);
+                }
+            ?>
         </div>
     </div>
 </div>

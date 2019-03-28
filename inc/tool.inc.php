@@ -29,13 +29,14 @@ JN;
 
     //cookie设置失败？？？原因待查
     //本地浏览器的cookie设置成功了啊，问题在哪？？？
+    //问题已解决，原因在于密码字段长度设置过短
     function is_login($conn) {
         //return true;
         if (isset($_COOKIE['username'])) {
             $query = "select * from ibbs_member where username='{$_COOKIE['username']}'";
             $result = execute($conn, $query);
             if (mysqli_num_rows($result) == 1) {
-                return true;
+                return $result['id'];
             }
             else {
                 return false;
