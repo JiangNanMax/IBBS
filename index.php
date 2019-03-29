@@ -39,6 +39,16 @@ $member_id = is_login($conn);
                     $result_s = execute($conn, $query);
                     if (mysqli_num_rows($result_s)) {
                         while ($data_s = mysqli_fetch_assoc($result_s)) {
+                            $query = "select count(*) from ibbs_content where module_id={$data_s['id']} and time > CURDATE()";
+                            $count_today = execute($conn, $query);
+                            $query = "select count(*) from ibbs_content where module_id={$data_s['id']}";
+                            $count_all = execute($conn, $query);
+$html = <<<JN
+                            <div class="childBox new">
+                                <h2><a href="#">{$data_s['module_name']}</a><span>&nbsp;(今日{$count_today}})</span></h2>
+                                帖子：{$count_all}<br>
+                            </div>              
+JN;
 
                         }
                     }
@@ -51,130 +61,4 @@ $member_id = is_login($conn);
 <?php
     }
 ?>
-
-<!--
-
-$query="select count(*) from sfk_content where module_id={$data_son['id']} and time > CURDATE()";
-				$count_today=num($link,$query);
-				$query="select count(*) from sfk_content where module_id={$data_son['id']}";
-				$count_all=num($link,$query);
-				$html=<<<A
-					<div class="childBox new">
-						<h2><a href="#">{$data_son['module_name']}</a> <span>(今日{$count_today})</span></h2>
-						帖子：{$count_all}<br />
-					</div>
-A;
-				echo $html;
--->
-
-    <div class="box auto">
-        <div class="title">MySQL</div>
-        <div class="classlist">
-            <div style="padding:10px 0;">暂无子版块...</div>
-        </div>
-    </div>
-    <div class="box auto">
-        <div class="title">其他</div>
-        <div class="classlist">
-            <div class="childBox new">
-                <h2><a href="#">Java</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <div class="childBox old">
-                <h2><a href="#">Python</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <div class="childBox lock">
-                <h2><a href="#">JavaScript</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <div class="childBox new">
-                <h2><a href="#">C++</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <div class="childBox new">
-                <h2><a href="#">Java</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <div class="childBox old">
-                <h2><a href="#">Python</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <div class="childBox lock">
-                <h2><a href="#">JavaScript</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <div class="childBox new">
-                <h2><a href="#">C++</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-            <div class="childBox new">
-                <h2><a href="#">Java</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <div class="childBox old">
-                <h2><a href="#">Python</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <div class="childBox lock">
-                <h2><a href="#">JavaScript</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <div class="childBox new">
-                <h2><a href="#">C++</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-            <div class="childBox new">
-                <h2><a href="#">Java</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <div class="childBox old">
-                <h2><a href="#">Python</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <div class="childBox lock">
-                <h2><a href="#">JavaScript</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <div class="childBox new">
-                <h2><a href="#">C++</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-            <div class="childBox new">
-                <h2><a href="#">Java</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <div class="childBox old">
-                <h2><a href="#">Python</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <div class="childBox lock">
-                <h2><a href="#">JavaScript</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <div class="childBox new">
-                <h2><a href="#">C++</a><span>&nbsp;(今日66)</span></h2>
-                帖子：1997<br>
-            </div>
-
-            <!-- 注意清除浮动! -->
-            <div style="clear:both;"></div>
-        </div>
-    </div>
 <?php include 'inc/footer.inc.php'; ?>

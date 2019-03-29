@@ -20,8 +20,8 @@ if (isset($_POST['submit'])) {
     $_POST = escape($conn, $_POST);
     include 'inc/publish_check.php';
     $query = "insert into ibbs_content(module_id,title,content,publish_time,member_id) values({$_POST['module_id']},'{$_POST['title']}','{$_POST['content']}',now(),{$member_id})";
-    $result = execute($conn, $query);
-    if (mysqli_affected_rows($result) == 1) {
+    execute($conn, $query);
+    if (mysqli_affected_rows($conn) == 1) {
         skip('publish.php', 'ok', '发布成功！');
     }
     else {
