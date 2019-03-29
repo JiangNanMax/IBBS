@@ -19,7 +19,19 @@ $html = <<<JN
                 <link rel="stylesheet" type="text/css" href="css/warn.css">
             </head>
             <body>
-                <div class="warn"><span class="pic {$pic}"></span>&nbsp;{$message} <a href="{$url}">3秒后自动跳转!</a></div>
+                <div class="warn"><span class="pic {$pic}"></span>&nbsp;{$message} <a href="{$url}"><span id="second">3</span>秒后自动跳转!</a></div>
+                <script type="text/javascript">
+                    //倒计时
+                    function clock() {
+                        var span = document.getElementById('second');
+                        var num = span.innerHTML;
+                        if(num != 0) {
+                            num--;
+                            span.innerHTML = num;
+                        }
+                    };
+                    setInterval("clock()", 1000);
+                </script>
             </body>
         </html>
 JN;
