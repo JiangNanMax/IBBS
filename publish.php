@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
     $_POST = escape($conn, $_POST);
     $query = "insert into ibbs_content(module_id,title,content,publish_time,member_id) values({$_POST['member_id']},'{$_POST['title']}','{$_POST['content']}',now(),{$member_id})";
     $result = execute($conn, $query);
-    if (mysqli_num_rows($result) == 1) {
+    if (mysqli_affected_rows($result) == 1) {
         skip('publish.php', 'ok', '发布成功！');
     }
     else {

@@ -16,6 +16,7 @@ $conn = connect();
 $member_id = is_login($conn);
 ?>
 <?php include 'inc/header.inc.php'; ?>
+
     <div id="hot" class="auto">
         <div class="title">热门动态</div>
         <ul class="newlist">
@@ -24,12 +25,48 @@ $member_id = is_login($conn);
         <!-- 清除左右漂浮 -->
         <div style="clear:both;"></div>
     </div>
-    <div class="box auto">
-        <div class="title">PHP</div>
-        <div class="classlist">
-            <div style="padding:10px 0;">暂无子版块...</div>
+
+<?php
+    $query = "select * from ibbs_father_module order by sort desc";
+    $result_f = execute($conn, $query);
+    while ($data_f = mysqli_fetch_assoc($result_f)) {
+?>
+        <div class="box auto">
+            <div class="title"><?php echo $data_f['module_name']; ?></div>
+            <div class="classlist">
+                <?php
+                    $query = "select * from ibbs_son_module where father_module_id={$data_f['id']}";
+                    $result_s = execute($conn, $query);
+                    if (mysqli_num_rows($result_s)) {
+                        while ($data_s = mysqli_fetch_assoc($result_s)) {
+
+                        }
+                    }
+                    else {
+                        echo '<div style="padding:10px 0;">暂无子版块...</div>';
+                    }
+                ?>
+            </div>
         </div>
-    </div>
+<?php
+    }
+?>
+
+<!--
+
+$query="select count(*) from sfk_content where module_id={$data_son['id']} and time > CURDATE()";
+				$count_today=num($link,$query);
+				$query="select count(*) from sfk_content where module_id={$data_son['id']}";
+				$count_all=num($link,$query);
+				$html=<<<A
+					<div class="childBox new">
+						<h2><a href="#">{$data_son['module_name']}</a> <span>(今日{$count_today})</span></h2>
+						帖子：{$count_all}<br />
+					</div>
+A;
+				echo $html;
+-->
+
     <div class="box auto">
         <div class="title">MySQL</div>
         <div class="classlist">

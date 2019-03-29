@@ -117,8 +117,10 @@ body {
     width: 300px;
 }
 #header .username a {
+    color: #fff;
     float: right;
-    font-size: 10px;
+    font-size: 14px;
+    cursor: pointer;
 }
 .place-holder {
     margin-top: 55px;

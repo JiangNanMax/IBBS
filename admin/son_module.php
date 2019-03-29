@@ -8,7 +8,7 @@
 include_once '../inc/config.inc.php';
 include_once '../inc/mysql.inc.php';
 
-$template['title'] = 子版块列表;
+$template['title'] = '子版块列表';
 $template['css'] = array('css/index.css');
 
 $conn = connect();
