@@ -19,7 +19,7 @@ if (empty($_POST['content'])) {
 }
 $query = "select * from ibbs_son_module where id={$_POST['module_id']}";
 $result = execute($conn, $query);
-if (mysqli_num_rows($reuslt) != 1) {
+if (mysqli_num_rows($result) != 1) {
     skip('publish.php', 'error', '所属版块不存在！');
 }
 ?>

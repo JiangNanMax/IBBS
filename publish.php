@@ -17,9 +17,9 @@ if (!($member_id = is_login($conn))) {
     skip('login.php', 'error', '登录后才能进行发帖！');
 }
 if (isset($_POST['submit'])) {
-    include 'inc/publish_check.php';
     $_POST = escape($conn, $_POST);
-    $query = "insert into ibbs_content(module_id,title,content,publish_time,member_id) values({$_POST['member_id']},'{$_POST['title']}','{$_POST['content']}',now(),{$member_id})";
+    include 'inc/publish_check.php';
+    $query = "insert into ibbs_content(module_id,title,content,publish_time,member_id) values({$_POST['module_id']},'{$_POST['title']}','{$_POST['content']}',now(),{$member_id})";
     $result = execute($conn, $query);
     if (mysqli_affected_rows($result) == 1) {
         skip('publish.php', 'ok', '发布成功！');
