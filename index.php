@@ -32,7 +32,9 @@ $member_id = is_login($conn);
     while ($data_f = mysqli_fetch_assoc($result_f)) {
 ?>
         <div class="box auto">
-            <div class="title"><?php echo $data_f['module_name']; ?></div>
+            <div class="title">
+                <a href="list_father.php?id=<?php echo $data_f['id']; ?>" style="color:#105cb6;"><?php echo $data_f['module_name']; ?></a>
+            </div>
             <div class="classlist">
                 <?php
                     $query = "select * from ibbs_son_module where father_module_id={$data_f['id']}";

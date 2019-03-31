@@ -5,13 +5,45 @@
  * Date: 2019/3/30
  * Time: 15:42
  */
+include_once 'inc/config.inc.php';
+include_once 'inc/mysql.inc.php';
+include_once 'inc/tool.inc.php';
+
 $template['title'] = '父版块';
 $template['css'] = array('css/public.css', 'css/list.css');
+
+//连接DB
+$conn = connect();
+$member_id = is_login($conn);
+
+//参数验证
+if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
+    skip('index.php', 'error', '父版块参数错误！');
+}
+
+//拉取父版块信息
+$query = "select * from ibbs_father_module where id={$_GET['id']}";
+$result_f = execute($conn, $query);
+if (mysqli_num_rows($result_f) == 0) {
+    skip('index.php', 'error', '父版块不存在！');
+}
+$data_f = mysqli_fetch_assoc($result_f);
+
+//拉取子版块信息
+$query = "select * from ibbs_son_module where father_module_id={$_GET['id']}";
+$result_s = execute($conn, $query);
+//解析出需要用到的数据
+
+//两个计数
+$query = "";
+$count_all = get_num($conn, $query);
+$query = "";
+$count_today = get_num($conn, $query);
 ?>
 
 <?php include 'inc/header.inc.php' ?>
     <div id="position" class="auto">
-        <a href="">首页</a> &gt; <a href="">Java</a>
+        <a href="index.php">首页</a> &gt; <a href="">{}</a>
     </div>
     <div id="main" class="auto">
         <div id="left">
