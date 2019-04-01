@@ -36,8 +36,8 @@ $id_s = '';
 $list_s = '';
 //解析出需要用到的数据
 while ($data_s = mysqli_fetch_assoc($result_s)) {
-    $id_s.=($data_s['module_name'].",");
-    $list_s.='<a style="color: #333;">{$data_s["module_name"}</a> ';
+    $id_s.=($data_s['id'].",");
+    $list_s.="<a style=\"color: #333;cursor:pointer;\">{$data_s['module_name']}</a>&nbsp;&nbsp;";
 }
 $id_s = trim($id_s, ",");
 
@@ -65,6 +65,13 @@ $count_today = get_num($conn, $query);
             </div>
             <div style="clear:both;"></div>
             <ul class="postList">
+                <?php
+                    $query = "select * from ibbs_content where id in ({$id_s})";
+                    $result = execute($conn, $query);
+                    while ($data = mysqli_fetch_assoc($result)) {
+
+                    }
+                ?>
                 <li>
                     <div class="smallPic">
                         <a href="">
@@ -89,102 +96,7 @@ $count_today = get_num($conn, $query);
                     </div>
                     <div style="clear:both;"></div>
                 </li>
-                <li>
-                    <div class="smallPic">
-                        <a href="">
-                            <img width="45" height="45" src=css/2374101_small.jpg alt="">
-                        </a>
-                    </div>
-                    <div class="subject">
-                        <div class="titleWrap">
-                            <a href="">[分类]</a>&nbsp;&nbsp;<a class="title" href="">数据库连接</a>
-                        </div>
-                        <p>
-                            楼主：JiangNanMax&nbsp;2019-03-14&nbsp;&nbsp;&nbsp;&nbsp;最后回复：2019-03-14
-                        </p>
-                    </div>
-                    <div class="count">
-                        <p>
-                            回复<br><span>66</span>
-                        </p>
-                        <p>
-                            浏览<br><span>666</span>
-                        </p>
-                    </div>
-                    <div style="clear:both;"></div>
-                </li>
-                <li>
-                    <div class="smallPic">
-                        <a href="">
-                            <img width="45" height="45" src=css/2374101_small.jpg alt="">
-                        </a>
-                    </div>
-                    <div class="subject">
-                        <div class="titleWrap">
-                            <a href="">[分类]</a>&nbsp;&nbsp;<a class="title" href="">数据库连接</a>
-                        </div>
-                        <p>
-                            楼主：JiangNanMax&nbsp;2019-03-14&nbsp;&nbsp;&nbsp;&nbsp;最后回复：2019-03-14
-                        </p>
-                    </div>
-                    <div class="count">
-                        <p>
-                            回复<br><span>66</span>
-                        </p>
-                        <p>
-                            浏览<br><span>666</span>
-                        </p>
-                    </div>
-                    <div style="clear:both;"></div>
-                </li>
-                <li>
-                    <div class="smallPic">
-                        <a href="">
-                            <img width="45" height="45" src=css/2374101_small.jpg alt="">
-                        </a>
-                    </div>
-                    <div class="subject">
-                        <div class="titleWrap">
-                            <a href="">[分类]</a>&nbsp;&nbsp;<a class="title" href="">数据库连接</a>
-                        </div>
-                        <p>
-                            楼主：JiangNanMax&nbsp;2019-03-14&nbsp;&nbsp;&nbsp;&nbsp;最后回复：2019-03-14
-                        </p>
-                    </div>
-                    <div class="count">
-                        <p>
-                            回复<br><span>66</span>
-                        </p>
-                        <p>
-                            浏览<br><span>666</span>
-                        </p>
-                    </div>
-                    <div style="clear:both;"></div>
-                </li>
-                <li>
-                    <div class="smallPic">
-                        <a href="">
-                            <img width="45" height="45" src=css/2374101_small.jpg alt="">
-                        </a>
-                    </div>
-                    <div class="subject">
-                        <div class="titleWrap">
-                            <a href="">[分类]</a>&nbsp;&nbsp;<a class="title" href="">数据库连接</a>
-                        </div>
-                        <p>
-                            楼主：JiangNanMax&nbsp;2019-03-14&nbsp;&nbsp;&nbsp;&nbsp;最后回复：2019-03-14
-                        </p>
-                    </div>
-                    <div class="count">
-                        <p>
-                            回复<br><span>66</span>
-                        </p>
-                        <p>
-                            浏览<br><span>666</span>
-                        </p>
-                    </div>
-                    <div style="clear:both;"></div>
-                </li>
+
             </ul>
             <div class="pages_wrap">
                 <a href="" class="btn publish">发帖</a>
