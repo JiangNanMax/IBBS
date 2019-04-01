@@ -32,27 +32,35 @@ $data_f = mysqli_fetch_assoc($result_f);
 //拉取子版块信息
 $query = "select * from ibbs_son_module where father_module_id={$_GET['id']}";
 $result_s = execute($conn, $query);
+$id_s = '';
+$list_s = '';
 //解析出需要用到的数据
+while ($data_s = mysqli_fetch_assoc($result_s)) {
+    $id_s.=($data_s['module_name'].",");
+    $list_s.='<a style="color: #333;">{$data_s["module_name"}</a> ';
+}
+$id_s = trim($id_s, ",");
 
 //两个计数
-$query = "";
+$query = "select count(*) from ibbs_content where module_id in ({$id_s})";
 $count_all = get_num($conn, $query);
-$query = "";
+
+$query = "select count(*) from ibbs_content where module_id in ($id_s) and publish_time > CURDATE()";
 $count_today = get_num($conn, $query);
 ?>
 
 <?php include 'inc/header.inc.php' ?>
     <div id="position" class="auto">
-        <a href="index.php">首页</a> &gt; <a href="">{}</a>
+        <a href="index.php">首页</a> &gt; <a href="list_father.php?id=<?php echo $data_f['id'] ?>"><?php echo $data_f['module_name'] ?></a>
     </div>
     <div id="main" class="auto">
         <div id="left">
             <div class="box_wrap">
-                <h3>Java</h3>
+                <h3><?php echo $data_f['module_name'] ?></h3>
                 <div class="num">
-                    今日：<span>8</span>&nbsp;&nbsp;&nbsp;
-                    总帖：<span>1024</span>
-                    <div class="moderator">子版块： <a href="" style="color: #333;">JDBC</a>&nbsp;&nbsp;<a href="" style="color: #333;">JSP</a></div>
+                    今日：<span><?php echo $count_today ?></span>&nbsp;&nbsp;&nbsp;
+                    总帖：<span><?php echo $count_all ?></span>
+                    <div class="moderator">子版块： <?php echo $list_s ?></div>
                 </div>
             </div>
             <div style="clear:both;"></div>
