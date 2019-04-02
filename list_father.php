@@ -67,37 +67,37 @@ $count_today = get_num($conn, $query);
             <div style="clear:both;"></div>
             <ul class="postList">
                 <?php
-                    $query = "select * from ibbs_content where id in ({$id_s})";
+                    $query = "select ibbs_content.title,ibbs_content.id,ibbs_content.publish_time,ibbs_content.times,ibbs_member.username,ibbs_member.photo,ibbs_son_module.module_name from ibbs_content join ibbs_member on ibbs_content.member_id=ibbs_member.id join ibbs_son_module on ibbs_content.module_id=ibbs_son.id where ibbs_content.module_id in ($id_s)";
                     $result = execute($conn, $query);
                     while ($data = mysqli_fetch_assoc($result)) {
-
+                ?>
+                    <li>
+                        <div class="smallPic">
+                            <a href="">
+                                <img width="45" height="45" src="<?php if ($data['photo'] != '') {echo $data['photo'];} else {echo 'css/photo.jpg';} ?>">
+                            </a>
+                        </div>
+                        <div class="subject">
+                            <div class="titleWrap">
+                                <a href="">[<?php echo $data['module_name']; ?>]</a>&nbsp;&nbsp;<a class="title" href=""><?php echo $data['title']; ?></a>
+                            </div>
+                            <p>
+                                楼主：<?php echo $data['username']; ?>&nbsp;<?php echo $data['publish_time']; ?>&nbsp;&nbsp;&nbsp;&nbsp;最后回复：2019-03-14
+                            </p>
+                        </div>
+                        <div class="count">
+                            <p>
+                                回复<br><span>66</span>
+                            </p>
+                            <p>
+                                浏览<br><span><?php echo $data['times']; ?></span>
+                            </p>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </li>
+                <?php
                     }
                 ?>
-                <li>
-                    <div class="smallPic">
-                        <a href="">
-                            <img width="45" height="45" src=css/2374101_small.jpg alt="">
-                        </a>
-                    </div>
-                    <div class="subject">
-                        <div class="titleWrap">
-                            <a href="">[分类]</a>&nbsp;&nbsp;<a class="title" href="">数据库连接</a>
-                        </div>
-                        <p>
-                            楼主：JiangNanMax&nbsp;2019-03-14&nbsp;&nbsp;&nbsp;&nbsp;最后回复：2019-03-14
-                        </p>
-                    </div>
-                    <div class="count">
-                        <p>
-                            回复<br><span>66</span>
-                        </p>
-                        <p>
-                            浏览<br><span>666</span>
-                        </p>
-                    </div>
-                    <div style="clear:both;"></div>
-                </li>
-
             </ul>
             <div class="pages_wrap">
                 <a href="" class="btn publish">发帖</a>
@@ -118,7 +118,7 @@ $count_today = get_num($conn, $query);
                 <div class="title">版块列表</div>
                 <ul class="listWrap">
                     <?php
-                        $query = "select * from ibbs_father_module";
+                        $query = "select * from ibbs_fahter_module";
                         $result_f = execute($conn, $query);
                         while ($data_f = mysqli_fetch_assoc($result_f)) {
                     ?>
@@ -126,11 +126,11 @@ $count_today = get_num($conn, $query);
                         <h2><a href="list_father.php?id=<?php echo $data_f['id']; ?>"><?php echo $data_f['module_name']; ?></a></h2>
                         <ul>
                             <?php
-                                $query = "select * from ibbs_son_module where fahter_module_id={$data_f['id']}";
+                                $query = "select * from ibbs_son_module where father_module_id={$data_f['id']}";
                                 $result_s = execute($conn, $query);
                                 while ($data_s = mysqli_fetch_assoc($result_s)) {
                             ?>
-                                    <li><a href="" style="color: #666;"><?php echo $data_s['module_name']; ?></a></li>
+                                    <li><a href="#" style="color: #666;"><?php echo $data_s['module_name']; ?></a></li>
                             <?php
                                 }
                             ?>
