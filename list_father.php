@@ -30,6 +30,7 @@ if (mysqli_num_rows($result_f) == 0) {
 $data_f = mysqli_fetch_assoc($result_f);
 
 //拉取子版块信息
+//这里会有异常发生，比如父版块下没有子版块的情况
 $query = "select * from ibbs_son_module where father_module_id={$_GET['id']}";
 $result_s = execute($conn, $query);
 $id_s = '';
@@ -116,20 +117,28 @@ $count_today = get_num($conn, $query);
             <div class="classList">
                 <div class="title">版块列表</div>
                 <ul class="listWrap">
+                    <?php
+                        $query = "select * from ibbs_father_module";
+                        $result_f = execute($conn, $query);
+                        while ($data_f = mysqli_fetch_assoc($result_f)) {
+                    ?>
                     <li>
-                        <h2><a href="">Java</a></h2>
+                        <h2><a href="list_father.php?id=<?php echo $data_f['id']; ?>"><?php echo $data_f['module_name']; ?></a></h2>
                         <ul>
-                            <li><a href="" style="color: #666;">JDBC</a></li>
-                            <li><a href="" style="color: #666;">JSP</a></li>
-                            <li><a href="" style="color: #666;">JVM</a></li>
-                            <li><a href="" style="color: #666;">JDBC</a></li>
-                            <li><a href="" style="color: #666;">JSP</a></li>
-                            <li><a href="" style="color: #666;">JVM</a></li>
+                            <?php
+                                $query = "select * from ibbs_son_module where fahter_module_id={$data_f['id']}";
+                                $result_s = execute($conn, $query);
+                                while ($data_s = mysqli_fetch_assoc($result_s)) {
+                            ?>
+                                    <li><a href="" style="color: #666;"><?php echo $data_s['module_name']; ?></a></li>
+                            <?php
+                                }
+                            ?>
                         </ul>
                     </li>
-                    <li>
-                        <h2><a href="">Python</a></h2>
-                    </li>
+                    <?php
+                        }
+                    ?>
                 </ul>
             </div>
         </div>
