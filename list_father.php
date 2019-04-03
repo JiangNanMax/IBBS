@@ -41,6 +41,10 @@ while ($data_s = mysqli_fetch_assoc($result_s)) {
     $list_s.="<a style=\"color: #333;cursor:pointer;\">{$data_s['module_name']}</a>&nbsp;&nbsp;";
 }
 $id_s = trim($id_s, ",");
+if ($id_s == '') {
+    $id_s = '-1';
+}
+//父版块下暂无子版块的情况，待处理
 
 //两个计数
 $query = "select count(*) from ibbs_content where module_id in ({$id_s})";
@@ -67,7 +71,7 @@ $count_today = get_num($conn, $query);
             <div style="clear:both;"></div>
             <ul class="postList">
                 <?php
-                    $query = "select ibbs_content.title,ibbs_content.id,ibbs_content.publish_time,ibbs_content.times,ibbs_member.username,ibbs_member.photo,ibbs_son_module.module_name from ibbs_content join ibbs_member on ibbs_content.member_id=ibbs_member.id join ibbs_son_module on ibbs_content.module_id=ibbs_son.id where ibbs_content.module_id in ($id_s)";
+                    $query = "select ibbs_content.title,ibbs_content.id,ibbs_content.publish_time,ibbs_content.times,ibbs_member.username,ibbs_member.photo,ibbs_son_module.module_name from ibbs_content join ibbs_member on ibbs_content.member_id=ibbs_member.id join ibbs_son_module on ibbs_content.module_id=ibbs_son_module.id where ibbs_content.module_id in ($id_s)";
                     $result = execute($conn, $query);
                     while ($data = mysqli_fetch_assoc($result)) {
                 ?>
@@ -118,7 +122,7 @@ $count_today = get_num($conn, $query);
                 <div class="title">版块列表</div>
                 <ul class="listWrap">
                     <?php
-                        $query = "select * from ibbs_fahter_module";
+                        $query = "select * from ibbs_father_module";
                         $result_f = execute($conn, $query);
                         while ($data_f = mysqli_fetch_assoc($result_f)) {
                     ?>
