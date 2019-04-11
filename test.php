@@ -18,14 +18,14 @@
         $start = ($_GET[$page] - 1) * $page_size;
         $limit = "limit {$start},{$page_size}";
         echo '当前页：'.$_GET[$page].'<br />';
-        $html = '';
+        $html = array();
         if ($num_btn >= $page_num_all) {
             for ($i = 1; $i <= $page_num_all; $i++) {
                 if ($_GET[$page] == $i) {
-                    $html .= "<span>{$i}</span> ";
+                    $html[$i] = "<span>{$i}</span>";
                 }
                 else {
-                    $html .= "<a href='test.php?page={$i}'>{$i}</a> ";
+                    $html[$i] = "<a href='test.php?page={$i}'>{$i}</a>";
                 }
             }
         }
@@ -42,15 +42,37 @@
             }
             for ($i = 0; $i < $num_btn; $i++) {
                 if ($_GET[$page] == $start) {
-                    $html .= "<span>{$start}</span> ";
+                    $html[$start] = "<span>{$start}</span>";
                 }
                 else {
-                    $html .= "<a href='test.php?page={$start}'>{$start}</a> ";
+                    $html[$start] = "<a href='test.php?page={$start}'>{$start}</a>";
                 }
                 $start++;
             }
+            if (count($html) >= 3) {
+                reset($html);
+                $key_first = key($html);
+                end($html);
+                $key_last = key($html);
+                if ($key_first != 1) {
+                    array_shift($html);
+                    array_unshift($html, "<a href='test.php?page=1'>1..</a>");
+                }
+                if ($key_last != $page_num_all) {
+                    array_pop($html);
+                    array_push($html, "<a href='test.php?page={$page_num_all}'>..{$page_num_all}</a>");
+                }
+            }
         }
-
+        if ($_GET[$page] != 1) {
+            $prev = $_GET[$page] - 1;
+            array_unshift($html, "<a href='test.php?page={$prev}'>« 上一页</a>");
+        }
+        if ($_GET[$page] != $page_num_all) {
+            $next = $_GET[$page] + 1;
+            array_push($html, "<a href='test.php?page={$next}'>下一页 »</a>");
+        }
+        $html = implode(' ', $html);
         $data = array(
             'limit' => $limit,
             'html' => $html
@@ -59,6 +81,5 @@
     }
 
     $page = page(100, 10, 5);
-    //var_dump(page(100, 10, 11));
     echo $page['html'];
 ?>
