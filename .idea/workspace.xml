@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4529fdc7-afbe-48d4-99f2-6055f1c6af08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/inc/page.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/list_father.php" beforeDir="false" afterPath="$PROJECT_DIR$/list_father.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +90,7 @@
         <counts>
           <entry key="css" value="8479" />
           <entry key="html" value="3869" />
-          <entry key="php" value="23633" />
+          <entry key="php" value="23653" />
           <entry key="txt" value="471" />
         </counts>
       </usages-collector>
@@ -101,7 +98,7 @@
         <counts>
           <entry key="CSS" value="8479" />
           <entry key="HTML" value="3907" />
-          <entry key="PHP" value="23594" />
+          <entry key="PHP" value="23614" />
           <entry key="PLAIN_TEXT" value="471" />
           <entry key="SQL" value="1" />
         </counts>
@@ -154,8 +151,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/list_father.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="109" column="56" lean-forward="true" selection-start-line="109" selection-start-column="56" selection-end-line="109" selection-end-column="56" />
+            <state relative-caret-position="493">
+              <caret line="95" column="32" lean-forward="true" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
                 <element signature="e#72#78#0" expanded="true" />
@@ -360,12 +357,12 @@
       <workItem from="1554883759303" duration="3024000" />
       <workItem from="1554969076656" duration="3381000" />
       <workItem from="1554990582694" duration="78000" />
-      <workItem from="1555052454434" duration="475000" />
+      <workItem from="1555052454434" duration="940000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169228000" />
+    <option name="totallyTimeSpent" value="169693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -736,8 +733,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/list_father.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="109" column="56" lean-forward="true" selection-start-line="109" selection-start-column="56" selection-end-line="109" selection-end-column="56" />
+        <state relative-caret-position="493">
+          <caret line="95" column="32" lean-forward="true" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
           <folding>
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
             <element signature="e#72#78#0" expanded="true" />
