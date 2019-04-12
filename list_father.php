@@ -8,7 +8,7 @@
 include_once 'inc/config.inc.php';
 include_once 'inc/mysql.inc.php';
 include_once 'inc/tool.inc.php';
-
+include_once 'inc/page.inc.php';
 $template['title'] = '父版块';
 $template['css'] = array('css/public.css', 'css/list.css');
 
@@ -106,13 +106,10 @@ $count_today = get_num($conn, $query);
             <div class="pages_wrap">
                 <a href="" class="btn publish">发帖</a>
                 <div class="pages">
-                    <a>« 上一页</a>
-                    <a>1</a>
-                    <span>2</span>
-                    <a>3</a>
-                    <a>4</a>
-                    <a>...8</a>
-                    <a>下一页 »</a>
+                    <?php
+                        $page = $page($count_all, 1, 5);
+                        echo $page['html'];
+                    ?>
                 </div>
             </div>
         </div>

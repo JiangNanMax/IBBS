@@ -2,10 +2,9 @@
 /**
  * Created by PhpStorm.
  * User: jiangnan
- * Date: 2019/4/9
- * Time: 10:51
+ * Date: 2019/4/12
+ * Time: 15:08
  */
-    header("Content-type:text/html;charset=utf-8");
     function page($count, $page_size, $num_btn=10, $page='page') {
         if (!isset($_GET[$page]) || !is_numeric($_GET[$page]) || $_GET[$page] < 1) {
             $_GET[$page] = 1;
@@ -100,6 +99,6 @@
         return $data;
     }
 
-    $page = page(100, 10, 5);
-    echo $page['html'];
+    //$page = page(100, 10, 5);
+    //echo $page['html'];
 ?>
