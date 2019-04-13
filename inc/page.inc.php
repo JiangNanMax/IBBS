@@ -6,6 +6,13 @@
  * Time: 15:08
  */
     function page($count, $page_size, $num_btn=10, $page='page') {
+        if ($count == 0) {
+            $data = array(
+                'limit' => '',
+                'html' => ''
+            );
+            return $data;
+        }
         if (!isset($_GET[$page]) || !is_numeric($_GET[$page]) || $_GET[$page] < 1) {
             $_GET[$page] = 1;
         }
