@@ -37,7 +37,9 @@
         if ($member_id) {
 $note=<<<JN
             <div class="username">
-            <a>{$_COOKIE['username']}</a> <span style="color:#fff">|</span> <a href="logout.php">退出</a>
+                <a href="logout.php">退出</a>
+		        <a style="color:#fff;">&nbsp;|&nbsp;</a>
+		        <a>{$_COOKIE['username']}</a>
             </div>
 JN;
             echo ($note);
