@@ -26,22 +26,34 @@ if (mysqli_num_rows($result_s) != 1) {
 }
 $data_s = mysqli_fetch_assoc($result_s);
 
+$query = "select * from ibbs_father_module where id={$data_s['father_module_id']}";
+$result_f = execute($conn, $query);
+$data_f = mysqli_fetch_assoc($result_f);
 
+$query = "select count(*) from ibbs_content where module_id={$_GET['id']}";
+$count_all = get_num($conn, $query);
+
+$query = "select count(*) from ibbs_content where module_id={$_GET['id']} and publish_time>CURDATE()";
+$count_today = get_num($conn, $query);
 
 ?>
 <?php include 'inc/header.inc.php' ?>
     <div id="position" class="auto">
-        <a href="">首页</a> &gt; <a href="">Java</a> &gt; <a href="">JDBC</a>
+        <a href="index.php">首页</a> &gt; <a href="list_father.php?id=<?php echo $data_f['id'] ?>"><?php echo $data_f['module_name'] ?></a> &gt; <?php echo $data_s['module_name'] ?>
     </div>
     <div id="main" class="auto">
         <div id="left">
             <div class="box_wrap">
-                <h3>JDBC</h3>
+                <h3><?php echo $data_s['module_name'] ?></h3>
                 <div class="num">
-                    今日：<span>8</span>&nbsp;&nbsp;&nbsp;
-                    总帖：<span>1024</span>
-                    <div class="moderator">版主：<span>JiangNanMax</span></div>
-                    <div class="notice">通知通知通知......</div>
+                    今日：<span><?php echo $count_today ?></span>&nbsp;&nbsp;&nbsp;
+                    总帖：<span><?php echo $count_all ?></span>
+                    <div class="moderator">版主：
+                        <span>
+
+                        </span>
+                    </div>
+                    <div class="notice"><?php echo  ?></div>
                 </div>
             </div>
             <div style="clear:both;"></div>
