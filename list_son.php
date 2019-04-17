@@ -36,6 +36,9 @@ $count_all = get_num($conn, $query);
 $query = "select count(*) from ibbs_content where module_id={$_GET['id']} and publish_time>CURDATE()";
 $count_today = get_num($conn, $query);
 
+$query = "select * from ibbs_member where id={$data_s['member_id']}";
+$result_m = execute($conn, $query);
+
 ?>
 <?php include 'inc/header.inc.php' ?>
     <div id="position" class="auto">
@@ -50,149 +53,62 @@ $count_today = get_num($conn, $query);
                     总帖：<span><?php echo $count_all ?></span>
                     <div class="moderator">版主：
                         <span>
-
+                            <?php
+                                if (mysqli_num_rows($result_m) == 0) {
+                                    echo "暂无版主";
+                                } else {
+                                    $data_m = mysqli_fetch_assoc($result_m);
+                                    echo $data_m['username'];
+                                }
+                            ?>
                         </span>
                     </div>
-                    <div class="notice"><?php echo  ?></div>
+                    <div class="notice"><?php echo $data_s['info'] ?></div>
                 </div>
             </div>
             <div style="clear:both;"></div>
             <ul class="postList">
-                <li>
-                    <div class="smallPic">
-                        <a href="">
-                            <img width="45" height="45" src=css/2374101_small.jpg alt="">
-                        </a>
-                    </div>
-                    <div class="subject">
-                        <div class="titleWrap">
-                            <a href="">[分类]</a>&nbsp;&nbsp;<a class="title" href="">数据库连接</a>
+                <?php
+                    $page = page($count_all, 1, 5);
+                    $query = "select ibbs_content.title,ibbs_content.id,ibbs_content.publish_time,ibbs_content.times,ibbs_member.username,ibbs_member.photo from ibbs_content join ibbs_member on ibbs_content.member_id=ibbs_member.id where ibbs_content.module_id={$_GET['id']} and {$page['limit']}";
+                    $result = execute($conn, $query);
+                    while ($data = mysqli_fetch_assoc($result)) {
+                ?>
+                    <li>
+                        <div class="smallPic">
+                            <a href="">
+                                <img width="45" height="45" src="<?php if ($data['photo'] != '') {echo $data['photo'];} else {echo 'css/photo.jpg';} ?>" alt="">
+                            </a>
                         </div>
-                        <p>
-                            楼主：JiangNanMax&nbsp;2019-03-14&nbsp;&nbsp;&nbsp;&nbsp;最后回复：2019-03-14
-                        </p>
-                    </div>
-                    <div class="count">
-                        <p>
-                            回复<br><span>66</span>
-                        </p>
-                        <p>
-                            浏览<br><span>666</span>
-                        </p>
-                    </div>
-                    <div style="clear:both;"></div>
-                </li>
-                <li>
-                    <div class="smallPic">
-                        <a href="">
-                            <img width="45" height="45" src=css/2374101_small.jpg alt="">
-                        </a>
-                    </div>
-                    <div class="subject">
-                        <div class="titleWrap">
-                            <a href="">[分类]</a>&nbsp;&nbsp;<a class="title" href="">数据库连接</a>
+                        <div class="subject">
+                            <div class="titleWrap">
+                                <a class="title" href=""><?php echo $data['title'] ?></a>
+                            </div>
+                            <p>
+                                楼主：<?php echo $data['username'] ?>&nbsp;<?php echo $data['publish_time'] ?>&nbsp;&nbsp;&nbsp;&nbsp;最后回复：2019-03-14
+                            </p>
                         </div>
-                        <p>
-                            楼主：JiangNanMax&nbsp;2019-03-14&nbsp;&nbsp;&nbsp;&nbsp;最后回复：2019-03-14
-                        </p>
-                    </div>
-                    <div class="count">
-                        <p>
-                            回复<br><span>66</span>
-                        </p>
-                        <p>
-                            浏览<br><span>666</span>
-                        </p>
-                    </div>
-                    <div style="clear:both;"></div>
-                </li>
-                <li>
-                    <div class="smallPic">
-                        <a href="">
-                            <img width="45" height="45" src=css/2374101_small.jpg alt="">
-                        </a>
-                    </div>
-                    <div class="subject">
-                        <div class="titleWrap">
-                            <a href="">[分类]</a>&nbsp;&nbsp;<a class="title" href="">数据库连接</a>
+                        <div class="count">
+                            <p>
+                                回复<br><span>66</span>
+                            </p>
+                            <p>
+                                浏览<br><span><?php echo $data['times'] ?></span>
+                            </p>
                         </div>
-                        <p>
-                            楼主：JiangNanMax&nbsp;2019-03-14&nbsp;&nbsp;&nbsp;&nbsp;最后回复：2019-03-14
-                        </p>
-                    </div>
-                    <div class="count">
-                        <p>
-                            回复<br><span>66</span>
-                        </p>
-                        <p>
-                            浏览<br><span>666</span>
-                        </p>
-                    </div>
-                    <div style="clear:both;"></div>
-                </li>
-                <li>
-                    <div class="smallPic">
-                        <a href="">
-                            <img width="45" height="45" src=css/2374101_small.jpg alt="">
-                        </a>
-                    </div>
-                    <div class="subject">
-                        <div class="titleWrap">
-                            <a href="">[分类]</a>&nbsp;&nbsp;<a class="title" href="">数据库连接</a>
-                        </div>
-                        <p>
-                            楼主：JiangNanMax&nbsp;2019-03-14&nbsp;&nbsp;&nbsp;&nbsp;最后回复：2019-03-14
-                        </p>
-                    </div>
-                    <div class="count">
-                        <p>
-                            回复<br><span>66</span>
-                        </p>
-                        <p>
-                            浏览<br><span>666</span>
-                        </p>
-                    </div>
-                    <div style="clear:both;"></div>
-                </li>
-                <li>
-                    <div class="smallPic">
-                        <a href="">
-                            <img width="45" height="45" src=css/2374101_small.jpg alt="">
-                        </a>
-                    </div>
-                    <div class="subject">
-                        <div class="titleWrap">
-                            <a href="">[分类]</a>&nbsp;&nbsp;<a class="title" href="">数据库连接</a>
-                        </div>
-                        <p>
-                            楼主：JiangNanMax&nbsp;2019-03-14&nbsp;&nbsp;&nbsp;&nbsp;最后回复：2019-03-14
-                        </p>
-                    </div>
-                    <div class="count">
-                        <p>
-                            回复<br><span>66</span>
-                        </p>
-                        <p>
-                            浏览<br><span>666</span>
-                        </p>
-                    </div>
-                    <div style="clear:both;"></div>
-                </li>
+                        <div style="clear:both;"></div>
+                    </li>
+                <?php
+                    }
+                ?>
             </ul>
             <div class="pages_wrap">
                 <a href="" class="btn publish">发帖</a>
                 <div class="pages">
-                    <a>« 上一页</a>
-                    <a>1</a>
-                    <span>2</span>
-                    <a>3</a>
-                    <a>4</a>
-                    <a>...8</a>
-                    <a>下一页 »</a>
+                    <?php
+                        echo $page['html'];
+                    ?>
                 </div>
-            </div>
-            <div class="pages_wrap">
-
             </div>
         </div>
 
