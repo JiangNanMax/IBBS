@@ -56,7 +56,7 @@ $count_today = get_num($conn, $query);
 
 <?php include 'inc/header.inc.php' ?>
     <div id="position" class="auto">
-        <a href="index.php">首页</a> &gt; <a href="list_father.php?id=<?php echo $data_f['id'] ?>"><?php echo $data_f['module_name'] ?></a>
+        <a href="index.php">首页</a> &gt; <?php echo $data_f['module_name'] ?>
     </div>
     <div id="main" class="auto">
         <div id="left">
@@ -131,7 +131,7 @@ $count_today = get_num($conn, $query);
                                 $result_s = execute($conn, $query);
                                 while ($data_s = mysqli_fetch_assoc($result_s)) {
                             ?>
-                                    <li><a href="#" style="color: #666;"><?php echo $data_s['module_name']; ?></a></li>
+                                    <li><a href="list_son.php?id=<?php echo $data_s['id'] ?>" style="color: #666;"><?php echo $data_s['module_name']; ?></a></li>
                             <?php
                                 }
                             ?>

@@ -38,7 +38,6 @@ $count_today = get_num($conn, $query);
 
 $query = "select * from ibbs_member where id={$data_s['member_id']}";
 $result_m = execute($conn, $query);
-
 ?>
 <?php include 'inc/header.inc.php' ?>
     <div id="position" class="auto">
@@ -70,7 +69,8 @@ $result_m = execute($conn, $query);
             <ul class="postList">
                 <?php
                     $page = page($count_all, 1, 5);
-                    $query = "select ibbs_content.title,ibbs_content.id,ibbs_content.publish_time,ibbs_content.times,ibbs_member.username,ibbs_member.photo from ibbs_content join ibbs_member on ibbs_content.member_id=ibbs_member.id where ibbs_content.module_id={$_GET['id']} and {$page['limit']}";
+
+                    $query = "select ibbs_content.title,ibbs_content.id,ibbs_content.publish_time,ibbs_content.times,ibbs_member.username,ibbs_member.photo from ibbs_content join ibbs_member on ibbs_content.member_id=ibbs_member.id where ibbs_content.module_id={$_GET['id']} {$page['limit']}";
                     $result = execute($conn, $query);
                     while ($data = mysqli_fetch_assoc($result)) {
                 ?>
@@ -128,9 +128,9 @@ $result_m = execute($conn, $query);
                                 $query = "select * from ibbs_son_module where father_module_id={$data_f['id']}";
                                 $result_s = execute($conn, $query);
                                 while ($data_s = mysqli_fetch_assoc($result_s)) {
-                                    ?>
-                                    <li><a href="#" style="color: #666;"><?php echo $data_s['module_name']; ?></a></li>
-                                    <?php
+                                ?>
+                                    <li><a href="list_son.php?id=<?php echo $data_s['id'] ?>" style="color: #666;"><?php echo $data_s['module_name']; ?></a></li>
+                                <?php
                                 }
                                 ?>
                             </ul>
