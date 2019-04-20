@@ -12,16 +12,13 @@ include_once 'inc/page.inc.php';
 $template['title'] = '父版块';
 $template['css'] = array('css/public.css', 'css/list.css');
 
-//连接DB
 $conn = connect();
 $member_id = is_login($conn);
 
-//参数验证
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     skip('index.php', 'error', '父版块参数错误！');
 }
 
-//拉取父版块信息
 $query = "select * from ibbs_father_module where id={$_GET['id']}";
 $result_f = execute($conn, $query);
 if (mysqli_num_rows($result_f) == 0) {
@@ -29,13 +26,12 @@ if (mysqli_num_rows($result_f) == 0) {
 }
 $data_f = mysqli_fetch_assoc($result_f);
 
-//拉取子版块信息
 //这里会有异常发生，比如父版块下没有子版块的情况
 $query = "select * from ibbs_son_module where father_module_id={$_GET['id']}";
 $result_s = execute($conn, $query);
 $id_s = '';
 $list_s = '';
-//解析出需要用到的数据
+
 while ($data_s = mysqli_fetch_assoc($result_s)) {
     $id_s.=($data_s['id'].",");
     $list_s.="<a style=\"color: #333;cursor:pointer;\">{$data_s['module_name']}</a>&nbsp;&nbsp;";
@@ -46,7 +42,6 @@ if ($id_s == '') {
 }
 //父版块下暂无子版块的情况，待处理
 
-//两个计数
 $query = "select count(*) from ibbs_content where module_id in ({$id_s})";
 $count_all = get_num($conn, $query);
 
@@ -105,7 +100,7 @@ $count_today = get_num($conn, $query);
                 ?>
             </ul>
             <div class="pages_wrap">
-                <a href="" class="btn publish">发帖</a>
+                <a href="publish.php?father_module_id=<?php echo $_GET['id'] ?>" target="_blank" class="btn publish">发帖</a>
                 <div class="pages">
                     <?php
                         echo $page['html'];

@@ -31,21 +31,30 @@ if (isset($_POST['submit'])) {
 ?>
 <?php include 'inc/header.inc.php'; ?>
     <div id="position" class="auto">
-        <a href="">首页</a> &gt; <a href="">Java</a> &gt; <a href="">JDBC</a> &gt; 连接数据库
+        <a href="index.php">首页</a> &gt; 发帖
     </div>
     <div id="publish" class="auto">
         <form action="" method="post">
             <select name="module_id">
                 <option value="0">------请选择一个版块------</option>
                 <?php
-                    $query = "select * from ibbs_father_module order by sort desc";
+                    $where = '';
+                    if (isset($_GET['father_module_id']) && is_numeric($_GET['father_module_id'])) {
+                        $where = "where id={$_GET['father_module_id']}";
+                    }
+                    $query = "select * from ibbs_father_module {$where} order by sort desc";
                     $result_f = execute($conn, $query);
                     while ($data_f = mysqli_fetch_assoc($result_f)) {
                         echo ("<optgroup label='{$data_f['module_name']}'>");
                         $query = "select * from ibbs_son_module where father_module_id={$data_f['id']} order by sort desc";
                         $result_s = execute($conn, $query);
                         while ($data_s = mysqli_fetch_assoc($result_s)) {
-                            echo ("<option value='{$data_s['id']}'>{$data_s['module_name']}</option>");
+                            if (isset($_GET['son_module_id']) && $_GET['son_module_id'] == $data_s['id']) {
+                                echo ("<option selected='selected' value='{$data_s['id']}'>{$data_s['module_name']}</option>");
+                            }
+                            else {
+                                echo ("<option value='{$data_s['id']}'>{$data_s['module_name']}</option>");
+                            }
                         }
                         echo ("</optgroup>");
                     }
