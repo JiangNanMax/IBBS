@@ -7,7 +7,7 @@
  */
 include_once 'inc/config.inc.php';
 include_once 'inc/mysql.inc.php';
-include_once 'inc/tool.inc.php';
+include_once "inc/tool.inc.php";
 
 $template['title'] = '发帖';
 $template['css'] = array('css/public.css', 'css/publish.css');
