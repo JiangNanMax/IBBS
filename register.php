@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
 <div id="register" class="auto">
     <h2>欢迎注册成为IBBS的用户!</h2>
     <form method="post">
-        <label>用户名：<input type="text" name="username"><span class="note">&nbsp;- 用户名不得为空,不超过30个字符</span></label>
+        <label>用户名：<input type="text" name="username" id="user_name"><span class="note">&nbsp;- 用户名不得为空,不超过30个字符</span></label>
         <label>密码：<input type="password" name="password"><span class="note">&nbsp;- 为保障安全,密码不能少于6位&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
         <label>确认密码：<input type="password" name="confirm_password"><span class="note">&nbsp;- 请重新输入密码，确认一致&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
         <label>验证码：<input type="text" name="vcode"><span class="note">&nbsp;- 请正确输入下图中的验证码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
@@ -45,4 +45,36 @@ if (isset($_POST['submit'])) {
         <input type="submit" name="submit" class="btn" value="注册">
     </form>
 </div>
-<?php include 'inc/footer.inc.php';?>
+<div id="footer" class="auto">
+    <div class="bottom">
+        <a href="#">IBBS</a>
+    </div>
+    <div class="copyright">Powered by JiangNanMax ©2019</div>
+</div>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $('#user_name').blur(function () {
+        var username = $(this).val();
+        if (username == '') {
+            alert('用户名不能为空！');
+        }
+        else {
+            $.ajax({
+                type: "POST",
+                url: 'confirm_username.php',
+                data: {"user_name": username},
+                success: function (data) {
+                    var data_json = $.parseJSON(data);
+                    if (data_json['flag'] == true) {
+                        if (data_json['msg'] == 1) {
+                            alert('该用户名已被使用！');
+                            $('#user_name').val('');
+                        }
+                    }
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>
