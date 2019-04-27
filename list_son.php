@@ -12,12 +12,12 @@ include_once 'inc/page.inc.php';
 $template['title'] = '子版块';
 $template['css'] = array('css/public.css', 'css/list.css');
 
-$conn = connect();
-$member_id = is_login($conn);
-
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     skip('index.php', 'error' ,'子版块参数错误！');
 }
+
+$conn = connect();
+$member_id = is_login($conn);
 
 $query = "select * from ibbs_son_module where id={$_GET['id']}";
 $result_s = execute($conn, $query);
@@ -82,7 +82,7 @@ $result_m = execute($conn, $query);
                         </div>
                         <div class="subject">
                             <div class="titleWrap">
-                                <a class="title" href=""><?php echo $data['title'] ?></a>
+                                <a class="title" href="show_detail.php?id=<?php  ?>"><?php echo $data['title'] ?></a>
                             </div>
                             <p>
                                 楼主：<?php echo $data['username'] ?>&nbsp;<?php echo $data['publish_time'] ?>&nbsp;&nbsp;&nbsp;&nbsp;最后回复：2019-03-14

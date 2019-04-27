@@ -12,12 +12,12 @@ include_once 'inc/page.inc.php';
 $template['title'] = '父版块';
 $template['css'] = array('css/public.css', 'css/list.css');
 
-$conn = connect();
-$member_id = is_login($conn);
-
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     skip('index.php', 'error', '父版块参数错误！');
 }
+
+$conn = connect();
+$member_id = is_login($conn);
 
 $query = "select * from ibbs_father_module where id={$_GET['id']}";
 $result_f = execute($conn, $query);
@@ -67,7 +67,7 @@ $count_today = get_num($conn, $query);
             <ul class="postList">
                 <?php
                     $page = page($count_all, 1, 5);
-                    $query = "select ibbs_content.title,ibbs_content.id,ibbs_content.publish_time,ibbs_content.times,ibbs_member.username,ibbs_member.photo,ibbs_son_module.module_name from ibbs_content join ibbs_member on ibbs_content.member_id=ibbs_member.id join ibbs_son_module on ibbs_content.module_id=ibbs_son_module.id where ibbs_content.module_id in ($id_s) {$page['limit']}";
+                    $query = "select ibbs_content.title,ibbs_content.id,ibbs_content.module_id,ibbs_content.publish_time,ibbs_content.times,ibbs_member.username,ibbs_member.photo,ibbs_son_module.module_name from ibbs_content join ibbs_member on ibbs_content.member_id=ibbs_member.id join ibbs_son_module on ibbs_content.module_id=ibbs_son_module.id where ibbs_content.module_id in ($id_s) {$page['limit']}";
                     $result = execute($conn, $query);
                     while ($data = mysqli_fetch_assoc($result)) {
                 ?>
@@ -79,7 +79,7 @@ $count_today = get_num($conn, $query);
                         </div>
                         <div class="subject">
                             <div class="titleWrap">
-                                <a href="">[<?php echo $data['module_name']; ?>]</a>&nbsp;&nbsp;<a class="title" href=""><?php echo $data['title']; ?></a>
+                                <a href="list_son.php?id=<?php echo $data['module_id'] ?>">[<?php echo $data['module_name']; ?>]</a>&nbsp;&nbsp;<a class="title" href="show_detail.php?id=<?php  ?>"><?php echo $data['title']; ?></a>
                             </div>
                             <p>
                                 楼主：<?php echo $data['username']; ?>&nbsp;<?php echo $data['publish_time']; ?>&nbsp;&nbsp;&nbsp;&nbsp;最后回复：2019-03-14
