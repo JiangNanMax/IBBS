@@ -103,7 +103,7 @@ $result_m = execute($conn, $query);
                 ?>
             </ul>
             <div class="pages_wrap">
-                <a href="publish.php?son_module_id=<?php echo $_GET['id'] ?>" target="_blank" class="btn publish">发帖</a>
+                <a href="publish.php?father_module_id=<?php echo $data_f['id'] ?>&son_module_id=<?php echo $_GET['id'] ?>" class="btn publish">发帖</a>
                 <div class="pages">
                     <?php
                         echo $page['html'];
