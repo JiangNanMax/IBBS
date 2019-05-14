@@ -82,7 +82,7 @@ $result_m = execute($conn, $query);
                         </div>
                         <div class="subject">
                             <div class="titleWrap">
-                                <a class="title" href="show_detail.php?id=<?php  ?>"><?php echo $data['title'] ?></a>
+                                <a class="title" href="show_detail.php?id=<?php $data['id'] ?>"><?php echo $data['title'] ?></a>
                             </div>
                             <p>
                                 楼主：<?php echo $data['username'] ?>&nbsp;<?php echo $data['publish_time'] ?>&nbsp;&nbsp;&nbsp;&nbsp;最后回复：2019-03-14
