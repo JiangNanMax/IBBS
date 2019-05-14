@@ -82,32 +82,36 @@ $data_father = mysqli_fetch_assoc($result_father);
     $page = page($count_reply, 3, 5);
     $query = "select im.username,ir.member_id,im.photo,ir.reply_time,ir.id,ir.content from ibbs_reply ir,ibbs_member im where ir.member_id=im.id and ir.content_id={$_GET['id']} {$page['limit']}";
     $result_reply = execute($conn, $query);
-    while ($data_reply = mysqli_fetch_assoc($result_reply)){
-        $data_reply['content']=nl2br(htmlspecialchars($data_reply['content']));
+    while ($data_reply = mysqli_fetch_assoc($result_reply)) {
+        $data_reply['content'] = nl2br(htmlspecialchars($data_reply['content']));
     ?>
-        <div class="wrapContent">
+        <div class="contentWrap">
             <div class="left">
                 <div class="head_img">
                     <a href="">
-                        <img width=120 height=120 src="<?php if($data_reply['photo']!=''){echo $data_reply['photo'];} else {echo 'css/photo.jpg';}?>" />
+                        <img width=120 height=120 src="<?php if ($data_reply['photo'] != '') {
+                            echo $data_reply['photo'];
+                        } else {
+                            echo 'css/photo.jpg';
+                        } ?>"/>
                     </a>
                 </div>
                 <div class="name">
-                    <a href=""><?php echo $data_reply['username']?></a>
+                    <a href=""><?php echo $data_reply['username'] ?></a>
                 </div>
             </div>
             <div class="right">
                 <div class="pubdate">
-                    <span class="date">回复时间：<?php echo $data_reply['reply_time']?></span>
+                    <span class="date">回复时间：<?php echo $data_reply['reply_time'] ?></span>
                     <span class="floor">1楼&nbsp;|&nbsp;<a href="#">引用</a></span>
                 </div>
                 <div class="content">
                     <?php
-                        echo $data_reply['content'];
+                    echo $data_reply['content'];
                     ?>
                 </div>
             </div>
-            <div style="clear:both;"></div>
+            <div style="clear: both;"></div>
         </div>
     <?php
     }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4529fdc7-afbe-48d4-99f2-6055f1c6af08" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/reply.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/show_detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/show_detail.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -92,7 +92,7 @@
         <counts>
           <entry key="css" value="8480" />
           <entry key="html" value="3914" />
-          <entry key="php" value="29913" />
+          <entry key="php" value="29977" />
           <entry key="txt" value="582" />
         </counts>
       </usages-collector>
@@ -100,7 +100,7 @@
         <counts>
           <entry key="CSS" value="8480" />
           <entry key="HTML" value="3963" />
-          <entry key="PHP" value="29861" />
+          <entry key="PHP" value="29925" />
           <entry key="PLAIN_TEXT" value="582" />
           <entry key="SQL" value="3" />
         </counts>
@@ -139,11 +139,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/show_detail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="147" column="17" lean-forward="true" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="17" />
+            <state relative-caret-position="391">
+              <caret line="151" column="17" lean-forward="true" selection-start-line="151" selection-start-column="17" selection-end-line="151" selection-end-column="17" />
               <folding>
-                <element signature="e#4028#4034#0#HTML" expanded="true" />
-                <element signature="e#4035#4041#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="e#4017#4023#0#HTML" expanded="true" />
+                <element signature="e#4024#4030#0#HTML" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -306,6 +307,11 @@
             <path>
               <item name="IBBS" type="b2602c69:ProjectViewProjectNode" />
               <item name="IBBS" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IBBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IBBS" type="462c0819:PsiDirectoryNode" />
               <item name="inc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -419,18 +425,18 @@
       <workItem from="1556872789614" duration="363000" />
       <workItem from="1557045264118" duration="784000" />
       <workItem from="1557730931086" duration="1693000" />
-      <workItem from="1557811355654" duration="8144000" />
+      <workItem from="1557811355654" duration="8775000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206817000" />
+    <option name="totallyTimeSpent" value="207448000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="23" width="1280" height="739" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48356164" visible="true" weight="0.17851374" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48356164" visible="true" weight="0.2253635" />
       <window_info id="Structure" order="1" sideWeight="0.51643836" side_tool="true" weight="0.8101777" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -793,11 +799,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/show_detail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="147" column="17" lean-forward="true" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="17" />
+        <state relative-caret-position="391">
+          <caret line="151" column="17" lean-forward="true" selection-start-line="151" selection-start-column="17" selection-end-line="151" selection-end-column="17" />
           <folding>
-            <element signature="e#4028#4034#0#HTML" expanded="true" />
-            <element signature="e#4035#4041#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#4017#4023#0#HTML" expanded="true" />
+            <element signature="e#4024#4030#0#HTML" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
