@@ -12,10 +12,12 @@ include_once "inc/tool.inc.php";
 $template['title'] = '发帖';
 $template['css'] = array('css/public.css', 'css/publish.css');
 
+$conn = connect();
+
 if (!($member_id = is_login($conn))) {
     skip('login.php', 'error', '登录后才能进行发帖！');
 }
-$conn = connect();
+
 if (isset($_POST['submit'])) {
     $_POST = escape($conn, $_POST);
     include 'inc/publish_check.php';

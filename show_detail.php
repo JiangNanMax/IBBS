@@ -19,11 +19,16 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 $conn = connect();
 $member_id = is_login($conn);
 
-$query = "select ic.id cid,ic.module_id,ic.title,ic.content,ic.time,ic.publish_time,ic.member_id,ic.times,im.username,im.photo from ibbs_content ic,ibbs_member im where ic.id={$_GET['id']} and ic.member_id=im.id";
+$query = "select ic.id cid,ic.module_id,ic.title,ic.content,ic.publish_time,ic.member_id,ic.times,im.username,im.photo from ibbs_content ic,ibbs_member im where ic.id={$_GET['id']} and ic.member_id=im.id";
 $result_content = execute($conn, $query);
 if (mysqli_num_rows($result_content) != 1) {
-    skip('index.php', 'error', '该帖不存在！');
+    skip('index.php', 'error', '该帖不存在!');
 }
+
+$query = "update ibbs_content set times=times+1 where id={$_GET['id']}";
+execute($conn, $query);
+$data_content['times'] = $data_content['times'] + 1;
+
 $data_content = mysqli_fetch_assoc($result_content);
 $data_content['title'] = htmlspecialchars($data_content['title']);
 $data_content['content'] = nl2br(htmlspecialchars($data_content['content']));
@@ -139,7 +144,7 @@ $data_father = mysqli_fetch_assoc($result_father);
     </div>
 
 
-    <a id="talk" href="" class="btn publish">发帖</a>
+    <a id="talk" href="reply.php?id=<?php echo $_GET['id']?>" class="btn publish">回复</a>
     <div class="pages_wrap_show">
         <div class="pages">
             <a>« 上一页</a>
