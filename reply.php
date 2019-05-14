@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
     $query = "insert into ibbs_reply(content_id,content,reply_time,member_id) values({$_GET['id']},'{$_POST['content']}',now(),{$member_id})";
     execute($conn, $query);
     if(mysqli_affected_rows($conn) == 1) {
-        skip("show.php?id={$_GET['id']}", 'ok', '回复成功!');
+        skip("show_detail.php?id={$_GET['id']}", 'ok', '回复成功!');
     }else{
         skip($_SERVER['REQUEST_URI'], 'error', '回复失败,请重试!');
     }

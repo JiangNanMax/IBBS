@@ -49,39 +49,51 @@ $data_father = mysqli_fetch_assoc($result_father);
 
 <div id="main" class="auto">
 
-    <div class="contentWrap">
-        <div class="left">
-            <div class="head_img">
-                <a href="">
-                    <img width=120 height=120 src="<?php if($data_content['photo'] != ''){echo $data_content['photo'];} else {echo 'css/photo.jpg';} ?>" alt="">
-                </a>
+    <?php
+    if(!is_set($GET['page']) || $_GET['page'] == 1) {
+    ?>
+        <div class="contentWrap">
+            <div class="left">
+                <div class="head_img">
+                    <a href="">
+                        <img width=120 height=120 src="<?php if ($data_content['photo'] != '') {
+                            echo $data_content['photo'];
+                        } else {
+                            echo 'css/photo.jpg';
+                        } ?>" alt="">
+                    </a>
+                </div>
+                <div class="name">
+                    <a href=""><?php echo $data_content['username'] ?></a>
+                </div>
             </div>
-            <div class="name">
-                <a href=""><?php echo $data_content['username'] ?></a>
+            <div class="right">
+                <div class="title">
+                    <h2><?php echo $data_content['title'] ?></h2>
+                    <span>阅读：<?php echo $data_content['times'] ?>&nbsp;|&nbsp;回复：15</span>
+                </div>
+                <div class="pubdate">
+                    <span class="date">发布于：<?php echo $data_content['publish_time'] ?></span>
+                    <span class="floor" style="color:red;font-size:14px;font-weight:bold;">楼主</span>
+                </div>
+                <div class="content">
+                    <?php echo $data_content['content'] ?>
+                </div>
             </div>
+            <div style="clear: both;"></div>
         </div>
-        <div class="right">
-            <div class="title">
-                <h2><?php echo $data_content['title'] ?></h2>
-                <span>阅读：<?php echo $data_content['times'] ?>&nbsp;|&nbsp;回复：15</span>
-            </div>
-            <div class="pubdate">
-                <span class="date">发布于：<?php echo $data_content['publish_time'] ?></span>
-                <span class="floor_master">楼主</span>
-            </div>
-            <div class="content">
-                <?php echo $data_content['content'] ?>
-            </div>
-        </div>
-        <div style="clear: both;"></div>
-    </div>
+    <?php
+    }
+    ?>
 
     <?php
     $query = "select count(*) from ibbs_reply where content_id={$_GET['id']}";
     $count_reply = get_num($conn, $query);
-    $page = page($count_reply, 3, 5);
+    $page_size = 5;
+    $page = page($count_reply, $page_size, 5);
     $query = "select im.username,ir.member_id,im.photo,ir.reply_time,ir.id,ir.content from ibbs_reply ir,ibbs_member im where ir.member_id=im.id and ir.content_id={$_GET['id']} {$page['limit']}";
     $result_reply = execute($conn, $query);
+    $i = ($_GET['page'] - 1) * $page_size + 1;
     while ($data_reply = mysqli_fetch_assoc($result_reply)) {
         $data_reply['content'] = nl2br(htmlspecialchars($data_reply['content']));
     ?>
@@ -89,11 +101,7 @@ $data_father = mysqli_fetch_assoc($result_father);
             <div class="left">
                 <div class="head_img">
                     <a href="">
-                        <img width=120 height=120 src="<?php if ($data_reply['photo'] != '') {
-                            echo $data_reply['photo'];
-                        } else {
-                            echo 'css/photo.jpg';
-                        } ?>"/>
+                        <img width=120 height=120 src="<?php if ($data_reply['photo'] != '') {echo $data_reply['photo'];} else {echo 'css/photo.jpg';} ?>"/>
                     </a>
                 </div>
                 <div class="name">
@@ -103,11 +111,24 @@ $data_father = mysqli_fetch_assoc($result_father);
             <div class="right">
                 <div class="pubdate">
                     <span class="date">回复时间：<?php echo $data_reply['reply_time'] ?></span>
-                    <span class="floor">1楼&nbsp;|&nbsp;<a href="#">引用</a></span>
+                    <span class="floor"><?php echo $i++ ?>楼&nbsp;|&nbsp;<a href="quote.php?id=<?php echo $_GET['id'] ?>&reply_id=<?php echo $data_reply['id'] ?>">引用</a></span>
                 </div>
                 <div class="content">
                     <?php
-                    echo $data_reply['content'];
+                    if($data_reply['quote_id']){
+                        $query = "select count(*) from ibbs_reply where content_id={$_GET['id']} and id<={$data_reply['quote_id']}";
+                        $floor = get_num($conn, $query);
+                        $query = "select ibbs_reply.content,ibbs_member.username from ibbs_reply,ibbs_member where ibbs_reply.id={$data_reply['quote_id']} and ibbs_reply.content_id={$_GET['id']} and ibbs_reply.member_id=ibbs_member.id";
+                        $result_quote = execute($conn, $query);
+                        $data_quote = mysqli_fetch_assoc($result_quote);
+                        ?>
+                        <div class="quote">
+                            <h2>引用 <?php echo $floor ?>楼 <?php echo $data_quote['username']?> 发表的: </h2>
+                            <?php echo nl2br(htmlspecialchars($data_quote['content']))?>
+                        </div>
+                    <?php }?>
+                    <?php
+                        echo $data_reply['content'];
                     ?>
                 </div>
             </div>
