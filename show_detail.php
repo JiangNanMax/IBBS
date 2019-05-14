@@ -76,46 +76,44 @@ $data_father = mysqli_fetch_assoc($result_father);
         <div style="clear: both;"></div>
     </div>
 
-    <div class="contentWrap">
-        <div class="left">
-            <div class="head_img">
-                <a href="">
-                    <img src="css/head_img_2.png" alt="">
-                </a>
+    <?php
+    $query = "select count(*) from ibbs_reply where content_id={$_GET['id']}";
+    $count_reply = get_num($conn, $query);
+    $page = page($count_reply, 3, 5);
+    $query = "select im.username,ir.member_id,im.photo,ir.reply_time,ir.id,ir.content from ibbs_reply ir,ibbs_member im where ir.member_id=im.id and ir.content_id={$_GET['id']} {$page['limit']}";
+    $result_reply = execute($conn, $query);
+    while ($data_reply = mysqli_fetch_assoc($result_reply)){
+        $data_reply['content']=nl2br(htmlspecialchars($data_reply['content']));
+    ?>
+        <div class="wrapContent">
+            <div class="left">
+                <div class="head_img">
+                    <a href="">
+                        <img width=120 height=120 src="<?php if($data_reply['photo']!=''){echo $data_reply['photo'];} else {echo 'css/photo.jpg';}?>" />
+                    </a>
+                </div>
+                <div class="name">
+                    <a href=""><?php echo $data_reply['username']?></a>
+                </div>
             </div>
-            <div class="name">
-                <a href="">JiangNanMax</a>
+            <div class="right">
+                <div class="pubdate">
+                    <span class="date">回复时间：<?php echo $data_reply['reply_time']?></span>
+                    <span class="floor">1楼&nbsp;|&nbsp;<a href="#">引用</a></span>
+                </div>
+                <div class="content">
+                    <?php
+                        echo $data_reply['content'];
+                    ?>
+                </div>
             </div>
+            <div style="clear:both;"></div>
         </div>
-        <div class="right">
-            <div class="pubdate">
-                <span class="date">回复时间：2019-03-18 22:24:26</span>
-                <span class="floor">1楼&nbsp;|&nbsp;<a href="#">引用</a></span>
-            </div>
-            <div class="content">嗯嗯嗯嗯嗯嗯嗯...</div>
-        </div>
-        <div style="clear: both;"></div>
-    </div>
-    <div class="contentWrap">
-        <div class="left">
-            <div class="head_img">
-                <a href="">
-                    <img src="css/head_img_3.png" alt="">
-                </a>
-            </div>
-            <div class="name">
-                <a href="">JiangNanMax</a>
-            </div>
-        </div>
-        <div class="right">
-            <div class="pubdate">
-                <span class="date">回复时间：2019-03-18 22:28:46</span>
-                <span class="floor">2楼&nbsp;|&nbsp;<a href="#">引用</a></span>
-            </div>
-            <div class="content">噢噢噢噢噢噢噢噢噢...</div>
-        </div>
-        <div style="clear: both;"></div>
-    </div>
+    <?php
+    }
+    ?>
+
+    <!--
     <div class="contentWrap">
         <div class="left">
             <div class="head_img">
@@ -142,18 +140,14 @@ $data_father = mysqli_fetch_assoc($result_father);
         </div>
         <div style="clear: both;"></div>
     </div>
-
+    -->
 
     <a id="talk" href="reply.php?id=<?php echo $_GET['id']?>" class="btn publish">回复</a>
     <div class="pages_wrap_show">
         <div class="pages">
-            <a>« 上一页</a>
-            <a>1</a>
-            <span>2</span>
-            <a>3</a>
-            <a>4</a>
-            <a>...8</a>
-            <a>下一页 »</a>
+            <?php
+                echo $page['html'];
+            ?>
         </div>
     </div>
 </div>

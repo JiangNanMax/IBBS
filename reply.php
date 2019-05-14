@@ -21,7 +21,7 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])){
     skip('index.php', 'error', '参数错误!');
 }
 
-$query = "select ic.id,ic.title,im.username from ibbs_content sc,ibbs_member im where ic.id={$_GET['id']} and ic.member_id=im.id";
+$query = "select ic.id,ic.title,im.username from ibbs_content ic,ibbs_member im where ic.id={$_GET['id']} and ic.member_id=im.id";
 $result_content = execute($conn, $query);
 if (mysqli_num_rows($result_content) != 1) {
     skip('index.php', 'error', '您要回复的帖子不存在!');
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
     $_POST = escape($conn, $_POST);
     $query = "insert into ibbs_reply(content_id,content,reply_time,member_id) values({$_GET['id']},'{$_POST['content']}',now(),{$member_id})";
     execute($conn, $query);
-    if(mysqli_affected_rows($link) == 1) {
+    if(mysqli_affected_rows($conn) == 1) {
         skip("show.php?id={$_GET['id']}", 'ok', '回复成功!');
     }else{
         skip($_SERVER['REQUEST_URI'], 'error', '回复失败,请重试!');
@@ -47,7 +47,7 @@ $data_content['title']=htmlspecialchars($data_content['title']);
         <a href="index.php">首页</a> &gt; 回复
     </div>
     <div id="publish" class="auto">
-        <div>回复：由 <?php echo $data_content['name']?> 发布的： <?php echo $data_content['title']?></div>
+        <div>回复：由 <?php echo $data_content['username']?> 发布的： <?php echo $data_content['title']?></div>
         <form method="post">
             <textarea name="content" class="content"></textarea>
             <input type="submit" name="submit" class="publish" value="回复">
