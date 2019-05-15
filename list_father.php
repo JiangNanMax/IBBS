@@ -66,10 +66,20 @@ $count_today = get_num($conn, $query);
             <div style="clear:both;"></div>
             <ul class="postList">
                 <?php
-                    $page = page($count_all, 1, 5);
+                    $page = page($count_all, 5, 5);
                     $query = "select ibbs_content.title,ibbs_content.id,ibbs_content.module_id,ibbs_content.publish_time,ibbs_content.times,ibbs_member.username,ibbs_member.photo,ibbs_son_module.module_name from ibbs_content join ibbs_member on ibbs_content.member_id=ibbs_member.id join ibbs_son_module on ibbs_content.module_id=ibbs_son_module.id where ibbs_content.module_id in ($id_s) {$page['limit']}";
                     $result = execute($conn, $query);
                     while ($data = mysqli_fetch_assoc($result)) {
+                    $data['title'] = htmlspecialchars(['title']);
+                    $query="select reply_time from ibbs_reply where content_id={$data['id']} order by id desc limit 1";
+                    $result_last_reply = execute($conn, $query);
+                    if(mysqli_num_rows($result_last_reply) == 0){
+                        $last_time = '暂无回复';
+                    }else{
+                        $data_last_reply = mysqli_fetch_assoc($result_last_reply);
+                        $last_time = $data_last_reply['reply_time'];
+                    }
+                    $query = "select count(*) from ibbs_reply where content_id={$data['id']}";
                 ?>
                     <li>
                         <div class="smallPic">
@@ -82,12 +92,12 @@ $count_today = get_num($conn, $query);
                                 <a href="list_son.php?id=<?php echo $data['module_id'] ?>">[<?php echo $data['module_name']; ?>]</a>&nbsp;&nbsp;<a class="title" href="show_detail.php?id=<?php echo $data['id'] ?>"><?php echo $data['title']; ?></a>
                             </div>
                             <p>
-                                楼主：<?php echo $data['username']; ?>&nbsp;<?php echo $data['publish_time']; ?>&nbsp;&nbsp;&nbsp;&nbsp;最后回复：2019-03-14
+                                楼主：<?php echo $data['username']; ?>&nbsp;<?php echo $data['publish_time']; ?>&nbsp;&nbsp;&nbsp;&nbsp;最后回复：<?php echo $last_time ?>
                             </p>
                         </div>
                         <div class="count">
                             <p>
-                                回复<br><span>66</span>
+                                回复<br><span><?php echo get_num($conn, $query) ?></span>
                             </p>
                             <p>
                                 浏览<br><span><?php echo $data['times']; ?></span>

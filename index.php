@@ -45,9 +45,10 @@ $member_id = is_login($conn);
                             $count_today = get_num($conn, $query);
                             $query = "select count(*) from ibbs_content where module_id={$data_s['id']}";
                             $count_all = get_num($conn, $query);
+                            $son_id = $data_s['id'];
 $html = <<<JN
                             <div class="childBox new">
-                                <h2><a href="#">{$data_s['module_name']}</a><span>&nbsp;(今日{$count_today})</span></h2>
+                                <h2><a href="list_son.php?id="{$son_id}>{$data_s['module_name']}</a><span>&nbsp;(今日{$count_today})</span></h2>
                                 帖子：{$count_all}<br>
                             </div>              
 JN;

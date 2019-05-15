@@ -5,8 +5,15 @@
  * Date: 2019/5/14
  * Time: 22:19
  */
+include_once 'inc/config.inc.php';
+include_once 'inc/mysql.inc.php';
+include_once 'inc/tool.inc.php';
+
 $template['title'] = '动态';
 $template['css'] = array('css/public.css', 'css/show.css', './style.css', './icon.css');
+
+$conn = connect();
+$member_id = is_login($conn);
 ?>
 <?php include 'inc/header.inc.php' ?>
 

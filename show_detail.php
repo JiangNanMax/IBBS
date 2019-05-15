@@ -42,6 +42,9 @@ $query = "select * from ibbs_father_module where id={$data_son['father_module_id
 $result_father = execute($conn, $query);
 $data_father = mysqli_fetch_assoc($result_father);
 
+$query = "select count(*) from ibbs_reply where content_id={$_GET['id']}";
+$count_reply = get_num($conn, $query);
+
 ?>
 <?php include 'inc/header.inc.php' ?>
 <div id="position" class="auto">
@@ -75,7 +78,7 @@ $data_father = mysqli_fetch_assoc($result_father);
             <div class="right">
                 <div class="title">
                     <h2><?php echo $data_content['title'] ?></h2>
-                    <span>阅读：<?php echo $data_content['times'] ?>&nbsp;|&nbsp;回复：15</span>
+                    <span>阅读：<?php echo $data_content['times'] ?>&nbsp;|&nbsp;回复：<?php echo $count_reply ?></span>
                 </div>
                 <div class="pubdate">
                     <span class="date">发布于：<?php echo $data_content['publish_time'] ?></span>

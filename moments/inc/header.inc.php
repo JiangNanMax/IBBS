@@ -37,7 +37,7 @@
         if ($member_id) {
 $note=<<<JN
             <div class="username">
-                <a href="logout.php">退出</a>
+                <a href="../logout.php">退出</a>
 		        <a style="color:#fff;">&nbsp;|&nbsp;</a>
 		        <a>{$_COOKIE['username']}</a>
             </div>
@@ -47,9 +47,9 @@ JN;
         else {
 $note=<<<JN
             <div class="login">
-                <a href="login.php">登录</a>
+                <a href="../login.php">登录</a>
                 &nbsp;
-                <a href="register.php">注册</a>
+                <a href="../register.php">注册</a>
             </div>
 JN;
             echo ($note);
