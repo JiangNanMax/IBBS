@@ -1,0 +1,135 @@
+@font-face {
+	font-family: 'cui-icon';
+	src:url(font/cui-icon.woff2);
+	font-weight: normal;
+	font-style: normal;
+}
+
+.cui-icon {
+	font-family: 'cui-icon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+}
+
+.cui-icon-add:before {
+	content: "\ea01"
+}
+
+.cui-icon-cancel:before {
+	content: "\ea02"
+}
+
+.cui-icon-confirm:before {
+	content: "\ea03"
+}
+
+.cui-icon-date:before {
+	content: "\ea04"
+}
+
+.cui-icon-download:before {
+	content: "\ea05"
+}
+
+.cui-icon-edit:before {
+	content: "\ea06"
+}
+
+.cui-icon-heart:before {
+	content: "\ea07"
+}
+
+.cui-icon-help:before {
+	content: "\ea08"
+}
+
+.cui-icon-home:before {
+	content: "\ea09"
+}
+
+.cui-icon-infomation:before {
+	content: "\ea0a"
+}
+
+.cui-icon-menu:before {
+	content: "\ea0b"
+}
+
+.cui-icon-minus:before {
+	content: "\ea0c"
+}
+
+.cui-icon-purchase:before {
+	content: "\ea0d"
+}
+
+.cui-icon-refresh:before {
+	content: "\ea0e"
+}
+
+.cui-icon-search:before {
+	content: "\ea0f"
+}
+
+.cui-icon-star-outline:before {
+	content: "\ea10"
+}
+
+.cui-icon-star:before {
+	content: "\ea11"
+}
+
+.cui-icon-visible:before {
+	content: "\ea12"
+}
+
+.cui-icon-double-down:before {
+	content: "\ea13"
+}
+
+.cui-icon-double-left:before {
+	content: "\ea14"
+}
+
+.cui-icon-double-right:before {
+	content: "\ea15"
+}
+
+.cui-icon-double-up:before {
+	content: "\ea16"
+}
+
+.cui-icon-down:before {
+	content: "\ea17"
+}
+
+.cui-icon-left:before {
+	content: "\ea18"
+}
+
+.cui-icon-more:before {
+	content: "\ea19"
+}
+
+.cui-icon-play:before {
+	content: "\ea1a"
+}
+
+.cui-icon-right:before {
+	content: "\ea1b"
+}
+
+.cui-icon-triangle-down:before {
+	content: "\ea1c"
+}
+
+.cui-icon-up:before {
+	content: "\ea1d"
+}

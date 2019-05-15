@@ -9,6 +9,7 @@ include_once 'inc/config.inc.php';
 include_once 'inc/mysql.inc.php';
 include_once 'inc/tool.inc.php';
 include_once 'inc/page.inc.php';
+
 $template['title'] = '详情页';
 $template['css'] = array('css/public.css', 'css/show.css');
 
@@ -50,7 +51,11 @@ $data_father = mysqli_fetch_assoc($result_father);
 <div id="main" class="auto">
 
     <?php
-    if(!is_set($GET['page']) || $_GET['page'] == 1) {
+    $query = "select count(*) from ibbs_reply where content_id={$_GET['id']}";
+    $count_reply = get_num($conn, $query);
+    $page_size = 5;
+    $page = page($count_reply, $page_size, 5);
+    if(isset($_GET['page']) and $_GET['page'] == 1) {
     ?>
         <div class="contentWrap">
             <div class="left">
@@ -87,11 +92,8 @@ $data_father = mysqli_fetch_assoc($result_father);
     ?>
 
     <?php
-    $query = "select count(*) from ibbs_reply where content_id={$_GET['id']}";
-    $count_reply = get_num($conn, $query);
-    $page_size = 5;
-    $page = page($count_reply, $page_size, 5);
-    $query = "select im.username,ir.member_id,im.photo,ir.reply_time,ir.id,ir.content from ibbs_reply ir,ibbs_member im where ir.member_id=im.id and ir.content_id={$_GET['id']} {$page['limit']}";
+
+    $query = "select im.username,ir.member_id,im.photo,ir.reply_time,ir.id,ir.quote_id,ir.content from ibbs_reply ir,ibbs_member im where ir.member_id=im.id and ir.content_id={$_GET['id']} {$page['limit']}";
     $result_reply = execute($conn, $query);
     $i = ($_GET['page'] - 1) * $page_size + 1;
     while ($data_reply = mysqli_fetch_assoc($result_reply)) {

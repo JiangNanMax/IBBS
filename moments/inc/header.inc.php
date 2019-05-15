@@ -23,8 +23,8 @@
     <div id="header" class="auto">
         <div class="logo">IBBS</div>
         <div class="nav">
-            <a href="index.php" class="hover">首页</a>
-            <a href="./moments/index.php">动态</a>
+            <a href="../index.php">首页</a>
+            <a href="#" class="hover">动态</a>
             <a href="#">热门</a>
         </div>
         <div class="search">
