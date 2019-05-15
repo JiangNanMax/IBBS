@@ -63,7 +63,7 @@ $count_reply = get_num($conn, $query);
         <div class="contentWrap">
             <div class="left">
                 <div class="head_img">
-                    <a href="">
+                    <a href="member.php?id=<?php echo $data_content['member_id'] ?>">
                         <img width=120 height=120 src="<?php if ($data_content['photo'] != '') {
                             echo $data_content['photo'];
                         } else {
@@ -105,7 +105,7 @@ $count_reply = get_num($conn, $query);
         <div class="contentWrap">
             <div class="left">
                 <div class="head_img">
-                    <a href="">
+                    <a href="member.php?id=<?php echo $data_reply['member_id'] ?>">
                         <img width=120 height=120 src="<?php if ($data_reply['photo'] != '') {echo $data_reply['photo'];} else {echo 'css/photo.jpg';} ?>"/>
                     </a>
                 </div>
@@ -142,36 +142,6 @@ $count_reply = get_num($conn, $query);
     <?php
     }
     ?>
-
-    <!--
-    <div class="contentWrap">
-        <div class="left">
-            <div class="head_img">
-                <a href="">
-                    <img src="css/head_img_4.png" alt="">
-                </a>
-            </div>
-            <div class="name">
-                <a href="">JiangNanMax</a>
-            </div>
-        </div>
-        <div class="right">
-            <div class="pubdate">
-                <span class="date">回复时间：2019-03-19 10:28:46</span>
-                <span class="floor">3楼&nbsp;|&nbsp;<a href="">引用</a></span>
-            </div>
-            <div class="content">
-                <div class="quote">
-                    <h2>引用 1楼 JiangNanMax 发表的: </h2>
-                    嗯嗯嗯嗯嗯嗯嗯...
-                </div>
-                啦啦啦啦啦啦...
-            </div>
-        </div>
-        <div style="clear: both;"></div>
-    </div>
-    -->
-
     <a id="talk" href="reply.php?id=<?php echo $_GET['id']?>" class="btn publish">回复</a>
     <div class="pages_wrap_show">
         <div class="pages">
