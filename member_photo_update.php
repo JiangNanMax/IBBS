@@ -19,9 +19,9 @@ $result_member = execute($conn,$query);
 $data_member = mysqli_fetch_assoc($result_member);
 if(isset($_POST['submit'])){
     $save_path = 'uploads'.date('/Y/m/d/');
-    $upload = upload($save_path,'8M','photo');
+    $upload = upload($save_path,'2M','photo');
     if($upload['return']) {
-        $query = "update sfk_member set photo='{$upload['save_path']}' where id={$member_id}";
+        $query = "update ibbs_member set photo='{$upload['save_path']}' where id={$member_id}";
         execute($conn, $query);
         if(mysqli_affected_rows($conn) == 1) {
             skip("member.php?id={$member_id}",'ok','头像设置成功！');
@@ -38,7 +38,7 @@ if(isset($_POST['submit'])){
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>修改头像</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <style type="text/css">
@@ -71,7 +71,7 @@ if(isset($_POST['submit'])){
     <h2>更改头像</h2>
     <div>
         <h3>原头像：</h3>
-        <img src="<?php if($data_member['photo']!=''){echo SUB_URL.$data_member['photo'];}else{echo 'style/photo.jpg';}?>" />
+        <img src="<?php if($data_member['photo']!=''){echo SUB_URL.$data_member['photo'];}else{echo 'css/photo.jpg';}?>" />
         <br />
         *建议图片尺寸：180*180
     </div>

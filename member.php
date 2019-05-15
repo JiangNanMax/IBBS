@@ -100,15 +100,14 @@ $count_all=get_num($conn, $query);
         <div class="member_big">
             <dl>
                 <dt>
-                    <img width="180" height="180" src="<?php if($data_content['photo']!=''){echo $data_content['photo'];}else{echo 'css/photo.jpg';}?>" />
+                    <img width="180" height="180" src="<?php if($data_member['photo']!=''){echo SUB_URL.$data_content['photo'];}else{echo 'css/photo.jpg';}?>" />
                 </dt>
                 <dd class="name"><?php echo $data_member['username']?></dd>
                 <dd>发帖数：<?php echo $count_all?></dd>
-                <!--<dd>操作：<a target="_blank" href="">修改头像</a> | <a target="_blank" href="">修改密码</a></dd>-->
                 <?php
                 if($member_id == $data_member['id']){
                 ?>
-                <dd>操作：<a target="_blank" href="member_photo_update.php">修改头像</a><!--  | <a target="_blank" href="">修改密码</a></dd> -->
+                <dd>管理：<a target="_blank" href="member_photo_update.php" style="color:dodgerblue;">修改头像</a><!--  | <a target="_blank" href="">修改密码</a></dd> -->
                 <?php }?>
             </dl>
             <div style="clear:both;"></div>

@@ -24,8 +24,8 @@
         <div class="logo">IBBS</div>
         <div class="nav">
             <a href="../index.php">首页</a>
-            <a href="#" class="hover">动态</a>
-            <a href="../resources/index.php">资源</a>
+            <a href="../moments/index.php">动态</a>
+            <a href="#" class="hover">资源</a>
         </div>
         <div class="search">
             <form action="">

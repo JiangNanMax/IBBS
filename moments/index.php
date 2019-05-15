@@ -25,7 +25,7 @@ $member_id = is_login($conn);
     <div class="section-wrapper">
         <div class="news-body">
             <div class="news-main">
-                <a style="text-decoration: none;"  class="news-main-card" href="http://www.17sucai.com/preview/1528155/2019-03-31/dt/index.html#">
+                <a style="text-decoration: none;"  class="news-main-card" href="">
                     <div class="news-main-card-bg" style="background-image: url(./images/homepage-news-img.jpg)"></div>
                     <div class="news-main-card-bg news-main-card-bg-mb" style="background-image: url(statics/images/homepage-news-img-mb.jpg)"></div>
                     <div class="news-main-card-top">
@@ -165,7 +165,7 @@ $member_id = is_login($conn);
 
                     <li>
                         <a style="text-decoration: none;" href="#" class="news-list-card">
-                            <h3 class="h3">《跟唐老师学习云网络》 - ip命令</h3>
+                            <h3 class="h3">学习云网络 - ip命令</h3>
                             <p class="p">ip命令作为Linux网络控制的魔法棒，是未来遨游云网络的必备命令行工具。</p>
                             <span class="more">查看详情</span>
                         </a>
@@ -191,7 +191,6 @@ $member_id = is_login($conn);
 
 <script src="./jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-    //换一换
     var $newsLists = $('.news-sub').find('.news-list-v');
 
     function changeNews() {

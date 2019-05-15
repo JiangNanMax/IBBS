@@ -1,0 +1,112 @@
+#main {
+    margin-top: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background:url(main_bg.png) repeat-y;
+    padding-bottom: 50px;
+}
+#main #left {
+    width: 640px;
+    float: left;
+    padding: 8px 20px;
+}
+#main #left .box_wrap {
+    color: #666;
+    line-height: 22px;
+}
+#main #left .box_wrap h3 {
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
+}
+#main #left div.num span {
+    color: black;
+    font-weight: bold;
+}
+#main #left div.moderator span {
+    color: #666;
+}
+#main ul.postList{
+    margin: 10px 0 0 0;
+    border-top: 1px dashed #ddd;
+}
+#main ul.postList li {
+    padding: 15px 0;
+    border-bottom: 1px dashed #ddd;
+}
+#main ul.postList li div.smallPic {
+    float: left;
+}
+#main ul.postList li div.subject {
+    width: 450px;
+    float: left;
+}
+#main #left div.pages_wrap {
+    margin-top: 20px;
+}
+#main #left div.subject {
+    margin-left: 10px;
+}
+#main ul.postList li div.subject .titleWrap a {
+    display: inline-block;
+    font-size: 14px;
+    color: #105cb6;
+}
+#main ul.postList li div.subject .titleWrap a.title {
+    font-weight: bold;
+}
+#main #left ul.postList li div.subject p {
+    color: #999;
+    padding: 10px 0 0 0;
+}
+#main ul.postList li div.count {
+    color: #999;
+    text-align: center;
+    line-height: 18px;
+}
+#main ul.postList li div.count p {
+    display: block;
+    float: right;
+    width: 54px;
+    height: 36px;
+    background: none repeat scroll 0 0 #f4f4f4;
+    border-radius: 3px;
+    margin-left: 10px;
+    padding: 4px 0;
+}
+#main ul.postList li div.count p span {
+    font-weight: bold;
+}
+#main #left div.moderator span {
+    font-weight: normal;
+    color: #000;
+}
+#main #right {
+    width: 280px;
+    float: right;
+}
+#main #right .classList .title {
+    width: 260px;
+    padding: 8px 0;
+    text-indent: 12px;
+    color: #666;
+    font-weight: bold;
+    font-size: 13px;
+    border-bottom: 1px solid #e8e8e8;
+}
+#main #right .classList ul.listWrap {
+    width: 230px;
+    margin: 10px auto;
+}
+#main #right .classList ul.listWrap li h2 a {
+    color: #333;
+    font-weight: bold;
+}
+#main #right .classList ul.listWrap li ul {
+    margin: 2px 0 8px 0;
+}
+#main #right .classList ul.listWrap li ul li {
+    background: url(style_icon.png) 0 -389px no-repeat;
+    padding-left: 10px;
+    line-height: 26px;
+}

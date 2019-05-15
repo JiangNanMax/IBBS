@@ -1,0 +1,192 @@
+/* 基本格式 */
+* {
+
+}
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h4,h6,form,input,textarea,p {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Tahoma;
+}
+div {
+    display: block;
+}
+ul {
+    list-style: none;
+}
+img,a img {
+    border: none;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+body {
+    background: #f4f4f4;
+    color: #333;
+}
+.auto {
+    width: 960px;
+    margin: 0 auto;
+}
+#position {
+    background: url(style_icon.png) 0px -60px no-repeat;
+    text-indent: 20px;
+    line-height: 14px;
+    font-size: 14px;
+}
+#position a{
+    color: #666;
+}
+/* *基本格式* */
+.header_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    background: #488fce;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+#header {
+    height: 45px;
+    line-height: 45px;
+}
+#header .logo {
+    float: left;
+    width: 75px;
+    color: #fff;
+    font-size: 23px;
+    font-family: 微软雅黑;
+    font-weight: bold;
+}
+#header .nav a {
+    float: left;
+    width: 55px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+}
+#header .nav a.hover {
+    background: #3b7fc4;
+}
+#header .search {
+    float: left;
+    height: 28px;
+    background: none repeat scroll 0 0 #f2f2f2;
+    display: inline;
+    width: 160px;
+    border-radius: 2px;
+    margin: 9px 0 0 23px;
+}
+#header .search:hover {
+    background: #fff;
+}
+#header .search input.keyword {
+    float: left;
+    width: 130px;
+    height: 20px;
+    margin: 4px 0 0 2px;
+    border: none;
+}
+#header .search input.submit {
+    background: url(style_icon.png) 0 -593px;
+    float: right;
+    width: 25px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    margin: 0 0 0 0;
+}
+#header .login {
+    float: right;
+    width: 80px;
+}
+#header .login a {
+    color: #fff;
+    cursor: pointer;
+}
+#header .username {
+    float: right;
+    width: 300px;
+}
+#header .username a {
+    color: #fff;
+    float: right;
+    font-size: 14px;
+    cursor: pointer;
+}
+.place-holder {
+    margin-top: 55px;
+}
+a.btn {
+    display: block;
+    width: 30px;
+    height: 20px;
+    float: left;
+}
+a.publish {
+    color: #fff;
+    background: url(btn.png) 0 -120px;
+    padding: 6px 18px;
+    border: 1px solid #b1aeae;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.pages_wrap .pages {
+    float: right;
+    margin-right: 140px;
+    margin-top: 60px;
+}
+.pages a {
+    display: inline-block;
+    background: url(core_bg.png);
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    color: #666666;
+    margin-right: 3px;
+    padding: 6px 10px;
+    line-height: 13px;
+    cursor: pointer;
+    vertical-align: top;
+}
+.pages a:hover {
+    color: #fff;
+    background: #488fcf;
+}
+.pages span {
+    display: inline-block;
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    color: #666666;
+    margin-right: 3px;
+    padding: 6px 10px;
+    line-height: 13px;
+    color: #fff;
+    background: #488fcf;
+}
+#footer {
+    border-top: 1px solid #d3d3d3;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+#footer a {
+    color: #666;
+}
+#footer .bottom {
+    padding-bottom: 8px;
+}
+#footer .copyright {
+    color: #999;
+    font-size: 10px;
+    text-align: center;
+}
+
