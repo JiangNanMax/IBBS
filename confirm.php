@@ -15,13 +15,13 @@ if(!isset($_GET['message']) || !isset($_GET['url']) || !isset($_GET['return_url'
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="utf-8" />
-    <title>确认页</title>
-    <meta name="keywords" content="确认页" />
-    <meta name="description" content="确认页" />
-    <link rel="stylesheet" type="text/css" href="css/warn.css" />
+    <meta charset="UTF-8">
+    <title>确认操作</title>
+    <link rel="shortcut icon" href="css/bbs32.png">
+    <link rel="stylesheet" href="css/warn.css">
 </head>
 <body>
-    <div class="notice"><span class="pic ask"></span> <?php echo $_GET['message']?> <a style="color:red;" href="<?php echo $_GET['url']?>">确定</a> | <a style="color:#666;" href="<?php echo $_GET['return_url']?>">取消</a></div>
+<div class="warn"><span class="pic ask"></span>&nbsp;&nbsp;<?php echo $_GET['message'] ?>&nbsp;<a href="<?php echo $_GET['url'] ?>" style="color:red;">确认</a> |
+    <a href="<?php echo $_GET['return_url']?>" style="color:#666;">取消</a></div>
 </body>
 </html>

@@ -70,7 +70,7 @@ $count_all=get_num($conn, $query);
                                 $return_url = urlencode($_SERVER['REQUEST_URI']);
                                 $message = "你真的要删除帖子 {$data_content['title']} 吗？";
                                 $delete_url = "confirm.php?url={$url}&return_url={$return_url}&message={$message}";
-                                echo "编辑 <a href='{$delete_url}'>删除</a>";
+                                echo "<a href='content_update.php?id={$data_content['id']}'>编辑</a> <a href='{$delete_url}'>删除</a>";
                             }
                             ?>
                             发帖日期：<?php echo $data_content['publish_time']?>&nbsp;&nbsp;&nbsp;&nbsp;最后回复：<?php echo $last_time ?>

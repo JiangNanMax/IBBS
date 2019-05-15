@@ -22,7 +22,7 @@ $result_content = execute($conn, $query);
 if(mysqli_num_rows($result_content) == 1){
     $data_content = mysqli_fetch_assoc($result_content);
     if(check_user($member_id, $data_content['member_id'])){
-        $query="delete from sfk_content where id={$_GET['id']}";
+        $query="delete from ibbs_content where id={$_GET['id']}";
         execute($conn, $query);
         if(mysqli_affected_rows($conn) == 1){
             skip("member.php?id={$member_id}", 'ok', '删除成功!');
