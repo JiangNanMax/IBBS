@@ -29,7 +29,7 @@ $member_id = is_login($conn);
             <div class="right">
                 <div class="pubdate">
                     <span class="date" style="font-size:16px;">《Java编程思想》</span>
-                    <span class="floor"><a href="#">立即下载</a></span>
+                    <span class="floor"><a href="./uploads/05/16/thinking_in_java.pdf" download="thinking_in_java.pdf">立即下载</a></span>
                 </div>
                 <div class="content">本书共22章，包括操作符、控制执行流程、访问权限控制、复用类、多态、接口、通过异常处理错误、字符串、泛型、数组、容器深入研究、JavaI/O系统、枚举类型、并发以及图形化用户界面等内容。这些丰富的内容，包含了Java语言基础语法以及高级特性，适合各个层次的Java程序员阅读，同时也是高等院校讲授面向对象程序设计语言以及Java语言的绝佳教材和参考书</div>
             </div>
@@ -47,7 +47,7 @@ $member_id = is_login($conn);
             <div class="right">
                 <div class="pubdate">
                     <span class="date" style="font-size:16px;">《Java编程思想》</span>
-                    <span class="floor"><a href="#">立即下载</a></span>
+                    <span class="floor"><a href="./uploads/05/16/thinking_in_java.pdf" download="thinking_in_java.pdf">立即下载</a></span>
                 </div>
                 <div class="content">本书共22章，包括操作符、控制执行流程、访问权限控制、复用类、多态、接口、通过异常处理错误、字符串、泛型、数组、容器深入研究、JavaI/O系统、枚举类型、并发以及图形化用户界面等内容。这些丰富的内容，包含了Java语言基础语法以及高级特性，适合各个层次的Java程序员阅读，同时也是高等院校讲授面向对象程序设计语言以及Java语言的绝佳教材和参考书</div>
             </div>
@@ -65,7 +65,7 @@ $member_id = is_login($conn);
             <div class="right">
                 <div class="pubdate">
                     <span class="date" style="font-size:16px;">《Java编程思想》</span>
-                    <span class="floor"><a href="#">立即下载</a></span>
+                    <span class="floor"><a href="./uploads/05/16/thinking_in_java.pdf" download="thinking_in_java.pdf">立即下载</a></span>
                 </div>
                 <div class="content">本书共22章，包括操作符、控制执行流程、访问权限控制、复用类、多态、接口、通过异常处理错误、字符串、泛型、数组、容器深入研究、JavaI/O系统、枚举类型、并发以及图形化用户界面等内容。这些丰富的内容，包含了Java语言基础语法以及高级特性，适合各个层次的Java程序员阅读，同时也是高等院校讲授面向对象程序设计语言以及Java语言的绝佳教材和参考书</div>
             </div>
@@ -83,7 +83,7 @@ $member_id = is_login($conn);
             <div class="right">
                 <div class="pubdate">
                     <span class="date" style="font-size:16px;">《Java编程思想》</span>
-                    <span class="floor"><a href="#">立即下载</a></span>
+                    <span class="floor"><a href="./uploads/05/16/thinking_in_java.pdf" download="thinking_in_java.pdf">立即下载</a></span>
                 </div>
                 <div class="content">本书共22章，包括操作符、控制执行流程、访问权限控制、复用类、多态、接口、通过异常处理错误、字符串、泛型、数组、容器深入研究、JavaI/O系统、枚举类型、并发以及图形化用户界面等内容。这些丰富的内容，包含了Java语言基础语法以及高级特性，适合各个层次的Java程序员阅读，同时也是高等院校讲授面向对象程序设计语言以及Java语言的绝佳教材和参考书</div>
             </div>
@@ -101,7 +101,7 @@ $member_id = is_login($conn);
             <div class="right">
                 <div class="pubdate">
                     <span class="date" style="font-size:16px;">《Java编程思想》</span>
-                    <span class="floor"><a href="#">立即下载</a></span>
+                    <span class="floor"><a href="./uploads/05/16/thinking_in_java.pdf" download="thinking_in_java.pdf">立即下载</a></span>
                 </div>
                 <div class="content">本书共22章，包括操作符、控制执行流程、访问权限控制、复用类、多态、接口、通过异常处理错误、字符串、泛型、数组、容器深入研究、JavaI/O系统、枚举类型、并发以及图形化用户界面等内容。这些丰富的内容，包含了Java语言基础语法以及高级特性，适合各个层次的Java程序员阅读，同时也是高等院校讲授面向对象程序设计语言以及Java语言的绝佳教材和参考书</div>
             </div>
