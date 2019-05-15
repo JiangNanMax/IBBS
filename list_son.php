@@ -68,12 +68,12 @@ $result_m = execute($conn, $query);
             <div style="clear:both;"></div>
             <ul class="postList">
                 <?php
-                    $page = page($count_all, 1, 5);
+                    $page = page($count_all, 5, 5);
 
-                    $query = "select ibbs_content.title,ibbs_content.id,ibbs_content.publish_time,ibbs_content.times,ibbs_member.username,ibbs_member.photo from ibbs_content join ibbs_member on ibbs_content.member_id=ibbs_member.id where ibbs_content.module_id={$_GET['id']} {$page['limit']}";
+                    $query = "select ibbs_content.title,ibbs_content.id,ibbs_content.publish_time,ibbs_content.times,ibbs_content.member_id,ibbs_member.username,ibbs_member.photo from ibbs_content join ibbs_member on ibbs_content.member_id=ibbs_member.id where ibbs_content.module_id={$_GET['id']} {$page['limit']}";
                     $result = execute($conn, $query);
                     while ($data = mysqli_fetch_assoc($result)) {
-                    $data['title'] = htmlspecialchars(['title']);
+                    $data['title'] = htmlspecialchars($data['title']);
                     $query="select reply_time from ibbs_reply where content_id={$data['id']} order by id desc limit 1";
                     $result_last_reply = execute($conn, $query);
                     if(mysqli_num_rows($result_last_reply) == 0){
@@ -86,7 +86,7 @@ $result_m = execute($conn, $query);
                 ?>
                     <li>
                         <div class="smallPic">
-                            <a href="">
+                            <a href="member.php?id=<?php echo $data['member_id'] ?>">
                                 <img width="45" height="45" src="<?php if ($data['photo'] != '') {echo $data['photo'];} else {echo 'css/photo.jpg';} ?>" alt="">
                             </a>
                         </div>

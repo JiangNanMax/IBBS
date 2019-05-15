@@ -39,7 +39,7 @@ $note=<<<JN
             <div class="username">
                 <a href="../logout.php">退出</a>
 		        <a style="color:#fff;">&nbsp;|&nbsp;</a>
-		        <a>{$_COOKIE['username']}</a>
+		        <a href="../member.php?id={$member_id}">{$_COOKIE['username']}</a>
             </div>
 JN;
             echo ($note);
