@@ -48,19 +48,19 @@ if(mysqli_num_rows($result_content) == 1){
     <div id="position" class="auto">
         <a href="index.php">首页</a> &gt; 编辑
     </div>
-    <div id="publish">
+    <div id="publish" class="auto">
         <form method="post">
             <select name="module_id">
                 <option value='-1'>请选择一个子版块</option>
                 <?php
-                $query="select * from sfk_father_module order by sort desc";
-                $result_father=execute($link, $query);
+                $query="select * from ibbs_father_module order by sort desc";
+                $result_father = execute($conn, $query);
                 while ($data_father=mysqli_fetch_assoc($result_father)){
                     echo "<optgroup label='{$data_father['module_name']}'>";
                     $query="select * from sfk_son_module where father_module_id={$data_father['id']} order by sort desc";
-                    $result_son=execute($link, $query);
-                    while ($data_son=mysqli_fetch_assoc($result_son)){
-                        if($data_son['id']==$data_content['module_id']){
+                    $result_son=execute($conn, $query);
+                    while ($data_son = mysqli_fetch_assoc($result_son)){
+                        if($data_son['id'] == $data_content['module_id']){
                             echo "<option selected='selected' value='{$data_son['id']}'>{$data_son['module_name']}</option>";
                         }else{
                             echo "<option value='{$data_son['id']}'>{$data_son['module_name']}</option>";

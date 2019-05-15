@@ -87,7 +87,7 @@ $result_m = execute($conn, $query);
                     <li>
                         <div class="smallPic">
                             <a href="member.php?id=<?php echo $data['member_id'] ?>">
-                                <img width="45" height="45" src="<?php if ($data['photo'] != '') {echo $data['photo'];} else {echo 'css/photo.jpg';} ?>" alt="">
+                                <img width="45" height="45" src="<?php if ($data['photo'] != '') {echo SUB_URL.$data['photo'];} else {echo 'css/photo.jpg';} ?>" alt="">
                             </a>
                         </div>
                         <div class="subject">

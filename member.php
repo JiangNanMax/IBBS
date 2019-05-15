@@ -59,7 +59,7 @@ $count_all=get_num($conn, $query);
                 ?>
                 <li>
                     <div class="smallPic">
-                        <img width="45" height="45" src="<?php if($data_content['photo']!=''){echo $data_content['photo'];}else{echo 'css/photo.jpg';}?>" />
+                        <img width="45" height="45" src="<?php if($data_content['photo']!=''){echo SUB_URL.$data_content['photo'];}else{echo 'css/photo.jpg';}?>" />
                     </div>
                     <div class="subject">
                         <div class="titleWrap"><h2><a target="_blank" href="show_detail.php?id=<?php echo $data_content['id']?>"><?php echo $data_content['title']?></a></h2></div>
@@ -105,6 +105,11 @@ $count_all=get_num($conn, $query);
                 <dd class="name"><?php echo $data_member['username']?></dd>
                 <dd>发帖数：<?php echo $count_all?></dd>
                 <!--<dd>操作：<a target="_blank" href="">修改头像</a> | <a target="_blank" href="">修改密码</a></dd>-->
+                <?php
+                if($member_id == $data_member['id']){
+                ?>
+                <dd>操作：<a target="_blank" href="member_photo_update.php">修改头像</a><!--  | <a target="_blank" href="">修改密码</a></dd> -->
+                <?php }?>
             </dl>
             <div style="clear:both;"></div>
         </div>
