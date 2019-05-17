@@ -15,7 +15,7 @@ $template['css'] = array('css/index.css');
 if (isset($_POST['submit'])) {
     $conn = connect();
 
-    $query = "insert into ibbs_moment (title, introduction, url) values ('{$_POST['title']}', '{$_POST['info']}', '{$_POST['url']}', now())";
+    $query = "insert into ibbs_moment (title, introduction, url, add_time) values ('{$_POST['title']}', '{$_POST['info']}', '{$_POST['url']}', now())";
     execute($conn, $query);
     if (mysqli_affected_rows($conn) == 1) {
         skip('moments.php', 'ok', '动态添加成功！');
@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
 ?>
 <?php include 'inc/header.inc.php' ?>
 <div id="main">
-    <div class="title" style="margin-bottom:20px;">添加父版块</div>
+    <div class="title" style="margin-bottom:20px;">添加动态</div>
     <form method="post">
         <table class="au">
             <tr>

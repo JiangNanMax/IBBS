@@ -48,7 +48,7 @@
         <li>
             <div class="small_title">内容管理</div>
             <ul class="child">
-                <li><a href="father_module.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'index.php') {echo "current";} ?>">父版块列表</a></li>
+                <li><a href="index.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'index.php') {echo "current";} ?>">父版块列表</a></li>
                 <?php
                     if (basename($_SERVER['SCRIPT_NAME']) == 'father_module_update.php') {
                         echo '<li><a href="" class="current">修改父版块</a></li>';
