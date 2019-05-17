@@ -18,7 +18,7 @@ $conn = connect();
 $save_path = '';
 $upload = null;
 
-if (isset($_POST['submit']) == '保存图片') {
+if (isset($_POST['pic'])) {
     $save_path = '../resources/uploads'.date('/Y/m/d/');
     $upload = upload($save_path,'2M','photo');
     if(!$upload['return']) {
@@ -27,6 +27,8 @@ if (isset($_POST['submit']) == '保存图片') {
     } else {
         skip('resource_add.php', 'ok', $save_path);
     }
+} else if (isset($_POST['submit'])) {
+    skip('resource_add.php', 'ok', 'it is submit');
 }
 
 
@@ -34,7 +36,22 @@ if (isset($_POST['submit']) == '保存图片') {
 ?>
 <?php include 'inc/header.inc.php' ?>
 <div id="main">
-    <div class="title" style="margin-bottom:20px;">添加动态</div>
+    <div class="title" style="margin-bottom:20px;">添加资源</div>
+    <form method="post">
+        <table class="au">
+            <tr>
+                <td>封面图片</td>
+                <td>
+                    <input style="cursor:pointer;" width="100" type="file" name="photo" /><br /><br />
+                    <input class="btn" type="submit" name="pic" value="保存" />
+                </td>
+                <td class="note">
+                    务必添加封面图片
+                </td>
+
+            </tr>
+        </table>
+    </form>
     <form method="post">
         <table class="au">
             <tr>
@@ -56,21 +73,6 @@ if (isset($_POST['submit']) == '保存图片') {
             </tr>
         </table>
         <input style="margin-left:110px;margin-top:20px;cursor:pointer;" class="btn" type="submit" name="submit" value="添加" />
-    </form>
-    <form method="post">
-        <table class="au">
-            <tr>
-                <td>封面图片</td>
-                <td>
-                    <input style="cursor:pointer;" width="100" type="file" name="photo" /><br /><br />
-                    <input class="btn" type="submit" name="submit" value="保存图片" />
-                </td>
-                <td class="note">
-                    务必添加封面图片
-                </td>
-
-            </tr>
-        </table>
     </form>
 </div>
 <?php include 'inc/footer.inc.php' ?>
