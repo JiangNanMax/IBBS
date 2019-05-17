@@ -100,7 +100,7 @@ $count_all=get_num($conn, $query);
         <div class="member_big">
             <dl>
                 <dt>
-                    <img width="180" height="180" src="<?php if($data_member['photo']!=''){echo SUB_URL.$data_content['photo'];}else{echo 'css/photo.jpg';}?>" />
+                    <img width="180" height="180" src="<?php if($data_member['photo']!=''){echo SUB_URL.$data_member['photo'];}else{echo 'css/photo.jpg';}?>" />
                 </dt>
                 <dd class="name"><?php echo $data_member['username']?></dd>
                 <dd>发帖数：<?php echo $count_all?></dd>

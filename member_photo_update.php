@@ -71,7 +71,7 @@ if(isset($_POST['submit'])){
     <h2>更改头像</h2>
     <div>
         <h3>原头像：</h3>
-        <img src="<?php if($data_member['photo']!=''){echo SUB_URL.$data_member['photo'];}else{echo 'css/photo.jpg';}?>" />
+        <img width=180 height=180 src="<?php if($data_member['photo']!=''){echo SUB_URL.$data_member['photo'];}else{echo 'css/photo.jpg';}?>" />
         <br />
         *建议图片尺寸：180*180
     </div>

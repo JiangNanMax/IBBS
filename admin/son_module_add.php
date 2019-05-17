@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
                     <textarea name="info"></textarea>
                 </td>
                 <td class="note">
-                    版块名称不得为空，且最长不得超过50个字符
+                    建议添加版块简介，优化用户体验
                 </td>
             </tr>
             <tr>

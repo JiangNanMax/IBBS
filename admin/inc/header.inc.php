@@ -48,7 +48,7 @@
         <li>
             <div class="small_title">内容管理</div>
             <ul class="child">
-                <li><a href="father_module.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'father_module.php') {echo "current";} ?>">父版块列表</a></li>
+                <li><a href="father_module.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'index.php') {echo "current";} ?>">父版块列表</a></li>
                 <?php
                     if (basename($_SERVER['SCRIPT_NAME']) == 'father_module_update.php') {
                         echo '<li><a href="" class="current">修改父版块</a></li>';
@@ -71,5 +71,27 @@
                 <li><a href="#">用户列表</a></li>
             </ul>
         </li>
+
+        <li>
+            <div class="small_title">动态管理</div>
+            <ul class="child">
+                <li><a href="moments.php">动态列表</a></li>
+                <li><a href="moment_add.php">添加新动态</a></li>
+                <?php
+                    if (basename($_SERVER['SCRIPT_NAME']) == 'moment_update.php') {
+                        echo '<li><a href="" class="current">修改动态</a></li>';
+                    }
+                ?>
+            </ul>
+        </li>
+
+        <li>
+            <div class="small_title">资源管理</div>
+            <ul class="child">
+                <li><a href="resources.php">资源列表</a></li>
+                <li><a href="resource_add.php">添加新资源</a></li>
+            </ul>
+        </li>
+
     </ul>
 </div>

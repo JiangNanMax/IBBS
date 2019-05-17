@@ -25,7 +25,7 @@
         <div class="nav">
             <a href="index.php" class="hover">首页</a>
             <a href="./moments/index.php">动态</a>
-            <a href="./moments/index.php">资源</a>
+            <a href="./resources/index.php">资源</a>
         </div>
         <div class="search">
             <form action="">
