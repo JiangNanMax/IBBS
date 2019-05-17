@@ -75,8 +75,8 @@
         <li>
             <div class="small_title">动态管理</div>
             <ul class="child">
-                <li><a href="moments.php">动态列表</a></li>
-                <li><a href="moment_add.php">添加新动态</a></li>
+                <li><a href="moments.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'moments.php') {echo "current";} ?>">动态列表</a></li>
+                <li><a href="moment_add.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'moment_add.php') {echo "current";} ?>">添加新动态</a></li>
                 <?php
                     if (basename($_SERVER['SCRIPT_NAME']) == 'moment_update.php') {
                         echo '<li><a href="" class="current">修改动态</a></li>';

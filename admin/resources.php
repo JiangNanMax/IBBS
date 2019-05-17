@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: jiangnan
  * Date: 2019/5/17
- * Time: 09:52
+ * Time: 21:03
  */
 include_once '../inc/config.inc.php';
 include_once '../inc/mysql.inc.php';
@@ -16,21 +16,22 @@ $conn = connect();
 <?php include 'inc/header.inc.php' ?>
 
 <div id="main">
-    <div class="title">动态列表</div>
+    <div class="title">资源列表</div>
     <table class="list">
         <tr>
             <th>名称</th>
-            <th>链接</th>
+            <th>存储位置</th>
             <th>添加时间</th>
+            <th>封面图</th>
             <th>操作</th>
         </tr>
         <?php
-        $query = 'select * from ibbs_moment';
+        $query = 'select * from ibbs_resource';
         $result = execute($conn, $query);
         while($data = mysqli_fetch_assoc($result)) {
-            $url = urlencode("moment_delete.php?id={$data['id']}");
+            $url = urlencode("resource_delete.php?id={$data['id']}");
             $return_url = urlencode($_SERVER['REQUEST_URI']);
-            $message = "确定要删除动态 {$data['title']} 吗？";
+            $message = "确定要删除资源 {$data['title']} 吗？";
             $delete_url = "confirm.php?url={$url}&return_url={$return_url}&message={$message}";
             //echo $delete_url;
             $html=<<<JN
@@ -38,7 +39,9 @@ $conn = connect();
             <td>{$data['title']}&nbsp;[id:&nbsp;{$data['id']}]</td>
             <td>{$data['url']}</td>
             <td>{$data['add_time']}</td>
-            <td><a href="{$data['url']}">[访问]</a>&nbsp;&nbsp;<a href="moment_update.php?id={$data['id']}">[编辑]</a>&nbsp;&nbsp;<a href="$delete_url">[删除]</a></td>
+            <!-- 待转为动态获取图片链接 -->
+            <td><img width=80 height=110 src="css/thinking_in_java.jpg" alt=""></td>
+            <td><a href="{$data['url']}">[访问]</a>&nbsp;&nbsp;<a href="resource_update.php?id={$data['id']}">[编辑]</a>&nbsp;&nbsp;<a href="$delete_url">[删除]</a></td>
         </tr>
 JN;
             echo $html;

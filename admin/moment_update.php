@@ -42,7 +42,7 @@ $data = mysqli_fetch_assoc($result);
             <table class="au">
                 <tr>
                     <td>动态名称</td>
-                    <td><input name="module_name" value="<?php echo $data['module_name']?>" type="text" /></td>
+                    <td><input name="module_name" value="<?php echo $data['title']?>" type="text" /></td>
                     <td class="note">
                         动态名称不得为空，且最长不得超过50个字符
                     </td>
@@ -51,7 +51,7 @@ $data = mysqli_fetch_assoc($result);
                 <tr>
                     <td>动态简介</td>
                     <td>
-                        <textarea name="info"><?php echo $data['info']?></textarea>
+                        <textarea name="info"><?php echo $data['introduction']?></textarea>
                     </td>
                     <td class="note">
                         建议添加有关该动态的简要介绍
