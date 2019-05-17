@@ -54,7 +54,11 @@ if (isset($_POST['submit']) == '保存图片') {
                     建议添加有关该资源的简要介绍
                 </td>
             </tr>
-
+        </table>
+        <input style="margin-left:110px;margin-top:20px;cursor:pointer;" class="btn" type="submit" name="submit" value="添加" />
+    </form>
+    <form method="post">
+        <table class="au">
             <tr>
                 <td>封面图片</td>
                 <td>
@@ -66,10 +70,10 @@ if (isset($_POST['submit']) == '保存图片') {
                 </td>
 
             </tr>
-
         </table>
-        <input style="margin-left:110px;margin-top:20px;cursor:pointer;" class="btn" type="submit" name="submit" value="添加" />
     </form>
 </div>
 <?php include 'inc/footer.inc.php' ?>
+
+
 
