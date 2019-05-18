@@ -26,19 +26,19 @@ if (isset($_POST['pic'])) {
         skip('resource_add.php', 'error', $upload['error']);
     }
     else {
-        setcookie('picsavepath', $save_path, time() + 3600);
+        setcookie('picsavepath', $upload['save_path'], time() + 3600);
     }
 }
 
 if (isset($_POST['book'])) {
     $save_path = '../resources/uploads'.date('/Y/m/d/');
-    $upload = upload($save_path,'200M','book');
+    $upload = upload($save_path,'200M','photo');
     if(!$upload['return']) {
         $save_path = '';
         skip('resource_add.php', 'error', $upload['error']);
     }
     else {
-        setcookie('booksavepath', $save_path, time() + 3600);
+        setcookie('booksavepath', $upload['save_path'], time() + 3600);
     }
 }
 
@@ -49,10 +49,10 @@ if (isset($_POST['submit'])) {
     $query = "insert into ibbs_resource (title, introduction, url, photo, add_time) values ('{$_POST['title']}', '{$_POST['info']}', '{$book_path}', '{$pic_path}', now())";
     execute($conn, $query);
     if (mysqli_affected_rows($conn) == 1) {
-        skip('resources.php', 'ok', '动态添加成功！');
+        skip('resources.php', 'ok', '资源添加成功！');
     }
     else {
-        skip('resource_add.php', 'error', '动态添加失败，请重试！');
+        skip('resource_add.php', 'error', '资源添加失败，请重试！');
     }
 }
 
@@ -63,7 +63,7 @@ if (isset($_POST['submit'])) {
     <form method="post" enctype="multipart/form-data">
         <table class="au">
             <tr>
-                <td>封面图片</td>
+                <td>封面</td>
                 <td>
                     <input style="cursor:pointer;" width="100" type="file" name="photo" /><br /><br />
                     <input class="btn" type="submit" name="pic" value="保存" />
@@ -71,7 +71,6 @@ if (isset($_POST['submit'])) {
                 <td class="note">
                     务必添加封面图片(最大2M),添加后请点击保存按钮，页面刷新完成后再继续添加下列内容
                 </td>
-
             </tr>
         </table>
     </form>
@@ -79,13 +78,13 @@ if (isset($_POST['submit'])) {
     <form method="post" enctype="multipart/form-data">
         <table class="au">
             <tr>
-                <td>资源文件</td>
+                <td>文件</td>
                 <td>
-                    <input style="cursor:pointer;" width="100" type="file" name="pdf" /><br /><br />
+                    <input style="cursor:pointer;" width="100" type="file" name="photo" /><br /><br />
                     <input class="btn" type="submit" name="book" value="保存" />
                 </td>
                 <td class="note">
-                    务必添加资源文件(当前仅支持.pdf文件,最大200M),添加后请点击保存按钮，页面刷新完成后再继续添加下列内容
+                    务必添加资源文件(当前仅支持.pdf文件,最大180M),添加后请点击保存按钮，页面刷新完成后再继续添加下列内容
                 </td>
             </tr>
         </table>

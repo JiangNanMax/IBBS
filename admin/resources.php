@@ -33,6 +33,7 @@ $conn = connect();
             $return_url = urlencode($_SERVER['REQUEST_URI']);
             $message = "确定要删除资源 {$data['title']} 吗？";
             $delete_url = "confirm.php?url={$url}&return_url={$return_url}&message={$message}";
+            $pic_path = $data['photo'];
             //echo $delete_url;
             $html=<<<JN
         <tr>
@@ -40,7 +41,7 @@ $conn = connect();
             <td>{$data['url']}</td>
             <td>{$data['add_time']}</td>
             <!-- 待转为动态获取图片链接 -->
-            <td><img width=80 height=110 src="css/thinking_in_java.jpg" alt=""></td>
+            <td><img width=80 height=110 src="{$pic_path}" alt=""></td>
             <td><a href="{$data['url']}">[访问]</a>&nbsp;&nbsp;<a href="resource_update.php?id={$data['id']}">[编辑]</a>&nbsp;&nbsp;<a href="$delete_url">[删除]</a></td>
         </tr>
 JN;
