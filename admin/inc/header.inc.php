@@ -88,8 +88,8 @@
         <li>
             <div class="small_title">资源管理</div>
             <ul class="child">
-                <li><a href="resources.php">资源列表</a></li>
-                <li><a href="resource_add.php">添加新资源</a></li>
+                <li><a href="resources.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'resources.php') {echo "current";} ?>">资源列表</a></li>
+                <li><a href="resource_add.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'resource_add.php') {echo "current";} ?>">添加新资源</a></li>
             </ul>
         </li>
 

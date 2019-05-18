@@ -24,20 +24,21 @@ if (isset($_POST['pic'])) {
     if(!$upload['return']) {
         $save_path = '';
         skip('resource_add.php', 'error', $upload['error']);
-    } else {
-        skip('resource_add.php', 'ok', $save_path);
     }
-} else if (isset($_POST['submit'])) {
-    skip('resource_add.php', 'ok', 'it is submit');
+    else {
+        setcookie('savepath', $save_path, time() + 300);
+    }
 }
-
-
+if (isset($_POST['submit'])) {
+    $pic_path = $_COOKIE['savepath'];
+    skip('resource_add.php', 'ok', $pic_path);
+}
 
 ?>
 <?php include 'inc/header.inc.php' ?>
 <div id="main">
     <div class="title" style="margin-bottom:20px;">添加资源</div>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <table class="au">
             <tr>
                 <td>封面图片</td>
@@ -46,7 +47,7 @@ if (isset($_POST['pic'])) {
                     <input class="btn" type="submit" name="pic" value="保存" />
                 </td>
                 <td class="note">
-                    务必添加封面图片
+                    务必添加封面图片,添加后请点击保存按钮，页面刷新完成后再继续添加下列内容
                 </td>
 
             </tr>
