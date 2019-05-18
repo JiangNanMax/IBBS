@@ -23,7 +23,7 @@ if (!mysqli_num_rows($result)) {
 }
 
 if (isset($_POST['submit'])) {
-    $query = "update ibbs_moment set title='{$_POST['title']}',info={$_POST['info']},url={$_POST['url']} where id={$_GET['id']}";
+    $query = "update ibbs_moment set title='{$_POST['title']}',introduction={$_POST['info']},url={$_POST['url']} where id={$_GET['id']}";
     $result = execute($conn, $query);
     if (mysqli_affected_rows($conn) == 1) {
         skip('moments.php', 'ok', '修改成功！');
