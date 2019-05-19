@@ -40,8 +40,8 @@
             <div class="small_title">系统</div>
             <ul class="child">
                 <li><a href="#" class="current">系统信息</a></li>
-                <li><a href="#">管理员</a></li>
-                <li><a href="#">添加管理员</a></li>
+                <li><a <?php if(basename($_SERVER['SCRIPT_NAME'])=='manage.php'){echo 'class="current"';}?> href="manage.php">管理员</a></li>
+                <li><a <?php if(basename($_SERVER['SCRIPT_NAME'])=='manage_add.php'){echo 'class="current"';}?> href="manage_add.php">添加管理员</a></li>
                 <li><a href="#">站点设置</a></li>
             </ul>
         </li>
@@ -90,6 +90,11 @@
             <ul class="child">
                 <li><a href="resources.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'resources.php') {echo "current";} ?>">资源列表</a></li>
                 <li><a href="resource_add.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'resource_add.php') {echo "current";} ?>">添加新资源</a></li>
+                <?php
+                if (basename($_SERVER['SCRIPT_NAME']) == 'resource_update.php') {
+                    echo '<li><a href="" class="current">修改资源</a></li>';
+                }
+                ?>
             </ul>
         </li>
 

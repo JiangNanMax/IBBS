@@ -32,8 +32,8 @@ $member_id = is_login($conn);
         while ($data_resource = mysqli_fetch_assoc($result_resource)) {
         $data_resource['title'] = nl2br(htmlspecialchars($data_resource['title']));
         $data_resource['introduction'] = nl2br(htmlspecialchars($data_resource['introduction']));
-        $pic_path = substr($data_resource['photo'],1);
-        $book_path = substr($data_resource['url'],1);
+        $pic_path = '.'.substr($data_resource['photo'],12);
+        $book_path = '.'.substr($data_resource['url'],12);
         ?>
 
             <div class="contentWrap">
@@ -41,11 +41,11 @@ $member_id = is_login($conn);
                     <div class="head_img">
                         <img width=120 height=170 src="<?php echo $pic_path ?>" alt="">
                     </div>
-                </div>
+                </div>lo..lo9.
                 <div class="right">
                     <div class="pubdate">
                         <span class="date" style="font-size:16px;">《<?php echo $data_resource['title'] ?>》</span>
-                        <span class="floor"><a href="<?php echo $book_path ?>" download="<?php echo($data_resource['title'].'pdf') ?>">立即下载</a></span>
+                        <span class="floor"><a href="<?php echo $book_path ?>" download="<?php echo($data_resource['title']) ?>">立即下载</a></span>
                     </div>
                     <div class="content"><?php echo $data_resource['introduction'] ?></div>
                 </div>

@@ -5,7 +5,7 @@
  * Date: 2019/5/15
  * Time: 21:24
  */
-function upload($save_path,$custom_upload_max_filesize,$key,$type=array('jpg','jpeg','png', 'JPG', 'JPEG', 'PNG')){
+function upload($save_path,$custom_upload_max_filesize,$key,$type=array('jpg','jpeg','png', 'JPG', 'JPEG', 'PNG', 'pdf', 'PDF')){
     $return_data = array();
     $phpini = ini_get('upload_max_filesize');
     $phpini_unit = strtoupper(substr($phpini,-1));
