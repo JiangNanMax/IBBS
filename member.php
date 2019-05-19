@@ -15,6 +15,7 @@ $template['css'] = array('css/public.css','css/list.css','css/member.css');
 
 $conn = connect();
 $member_id = is_login($conn);
+$is_manage_login = is_manage_login($conn);
 
 if(!isset($_GET['id']) || !is_numeric($_GET['id'])){
     skip('index.php', 'error', '参数错误!');
@@ -65,7 +66,7 @@ $count_all=get_num($conn, $query);
                         <div class="titleWrap"><h2><a target="_blank" href="show_detail.php?id=<?php echo $data_content['id']?>"><?php echo $data_content['title']?></a></h2></div>
                         <p>
                             <?php
-                            if(check_user($member_id, $data_content['member_id'])){
+                            if(check_user($member_id, $data_content['member_id'], $is_manage_login)){
                                 $url = urlencode("content_delete.php?id={$data_content['id']}");
                                 $return_url = urlencode($_SERVER['REQUEST_URI']);
                                 $message = "你真的要删除帖子 {$data_content['title']} 吗？";
