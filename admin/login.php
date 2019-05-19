@@ -17,7 +17,7 @@ if(isset($_POST['submit'])) {
     include_once 'inc/login_check.inc.php';
     $_POST = escape($conn, $_POST);
     $query = "select * from ibbs_manage where name='{$_POST['name']}' and pw=md5('{$_POST['pw']}')";
-    $result = execute($link, $query);
+    $result = execute($conn, $query);
     if(mysqli_num_rows($result) == 1){
         $data = mysqli_fetch_assoc($result);
         $_SESSION['manage']['name'] = $data['name'];

@@ -10,13 +10,13 @@ include_once '../inc/mysql.inc.php';
 include_once '../inc/tool.inc.php';
 
 $conn = connect();
-//include_once 'inc/is_manage_login.inc.php';
+include_once './inc/is_manage_login.inc.php';
 
 $template['title'] = '管理员添加页';
-$template['css'] = array('style/public.css');
+$template['css'] = array('css/index.css');
 
 if(isset($_POST['submit'])) {
-    include 'inc/check_manage.inc.php';
+    include './inc/manage_check.inc.php';
     $query = "insert into ibbs_manage(name,pw,create_time,level) values('{$_POST['name']}',md5({$_POST['pw']}),now(),{$_POST['level']})";
     execute($conn,$query);
     if(mysqli_affected_rows($conn) == 1) {
