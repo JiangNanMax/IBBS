@@ -89,7 +89,7 @@ if(isset($_POST['submit'])) {
 </head>
 <body>
 <div id="main">
-    <div class="title">管理员录</div>
+    <div class="title">管理员登录</div>
     <form method="post">
         <label>用户名：<input class="text" type="text" name="name" /></label>
         <label>密　码：<input class="text" type="password" name="pw" /></label>
