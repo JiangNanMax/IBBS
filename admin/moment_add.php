@@ -9,12 +9,13 @@ include_once '../inc/config.inc.php';
 include_once '../inc/mysql.inc.php';
 include_once '../inc/tool.inc.php';
 
+$conn = connect();
+include_once 'inc/is_manage_login.inc.php';
+
 $template['title'] = '添加动态';
 $template['css'] = array('css/index.css');
 
 if (isset($_POST['submit'])) {
-    $conn = connect();
-
     $query = "insert into ibbs_moment (title, introduction, url, add_time) values ('{$_POST['title']}', '{$_POST['info']}', '{$_POST['url']}', now())";
     execute($conn, $query);
     if (mysqli_affected_rows($conn) == 1) {

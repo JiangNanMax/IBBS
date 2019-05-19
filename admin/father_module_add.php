@@ -8,16 +8,19 @@
 include_once '../inc/config.inc.php';
 include_once '../inc/mysql.inc.php';
 include_once '../inc/tool.inc.php';
+
+$conn = connect();
+include_once 'inc/is_manage_login.inc.php';
+
 $template['title'] = '添加父版块';
 $template['css'] = array('css/index.css');
 if (isset($_POST['submit'])) {
-    $conn = connect();
     $check_type = 'add';
     include 'inc/father_module_check.inc.php';
     $query = "insert into ibbs_father_module (module_name, sort) values ('{$_POST['module_name']}', '{$_POST['sort']}')";
     execute($conn, $query);
     if (mysqli_affected_rows($conn) == 1) {
-        skip('index.php', 'ok', '父版块添加成功！');
+        skip('father_module.php', 'ok', '父版块添加成功！');
     }
     else {
         skip('father_module_add.php', 'error', '父版块添加失败，请重试！');

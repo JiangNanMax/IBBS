@@ -8,12 +8,15 @@
 include_once '../inc/config.inc.php';
 include_once '../inc/mysql.inc.php';
 include_once '../inc/tool.inc.php';
+
+$conn = connect();
+include_once 'inc/is_manage_login.inc.php';
+
 $template['title'] = '修改子版块';
 $template['css'] = array('css/index.css');
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     skip('son_module.php', 'error', 'id参数错误！');
 }
-$conn = connect();
 $query = "select * from ibbs_son_module where id={$_GET['id']}";
 $result = execute($conn, $query);
 if (!mysqli_num_rows($result)) {

@@ -8,16 +8,19 @@
 include_once '../inc/config.inc.php';
 include_once '../inc/mysql.inc.php';
 include_once '../inc/tool.inc.php';
+
+$conn = connect();
+include_once 'inc/is_manage_login.inc.php';
+
 $template['title'] = '修改父版块';
 $template['css'] = array('css/index.css');
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-    skip('index.php', 'error', 'id参数错误！');
+    skip('father_module.php', 'error', '参数错误！');
 }
-$conn = connect();
 $query = "select * from ibbs_father_module where id={$_GET['id']}";
 $result = execute($conn, $query);
 if (!mysqli_num_rows($result)) {
-    skip('index.php', 'error', '该板块不存在！');
+    skip('father_module.php', 'error', '该板块不存在！');
 }
 if (isset($_POST['submit'])) {
     $check_type = 'update';
@@ -27,10 +30,10 @@ if (isset($_POST['submit'])) {
     //exit();
     $result = execute($conn, $query);
     if (mysqli_affected_rows($conn) == 1) {
-        skip('index.php', 'ok', '修改成功！');
+        skip('father_module.php', 'ok', '修改成功！');
     }
     else {
-        skip('index.php', 'error', '修改失败，请重试！');
+        skip('father_module.php', 'error', '修改失败，请重试！');
     }
 }
 $data = mysqli_fetch_assoc($result);

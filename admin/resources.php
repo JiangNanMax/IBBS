@@ -7,11 +7,13 @@
  */
 include_once '../inc/config.inc.php';
 include_once '../inc/mysql.inc.php';
+include_once '../inc/tool.inc.php';
+
+$conn = connect();
+include_once 'inc/is_manage_login.inc.php';
 
 $template['title'] = "IBBS后台管理";
 $template['css'] = array('css/index.css');
-
-$conn = connect();
 ?>
 <?php include 'inc/header.inc.php' ?>
 

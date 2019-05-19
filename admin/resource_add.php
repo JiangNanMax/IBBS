@@ -10,10 +10,11 @@ include_once '../inc/mysql.inc.php';
 include_once '../inc/tool.inc.php';
 include_once 'inc/upload.inc.php';
 
+$conn = connect();
+include_once 'inc/is_manage_login.inc.php';
+
 $template['title'] = '添加资源';
 $template['css'] = array('css/index.css');
-
-$conn = connect();
 
 $save_path = '';
 $upload = null;
