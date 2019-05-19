@@ -43,17 +43,14 @@ $member_id = is_login($conn);
 
                 <ul class="news-list-v show">
                     <?php
-                    $query1 = "select * from ibbs_moment order by add_time desc limit 5";
-                    $result_moment1 = execute($conn, $query1);
-                    while($data_moment1 = mysqli_fetch_assoc($result_moment1)) {
-                    $data_moment1['title'] = nl2br(htmlspecialchars($data_moment1['title']));
-                    $data_moment1['introduction'] = nl2br(htmlspecialchars($data_moment1['introduction']));
+                    $query = "select * from ibbs_moment order by add_time desc limit 5";
+                    $result = execute($conn, $query);
+                    while($data = mysqli_fetch_assoc($result)) {
                     ?>
-
                         <li>
-                            <a style="text-decoration: none;" href="<?php $data_moment1['url'] ?>" class="news-list-card">
-                                <h3 class="h3"><?php $data_moment1['title'] ?></h3>
-                                <p class="p"><?php $data_moment1['introduction'] ?></p>
+                            <a style="text-decoration: none;" href="<?php echo $data['url'] ?>" class="news-list-card">
+                                <h3 class="h3"><?php echo $data['title'] ?></h3>
+                                <p class="p"><?php echo $data['introduction'] ?></p>
                                 <span class="more">查看详情</span>
                             </a>
                         </li>
@@ -66,17 +63,15 @@ $member_id = is_login($conn);
                 <ul class="news-list-v">
 
                     <?php
-                    $query2 = "select * from ibbs_moment order by add_time desc limit 5 offset 5";
-                    $result_moment2 = execute($conn, $query2);
-                    while($data_moment2 = mysqli_fetch_assoc($result_moment2)) {
-                    $data_moment2['title'] = nl2br(htmlspecialchars($data_moment2['title']));
-                    $data_moment2['introduction'] = nl2br(htmlspecialchars($data_moment2['introduction']));
+                    $query = "select * from ibbs_moment order by add_time desc limit 5 offset 5";
+                    $result = execute($conn, $query);
+                    while($data = mysqli_fetch_assoc($result)) {
                     ?>
 
                         <li>
-                            <a style="text-decoration: none;" href="<?php $data_moment2['url'] ?>" class="news-list-card">
-                                <h3 class="h3"><?php $data_moment2['title'] ?></h3>
-                                <p class="p"><?php $data_moment2['introduction'] ?></p>
+                            <a style="text-decoration: none;" href="<?php echo $data['url'] ?>" class="news-list-card">
+                                <h3 class="h3"><?php echo $data['title'] ?></h3>
+                                <p class="p"><?php echo $data['introduction'] ?></p>
                                 <span class="more">查看详情</span>
                             </a>
                         </li>
@@ -90,17 +85,15 @@ $member_id = is_login($conn);
                 <ul class="news-list-v">
 
                     <?php
-                    $query3 = "select * from ibbs_moment order by add_time desc limit 5 offset 10";
-                    $result_moment3 = execute($conn, $query3);
-                    while($data_moment3 = mysqli_fetch_assoc($result_moment3)) {
-                    $data_moment3['title'] = nl2br(htmlspecialchars($data_moment3['title']));
-                    $data_moment3['introduction'] = nl2br(htmlspecialchars($data_moment3['introduction']));
+                    $query = "select * from ibbs_moment order by add_time desc limit 5 offset 10";
+                    $result = execute($conn, $query);
+                    while($data = mysqli_fetch_assoc($result)) {
                     ?>
 
                         <li>
-                            <a style="text-decoration: none;" href="<?php $data_moment3['url'] ?>" class="news-list-card">
-                                <h3 class="h3"><?php $data_moment3['title'] ?></h3>
-                                <p class="p"><?php $data_moment3['introduction'] ?></p>
+                            <a style="text-decoration: none;" href="<?php echo $data['url'] ?>" class="news-list-card">
+                                <h3 class="h3"><?php echo $data['title'] ?></h3>
+                                <p class="p"><?php echo $data['introduction'] ?></p>
                                 <span class="more">查看详情</span>
                             </a>
                         </li>

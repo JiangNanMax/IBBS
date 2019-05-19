@@ -18,6 +18,7 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 
 $conn = connect();
 $member_id = is_login($conn);
+$is_manage_login = is_manage_login($conn);
 
 $query = "select * from ibbs_son_module where id={$_GET['id']}";
 $result_s = execute($conn, $query);
@@ -96,6 +97,15 @@ $result_m = execute($conn, $query);
                             </div>
                             <p>
                                 楼主：<?php echo $data['username'] ?>&nbsp;<?php echo $data['publish_time'] ?>&nbsp;&nbsp;&nbsp;&nbsp;最后回复：<?php echo $last_time ?>
+                                <?php
+                                if($is_manage_login) {
+                                    $return_url = urlencode($_SERVER['REQUEST_URI']);
+                                    $url = urlencode("content_delete.php?id={$data['id']}&return_url={$return_url}");
+                                    $message = "你真的要删除帖子 {$data['title']} 吗？";
+                                    $delete_url = "confirm.php?url={$url}&return_url={$return_url}&message={$message}";
+                                    echo "<a href='content_update.php?id={$data['id']}&return_url={$return_url}'>编辑</a> <a href='{$delete_url}'>删除</a>";
+                                }
+                                ?>
                             </p>
                         </div>
                         <div class="count">

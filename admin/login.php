@@ -81,7 +81,7 @@ if(isset($_POST['submit'])) {
         #main form label input.submit {
             width:200px;
             display:block;
-            height:35px;
+            height:50px;
             cursor:pointer;
             margin:0 0 0 56px;
         }

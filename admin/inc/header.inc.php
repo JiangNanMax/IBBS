@@ -23,15 +23,9 @@
     <div class="logo">
         IBBS管理中心
     </div>
-    <!--
-    <ul class="nav">
-        <li><a href="#">占位</a></li>
-        <li><a href="#">占位</a></li>
-    </ul>
-    -->
     <div class="login_info">
-        <a href="#" style="color:#fff;">网站首页</a>&nbsp;|&nbsp;
-        管理员：admin <a href="#">[注销]</a>
+        <a href="../index.php" style="color:#fff;">网站首页</a>&nbsp;|&nbsp;
+        管理员：<?php echo $_SESSION['manage']['name']?> <a style="color:#fff;" href="logout.php">[注销]</a>
     </div>
 </div>
 <div id="sidebar">
@@ -39,7 +33,7 @@
         <li>
             <div class="small_title">系统</div>
             <ul class="child">
-                <li><a href="#" class="current">系统信息</a></li>
+                <li><a href="#">系统信息</a></li>
                 <li><a <?php if(basename($_SERVER['SCRIPT_NAME'])=='manage.php'){echo 'class="current"';}?> href="manage.php">管理员</a></li>
                 <li><a <?php if(basename($_SERVER['SCRIPT_NAME'])=='manage_add.php'){echo 'class="current"';}?> href="manage_add.php">添加管理员</a></li>
                 <li><a href="#">站点设置</a></li>
@@ -62,7 +56,7 @@
                     }
                 ?>
                 <li><a href="son_module_add.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'son_module_add.php') {echo "current";} ?>">添加子版块</a></li>
-                <li><a href="#">帖子管理</a></li>
+                <li><a target="_blank" href="../index.php">帖子管理</a></li>
             </ul>
         </li>
         <li>

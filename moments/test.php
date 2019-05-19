@@ -12,21 +12,39 @@ include_once 'inc/tool.inc.php';
 $conn = connect();
 $query = "select * from ibbs_moment order by add_time desc limit 5";
 $result = execute($conn, $query);
-$data = mysqli_fetch_all($result);
-var_dump($data);
+while($data = mysqli_fetch_assoc($result)) {
+    echo $data['title'];
+    echo '<br/>';
+    echo '<br/>';
+    echo $data['introduction'];
+    echo '<br/>';
+    echo '<br/>';
+}
 
 echo '<br/>';echo '<br/>';echo '<br/>';
 
 $query = "select * from ibbs_moment order by add_time desc limit 5 offset 5";
 $result = execute($conn, $query);
-$data = mysqli_fetch_all($result);
-var_dump($data);
+while($data = mysqli_fetch_assoc($result)) {
+    echo $data['title'];
+    echo '<br/>';
+    echo '<br/>';
+    echo $data['introduction'];
+    echo '<br/>';
+    echo '<br/>';
+}
 
 echo '<br/>';echo '<br/>';echo '<br/>';
 
 $query = "select * from ibbs_moment order by add_time desc limit 5 offset 10";
 $result = execute($conn, $query);
-$data = mysqli_fetch_all($result);
-var_dump($data);
+while($data = mysqli_fetch_assoc($result)) {
+    echo $data['title'];
+    echo '<br/>';
+    echo '<br/>';
+    echo $data['introduction'];
+    echo '<br/>';
+    echo '<br/>';
+}
 
 ?>
