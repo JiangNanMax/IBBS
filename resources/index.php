@@ -41,7 +41,7 @@ $member_id = is_login($conn);
                     <div class="head_img">
                         <img width=120 height=170 src="<?php echo $pic_path ?>" alt="">
                     </div>
-                </div>lo..lo9.
+                </div>
                 <div class="right">
                     <div class="pubdate">
                         <span class="date" style="font-size:16px;">《<?php echo $data_resource['title'] ?>》</span>

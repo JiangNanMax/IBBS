@@ -43,17 +43,17 @@ $member_id = is_login($conn);
 
                 <ul class="news-list-v show">
                     <?php
-                    $query = "select * from ibbs_moment order by add_time desc limit 5";
-                    $result_moment = execute($conn, $query);
-                    while($data_moment = mysqli_fetch_assoc($result_moment)) {
-                    $data_moment['title'] = nl2br(htmlspecialchars($data_moment['title']));
-                    $data_moment['introduction'] = nl2br(htmlspecialchars($data_moment['introduction']));
+                    $query1 = "select * from ibbs_moment order by add_time desc limit 5";
+                    $result_moment1 = execute($conn, $query1);
+                    while($data_moment1 = mysqli_fetch_assoc($result_moment1)) {
+                    $data_moment1['title'] = nl2br(htmlspecialchars($data_moment1['title']));
+                    $data_moment1['introduction'] = nl2br(htmlspecialchars($data_moment1['introduction']));
                     ?>
 
                         <li>
-                            <a style="text-decoration: none;" href="<?php $data_moment['url'] ?>" class="news-list-card">
-                                <h3 class="h3"><?php $data_moment['title'] ?></h3>
-                                <p class="p"><?php $data_moment['introduction'] ?></p>
+                            <a style="text-decoration: none;" href="<?php $data_moment1['url'] ?>" class="news-list-card">
+                                <h3 class="h3"><?php $data_moment1['title'] ?></h3>
+                                <p class="p"><?php $data_moment1['introduction'] ?></p>
                                 <span class="more">查看详情</span>
                             </a>
                         </li>
@@ -66,17 +66,17 @@ $member_id = is_login($conn);
                 <ul class="news-list-v">
 
                     <?php
-                    $query = "select * from ibbs_moment order by add_time desc limit 5 offset 5";
-                    $result_moment = execute($conn, $query);
-                    while($data_moment = mysqli_fetch_assoc($result_moment)) {
-                    $data_moment['title'] = nl2br(htmlspecialchars($data_moment['title']));
-                    $data_moment['introduction'] = nl2br(htmlspecialchars($data_moment['introduction']));
+                    $query2 = "select * from ibbs_moment order by add_time desc limit 5 offset 5";
+                    $result_moment2 = execute($conn, $query2);
+                    while($data_moment2 = mysqli_fetch_assoc($result_moment2)) {
+                    $data_moment2['title'] = nl2br(htmlspecialchars($data_moment2['title']));
+                    $data_moment2['introduction'] = nl2br(htmlspecialchars($data_moment2['introduction']));
                     ?>
 
                         <li>
-                            <a style="text-decoration: none;" href="<?php $data_moment['url'] ?>" class="news-list-card">
-                                <h3 class="h3"><?php $data_moment['title'] ?></h3>
-                                <p class="p"><?php $data_moment['introduction'] ?></p>
+                            <a style="text-decoration: none;" href="<?php $data_moment2['url'] ?>" class="news-list-card">
+                                <h3 class="h3"><?php $data_moment2['title'] ?></h3>
+                                <p class="p"><?php $data_moment2['introduction'] ?></p>
                                 <span class="more">查看详情</span>
                             </a>
                         </li>
@@ -90,17 +90,17 @@ $member_id = is_login($conn);
                 <ul class="news-list-v">
 
                     <?php
-                    $query = "select * from ibbs_moment order by add_time desc limit 10";
-                    $result_moment = execute($conn, $query);
-                    while($data_moment = mysqli_fetch_assoc($result_moment)) {
-                    $data_moment['title'] = nl2br(htmlspecialchars($data_moment['title']));
-                    $data_moment['introduction'] = nl2br(htmlspecialchars($data_moment['introduction']));
+                    $query3 = "select * from ibbs_moment order by add_time desc limit 5 offset 10";
+                    $result_moment3 = execute($conn, $query3);
+                    while($data_moment3 = mysqli_fetch_assoc($result_moment3)) {
+                    $data_moment3['title'] = nl2br(htmlspecialchars($data_moment3['title']));
+                    $data_moment3['introduction'] = nl2br(htmlspecialchars($data_moment3['introduction']));
                     ?>
 
                         <li>
-                            <a style="text-decoration: none;" href="<?php $data_moment['url'] ?>" class="news-list-card">
-                                <h3 class="h3"><?php $data_moment['title'] ?></h3>
-                                <p class="p"><?php $data_moment['introduction'] ?></p>
+                            <a style="text-decoration: none;" href="<?php $data_moment3['url'] ?>" class="news-list-card">
+                                <h3 class="h3"><?php $data_moment3['title'] ?></h3>
+                                <p class="p"><?php $data_moment3['introduction'] ?></p>
                                 <span class="more">查看详情</span>
                             </a>
                         </li>
