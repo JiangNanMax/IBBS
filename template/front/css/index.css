@@ -15,12 +15,14 @@
 }
 #hot .newlist {
     background: #ffffff;
+    padding: 10px;
 }
 #hot .newlist li {
-    width: 480px;
+    width: 100%;
     float: left;
     text-indent: 15px;
     line-height: 23px;
+    margin-bottom: 5px;
 }
 #hot .newlist li a {
     color: #333;
