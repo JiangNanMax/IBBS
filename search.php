@@ -36,13 +36,13 @@ $page = page($count_all, 5, 5);
                 <h3>共找到<?php echo $count_all?>篇匹配的帖子</h3>
             </div>
             <div style="clear:both;"></div>
-            <ul class="postsList">
+            <ul class="postList">
                 <?php
                 $query="select
 			ibbs_content.title,ibbs_content.id,ibbs_content.publish_time,ibbs_content.times,ibbs_content.member_id,ibbs_member.username,ibbs_member.photo
 			from ibbs_content,ibbs_member where
 			ibbs_content.title like '%{$_GET['keyword']}%' and
-			ibbs_content.member_id=sfk_member.id
+			ibbs_content.member_id=ibbs_member.id
 			{$page['limit']}";
                 $result_content = execute($conn, $query);
                 while($data_content = mysqli_fetch_assoc($result_content)) {
@@ -106,24 +106,24 @@ $page = page($count_all, 5, 5);
                 <ul class="listWrap">
                     <?php
                     $query = "select * from ibbs_father_module";
-                    $result_father = execute($conn, $query);
-                    while($data_father = mysqli_fetch_assoc($result_father)) {
-                    ?>
+                    $result_f = execute($conn, $query);
+                    while ($data_f = mysqli_fetch_assoc($result_f)) {
+                        ?>
                         <li>
-                            <h2><a href="list_father.php?id=<?php echo $data_father['id']?>"><?php echo $data_father['module_name']?></a></h2>
+                            <h2><a href="list_father.php?id=<?php echo $data_f['id']; ?>"><?php echo $data_f['module_name']; ?></a></h2>
                             <ul>
                                 <?php
-                                $query = "select * from ibbs_son_module where father_module_id={$data_father['id']}";
-                                $result_son = execute($conn, $query);
-                                while($data_son = mysqli_fetch_assoc($result_son)){
-                                ?>
-                                    <li><h3><a href="list_son.php?id=<?php echo $data_son['id']?>"><?php echo $data_son['module_name']?></a></h3></li>
-                                <?php
+                                $query = "select * from ibbs_son_module where father_module_id={$data_f['id']}";
+                                $result_s = execute($conn, $query);
+                                while ($data_s = mysqli_fetch_assoc($result_s)) {
+                                    ?>
+                                    <li><a href="list_son.php?id=<?php echo $data_s['id'] ?>" style="color: #666;"><?php echo $data_s['module_name']; ?></a></li>
+                                    <?php
                                 }
                                 ?>
                             </ul>
                         </li>
-                    <?php
+                        <?php
                     }
                     ?>
                 </ul>

@@ -60,7 +60,7 @@ if($data_manage['level'] == '0') {
                 子版块(<?php echo $count_son_module?>)
                 帖子(<?php echo $count_content?>)
                 回复(<?php echo $count_reply?>)
-                会员(<?php echo $count_member?>)
+                用户(<?php echo $count_member?>)
                 管理员(<?php echo $count_manage?>)
             </li>
         </ul>
@@ -79,7 +79,6 @@ if($data_manage['level'] == '0') {
     <div class="explain">
         <ul>
             <li>|- 项目安装位置(绝对路径)：<?php echo SA_PATH?></li>
-            <li>|- 项目在web根目录下的位置(首页的url地址)：<?php echo SUB_URL?></li>
             <li>|- 版本：IBBS V1.0
             <li>|- 作者：JiangNanMax </li><a target="_blank" href="https://github.com/JiangNanMax/IBBS">[查看项目源代码]</a></li>
         </ul>

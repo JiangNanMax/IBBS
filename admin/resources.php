@@ -22,7 +22,7 @@ $template['css'] = array('css/index.css');
     <table class="list">
         <tr>
             <th>名称</th>
-            <th>存储位置</th>
+
             <th>添加时间</th>
             <th>封面图</th>
             <th>操作</th>
@@ -40,11 +40,14 @@ $template['css'] = array('css/index.css');
             $html=<<<JN
         <tr>
             <td>{$data['title']}&nbsp;[id:&nbsp;{$data['id']}]</td>
-            <td>{$data['url']}</td>
+            
             <td>{$data['add_time']}</td>
             <!-- 待转为动态获取图片链接 -->
-            <td><img width=80 height=110 src="{$pic_path}" alt=""></td>
-            <td><a href="{$data['url']}">[访问]</a>&nbsp;&nbsp;<a href="resource_update.php?id={$data['id']}">[编辑]</a>&nbsp;&nbsp;<a href="$delete_url">[删除]</a></td>
+            <td><img width=70 height=100 src="{$pic_path}" alt=""></td>
+            <td><a href="{$data['url']}">[访问]</a>
+                <a href="resource_update.php?id={$data['id']}">[编辑]</a>
+                <a href="$delete_url">[删除]</a>
+            </td>
         </tr>
 JN;
             echo $html;

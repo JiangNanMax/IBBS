@@ -28,8 +28,8 @@
             <a href="../resources/index.php">资源</a>
         </div>
         <div class="search">
-            <form action="">
-                <input type="text" class="keyword" name="keyword" placeholder="输入你想搜索的内容">
+            <form action="../search.php" method="get">
+                <input type="text" class="keyword" name="keyword" value="<?php if(isset($_GET['keyword']))echo $_GET['keyword']?>" placeholder="输入你想搜索的内容">
                 <input type="submit" class="submit" name="submit" value="">
             </form>
         </div>
