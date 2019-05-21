@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4529fdc7-afbe-48d4-99f2-6055f1c6af08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/phpinfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/member.php" beforeDir="false" afterPath="$PROJECT_DIR$/member.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/inc/header.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inc/header.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/inc/is_manage_login.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inc/is_manage_login.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/header.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/header.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list_father.php" beforeDir="false" afterPath="$PROJECT_DIR$/list_father.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list_son.php" beforeDir="false" afterPath="$PROJECT_DIR$/list_son.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,19 +79,19 @@
     <session id="1870824090">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="76" />
+          <entry key="project.closed" value="79" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="3" />
-          <entry key="project.open.time.4" value="4" />
-          <entry key="project.open.time.5" value="5" />
+          <entry key="project.open.time.4" value="5" />
+          <entry key="project.open.time.5" value="6" />
           <entry key="project.open.time.6" value="12" />
-          <entry key="project.open.time.7" value="20" />
+          <entry key="project.open.time.7" value="21" />
           <entry key="project.open.time.8" value="17" />
           <entry key="project.open.time.9" value="7" />
-          <entry key="project.opened" value="76" />
+          <entry key="project.opened" value="79" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -96,7 +99,7 @@
           <entry key="css" value="8524" />
           <entry key="html" value="4150" />
           <entry key="md" value="3" />
-          <entry key="php" value="35633" />
+          <entry key="php" value="36205" />
           <entry key="txt" value="582" />
         </counts>
       </usages-collector>
@@ -105,7 +108,7 @@
           <entry key="CSS" value="8524" />
           <entry key="HTML" value="4204" />
           <entry key="Markdown" value="3" />
-          <entry key="PHP" value="35575" />
+          <entry key="PHP" value="36147" />
           <entry key="PLAIN_TEXT" value="582" />
           <entry key="SQL" value="4" />
         </counts>
@@ -119,7 +122,7 @@
           <entry key="jpg" value="6" />
           <entry key="js" value="1" />
           <entry key="md" value="2" />
-          <entry key="php" value="464" />
+          <entry key="php" value="473" />
           <entry key="php___jb_tmp___" value="1" />
           <entry key="png" value="11" />
           <entry key="rnc" value="1" />
@@ -133,7 +136,7 @@
           <entry key="Image" value="18" />
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="2" />
-          <entry key="PHP" value="464" />
+          <entry key="PHP" value="473" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="RNG Compact" value="1" />
         </counts>
@@ -142,20 +145,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/phpinfo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/index.php">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="82" column="31" lean-forward="true" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
+            <state relative-caret-position="180">
+              <caret line="54" column="3" lean-forward="true" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
+              <folding>
+                <element signature="e#523#529#1#HTML" expanded="true" />
+                <element signature="e#529#535#0#HTML" expanded="true" />
+                <element signature="e#535#541#0#HTML" expanded="true" />
+                <element signature="e#541#547#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,10 +177,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/index.html" />
         <option value="$PROJECT_DIR$/moments/inc/header.inc.php" />
         <option value="$PROJECT_DIR$/member_photo_update.php" />
-        <option value="$PROJECT_DIR$/inc/header.inc.php" />
         <option value="$PROJECT_DIR$/template/admin/index.html" />
         <option value="$PROJECT_DIR$/inc/upload.inc.php" />
         <option value="$PROJECT_DIR$/admin/inc/upload.inc.php" />
@@ -191,7 +190,6 @@
         <option value="$PROJECT_DIR$/reply.php" />
         <option value="$PROJECT_DIR$/show_detail.php" />
         <option value="$PROJECT_DIR$/admin/inc/login_check.inc.php" />
-        <option value="$PROJECT_DIR$/admin/inc/is_manage_login.inc.php" />
         <option value="$PROJECT_DIR$/admin/father_module.php" />
         <option value="$PROJECT_DIR$/admin/father_module_add.php" />
         <option value="$PROJECT_DIR$/admin/father_module_delete.php" />
@@ -215,18 +213,21 @@
         <option value="$PROJECT_DIR$/admin/login.php" />
         <option value="$PROJECT_DIR$/moments/test.php" />
         <option value="$PROJECT_DIR$/moments/index.php" />
-        <option value="$PROJECT_DIR$/admin/inc/header.inc.php" />
         <option value="$PROJECT_DIR$/admin/logout.php" />
         <option value="$PROJECT_DIR$/inc/tool.inc.php" />
         <option value="$PROJECT_DIR$/content_delete.php" />
         <option value="$PROJECT_DIR$/content_update.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/list_son.php" />
-        <option value="$PROJECT_DIR$/list_father.php" />
         <option value="$PROJECT_DIR$/member.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/admin/phpinfo.php" />
         <option value="$PROJECT_DIR$/admin/index.php" />
+        <option value="$PROJECT_DIR$/admin/inc/is_manage_login.inc.php" />
+        <option value="$PROJECT_DIR$/inc/header.inc.php" />
+        <option value="$PROJECT_DIR$/search.php" />
+        <option value="$PROJECT_DIR$/list_father.php" />
+        <option value="$PROJECT_DIR$/list_son.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/admin/inc/header.inc.php" />
       </list>
     </option>
   </component>
@@ -261,6 +262,12 @@
               <item name="IBBS" type="b2602c69:ProjectViewProjectNode" />
               <item name="IBBS" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IBBS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IBBS" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -386,18 +393,21 @@
       <workItem from="1558188825815" duration="4369000" />
       <workItem from="1558234122900" duration="3055000" />
       <workItem from="1558248207734" duration="71000" />
-      <workItem from="1558248320828" duration="10953000" />
+      <workItem from="1558248320828" duration="11289000" />
+      <workItem from="1558335795364" duration="2637000" />
+      <workItem from="1558404894607" duration="476000" />
+      <workItem from="1558405731170" duration="791000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="273769000" />
+    <option name="totallyTimeSpent" value="278009000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.083561644" visible="true" weight="0.25282714" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.083561644" visible="true" weight="0.26494345" />
       <window_info id="Structure" order="1" sideWeight="0.91643834" side_tool="true" weight="0.7108239" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -411,7 +421,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50080776" side_tool="true" weight="0.35303265" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49919224" weight="0.5753425" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49919224" visible="true" weight="0.2589041" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -446,20 +456,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moments/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/inc/manage_check.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -645,13 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/inc/is_manage_login.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/manage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -708,18 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/inc/header.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="77" lean-forward="true" selection-start-line="54" selection-start-column="77" selection-end-line="54" selection-end-column="77" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -741,16 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content_update.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -765,29 +732,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/list_father.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="e#72#78#0" expanded="true" />
-            <element signature="e#78#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/member.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="751">
           <caret line="55" column="40" lean-forward="true" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/list_son.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="105" column="78" lean-forward="true" selection-start-line="105" selection-start-column="78" selection-end-line="105" selection-end-column="78" />
         </state>
       </provider>
     </entry>
@@ -801,6 +749,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="65" column="13" lean-forward="true" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/phpinfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -808,10 +763,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/index.php">
+    <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="82" column="31" lean-forward="true" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
+        <state relative-caret-position="116">
+          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/header.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/inc/is_manage_login.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list_father.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="102" column="50" selection-start-line="102" selection-start-column="50" selection-end-line="102" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list_son.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="100" column="9" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/inc/header.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="38" column="52" lean-forward="true" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="54" column="3" lean-forward="true" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
+          <folding>
+            <element signature="e#523#529#1#HTML" expanded="true" />
+            <element signature="e#529#535#0#HTML" expanded="true" />
+            <element signature="e#535#541#0#HTML" expanded="true" />
+            <element signature="e#541#547#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

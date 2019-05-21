@@ -103,6 +103,7 @@ $result_m = execute($conn, $query);
                                     $url = urlencode("content_delete.php?id={$data['id']}&return_url={$return_url}");
                                     $message = "你真的要删除帖子 {$data['title']} 吗？";
                                     $delete_url = "confirm.php?url={$url}&return_url={$return_url}&message={$message}";
+                                    echo "<br />";
                                     echo "<a href='content_update.php?id={$data['id']}&return_url={$return_url}'>编辑</a> <a href='{$delete_url}'>删除</a>";
                                 }
                                 ?>
