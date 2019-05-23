@@ -62,7 +62,8 @@
         <li>
             <div class="small_title">用户管理</div>
             <ul class="child">
-                <li><a href="#">用户列表</a></li>
+                <li><a href="user_list.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'user_list.php') {echo "current";} ?>">用户列表</a></li>
+                <li><a href="user_search.php" class="<?php if (basename($_SERVER['SCRIPT_NAME']) == 'user_search.php') {echo "current";} ?>">用户列表</a></li>
             </ul>
         </li>
 
