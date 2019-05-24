@@ -8,12 +8,18 @@
 include_once '../inc/config.inc.php';
 include_once '../inc/mysql.inc.php';
 include_once '../inc/tool.inc.php';
+include_once '../inc/page.inc.php';
 
 $conn = connect();
 include_once 'inc/is_manage_login.inc.php';
 
 $template['title'] = "IBBS后台管理";
 $template['css'] = array('css/index.css');
+
+$query = "select count(*) from ibbs_moment";
+$count_reply = get_num($conn, $query);
+$page_size = 8;
+$page = page($count_reply, $page_size, 5);
 ?>
 <?php include 'inc/header.inc.php' ?>
 
@@ -27,7 +33,7 @@ $template['css'] = array('css/index.css');
             <th>操作</th>
         </tr>
         <?php
-        $query = 'select * from ibbs_moment';
+        $query = "select * from ibbs_moment {$page['limit']}";
         $result = execute($conn, $query);
         while($data = mysqli_fetch_assoc($result)) {
             $url = urlencode("moment_delete.php?id={$data['id']}");
@@ -47,6 +53,13 @@ JN;
         }
         ?>
     </table>
+    <div class="pages_wrap_show">
+        <div class="pages">
+            <?php
+            echo $page['html'];
+            ?>
+        </div>
+    </div>
 </div>
 
 <?php include 'inc/footer.inc.php' ?>

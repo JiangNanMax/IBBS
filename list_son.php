@@ -71,7 +71,7 @@ $result_m = execute($conn, $query);
                 <?php
                     $page = page($count_all, 5, 5);
 
-                    $query = "select ibbs_content.title,ibbs_content.id,ibbs_content.publish_time,ibbs_content.times,ibbs_content.member_id,ibbs_member.username,ibbs_member.photo from ibbs_content join ibbs_member on ibbs_content.member_id=ibbs_member.id where ibbs_content.module_id={$_GET['id']} {$page['limit']}";
+                    $query = "select ibbs_content.title,ibbs_content.id,ibbs_content.publish_time,ibbs_content.times,ibbs_content.member_id,ibbs_member.username,ibbs_member.photo from ibbs_content join ibbs_member on ibbs_content.member_id=ibbs_member.id where ibbs_content.module_id={$_GET['id']} order by publish_time desc {$page['limit']}";
                     $result = execute($conn, $query);
                     while ($data = mysqli_fetch_assoc($result)) {
                     $data['title'] = htmlspecialchars($data['title']);

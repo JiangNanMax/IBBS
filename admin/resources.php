@@ -8,12 +8,18 @@
 include_once '../inc/config.inc.php';
 include_once '../inc/mysql.inc.php';
 include_once '../inc/tool.inc.php';
+include_once '../inc/page.inc.php';
 
 $conn = connect();
 include_once 'inc/is_manage_login.inc.php';
 
 $template['title'] = "IBBS后台管理";
 $template['css'] = array('css/index.css');
+
+$query = "select count(*) from ibbs_resource";
+$count_reply = get_num($conn, $query);
+$page_size = 5;
+$page = page($count_reply, $page_size, 5);
 ?>
 <?php include 'inc/header.inc.php' ?>
 
@@ -28,7 +34,7 @@ $template['css'] = array('css/index.css');
             <th>操作</th>
         </tr>
         <?php
-        $query = 'select * from ibbs_resource';
+        $query = "select * from ibbs_resource {$page['limit']}";
         $result = execute($conn, $query);
         while($data = mysqli_fetch_assoc($result)) {
             $url = urlencode("resource_delete.php?id={$data['id']}");
@@ -44,7 +50,7 @@ $template['css'] = array('css/index.css');
             <td>{$data['add_time']}</td>
             <!-- 待转为动态获取图片链接 -->
             <td><img width=70 height=100 src="{$pic_path}" alt=""></td>
-            <td><a href="{$data['url']}">[访问]</a>
+            <td><a target="_blank" href=".././resources/index.php">[访问]</a>
                 <a href="resource_update.php?id={$data['id']}">[编辑]</a>
                 <a href="$delete_url">[删除]</a>
             </td>
@@ -54,6 +60,13 @@ JN;
         }
         ?>
     </table>
+    <div class="pages_wrap_show">
+        <div class="pages">
+            <?php
+            echo $page['html'];
+            ?>
+        </div>
+    </div>
 </div>
 
 <?php include 'inc/footer.inc.php' ?>

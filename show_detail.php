@@ -28,11 +28,11 @@ if (mysqli_num_rows($result_content) != 1) {
 
 $query = "update ibbs_content set times=times+1 where id={$_GET['id']}";
 execute($conn, $query);
-$data_content['times'] = $data_content['times'] + 1;
 
 $data_content = mysqli_fetch_assoc($result_content);
 $data_content['title'] = htmlspecialchars($data_content['title']);
 $data_content['content'] = nl2br(htmlspecialchars($data_content['content']));
+$data_content['times'] = $data_content['times'] + 1;
 
 $query = "select * from ibbs_son_module where id={$data_content['module_id']}";
 $result_son = execute($conn, $query);
@@ -96,7 +96,7 @@ $count_reply = get_num($conn, $query);
 
     <?php
 
-    $query = "select im.username,ir.member_id,im.photo,ir.reply_time,ir.id,ir.quote_id,ir.content from ibbs_reply ir,ibbs_member im where ir.member_id=im.id and ir.content_id={$_GET['id']} {$page['limit']}";
+    $query = "select im.username,ir.member_id,im.photo,ir.reply_time,ir.id,ir.quote_id,ir.content from ibbs_reply ir,ibbs_member im where ir.member_id=im.id and ir.content_id={$_GET['id']} order by reply_time asc {$page['limit']}";
     $result_reply = execute($conn, $query);
     $i = ($_GET['page'] - 1) * $page_size + 1;
     while ($data_reply = mysqli_fetch_assoc($result_reply)) {

@@ -109,8 +109,8 @@ $count_all=get_num($conn, $query);
                 if($member_id == $data_member['id']){
                 ?>
                 <dd>管理：<a target="_blank" href="member_photo_update.php" style="color:dodgerblue;">修改头像</a>
-                         <br />
-                         <a target="_blank" href="member_pw_update.php">修改密码</a>
+                         &nbsp;&nbsp;&nbsp;
+                         <a target="_blank" href="member_pw_update.php" style="color:dodgerblue;">修改密码</a>
                 </dd>
                 <?php }?>
             </dl>

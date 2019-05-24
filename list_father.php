@@ -68,7 +68,7 @@ $count_today = get_num($conn, $query);
             <ul class="postList">
                 <?php
                     $page = page($count_all, 5, 5);
-                    $query = "select ibbs_content.title,ibbs_content.id,ibbs_content.module_id,ibbs_content.publish_time,ibbs_content.times,ibbs_content.member_id,ibbs_member.username,ibbs_member.photo,ibbs_son_module.module_name from ibbs_content join ibbs_member on ibbs_content.member_id=ibbs_member.id join ibbs_son_module on ibbs_content.module_id=ibbs_son_module.id where ibbs_content.module_id in ($id_s) {$page['limit']}";
+                    $query = "select ibbs_content.title,ibbs_content.id,ibbs_content.module_id,ibbs_content.publish_time,ibbs_content.times,ibbs_content.member_id,ibbs_member.username,ibbs_member.photo,ibbs_son_module.module_name from ibbs_content join ibbs_member on ibbs_content.member_id=ibbs_member.id join ibbs_son_module on ibbs_content.module_id=ibbs_son_module.id where ibbs_content.module_id in ($id_s) order by publish_time desc {$page['limit']}";
                     $result = execute($conn, $query);
                     while ($data = mysqli_fetch_assoc($result)) {
                     $data['title'] = htmlspecialchars($data['title']);

@@ -24,7 +24,7 @@
         IBBS管理中心
     </div>
     <div class="login_info">
-        <a href="../index.php" style="color:#fff;">网站首页</a>&nbsp;|&nbsp;
+        <a target="_blank" href="../index.php" style="color:#fff;">网站首页</a>&nbsp;|&nbsp;
         管理员：<?php echo $_SESSION['manage']['name']?> <a style="color:#fff;" href="logout.php">[注销]</a>
     </div>
 </div>

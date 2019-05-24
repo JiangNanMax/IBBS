@@ -212,3 +212,36 @@ table.au tr td.note {
     border-radius: 3px;
     cursor: pointer;
 }
+
+.pages_wrap .pages {
+    float: right;
+    margin-right: 140px;
+    margin-top: 60px;
+}
+.pages a {
+    display: inline-block;
+    background: url(core_bg.png);
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    color: #666666;
+    margin-right: 3px;
+    padding: 6px 10px;
+    line-height: 13px;
+    cursor: pointer;
+    vertical-align: top;
+}
+.pages a:hover {
+    color: #fff;
+    background: #488fcf;
+}
+.pages span {
+    display: inline-block;
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    color: #666666;
+    margin-right: 3px;
+    padding: 6px 10px;
+    line-height: 13px;
+    color: #fff;
+    background: #488fcf;
+}
