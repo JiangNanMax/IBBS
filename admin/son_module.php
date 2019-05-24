@@ -14,6 +14,11 @@ include_once 'inc/is_manage_login.inc.php';
 
 $template['title'] = '子版块列表';
 $template['css'] = array('css/index.css');
+
+$query = "select count(*) from ibbs_son_module where content_id={$_GET['id']}";
+$count_reply = get_num($conn, $query);
+$page_size = 10;
+$page = page($count_reply, $page_size, 5);
 ?>
 <?php include 'inc/header.inc.php'?>
     <div id="main">
@@ -28,7 +33,7 @@ $template['css'] = array('css/index.css');
             </tr>
             <?php
 
-                $query = "select ism.id,ism.module_name,ifm.module_name as father_module_name,ism.member_id from ibbs_son_module as ism join ibbs_father_module as ifm on ism.father_module_id=ifm.id order by ifm.id";
+                $query = "select ism.id,ism.module_name,ifm.module_name as father_module_name,ism.member_id from ibbs_son_module as ism join ibbs_father_module as ifm on ism.father_module_id=ifm.id order by ifm.id {$page['limit']}";
                 $result = execute($conn, $query);
                 while ($data = mysqli_fetch_assoc($result)) {
                     $url = urlencode("son_module_delete.php?id={$data['id']}");
@@ -48,5 +53,12 @@ JN;
                 }
             ?>
         </table>
+        <div class="pages_wrap_show">
+            <div class="pages">
+                <?php
+                echo $page['html'];
+                ?>
+            </div>
+        </div>
     </div>
 <?php include 'inc/footer.inc.php'?>

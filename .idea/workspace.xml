@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4529fdc7-afbe-48d4-99f2-6055f1c6af08" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/inc/header.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inc/header.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/user_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/user_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/user_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/user_search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/son_module.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/son_module.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +92,7 @@
           <entry key="css" value="8597" />
           <entry key="html" value="4282" />
           <entry key="md" value="3" />
-          <entry key="php" value="36897" />
+          <entry key="php" value="36930" />
           <entry key="txt" value="582" />
         </counts>
       </usages-collector>
@@ -104,7 +101,7 @@
           <entry key="CSS" value="8597" />
           <entry key="HTML" value="4343" />
           <entry key="Markdown" value="3" />
-          <entry key="PHP" value="36832" />
+          <entry key="PHP" value="36865" />
           <entry key="PLAIN_TEXT" value="582" />
           <entry key="SQL" value="4" />
         </counts>
@@ -118,7 +115,7 @@
           <entry key="jpg" value="6" />
           <entry key="js" value="1" />
           <entry key="md" value="2" />
-          <entry key="php" value="518" />
+          <entry key="php" value="520" />
           <entry key="php___jb_tmp___" value="1" />
           <entry key="png" value="11" />
           <entry key="rnc" value="1" />
@@ -132,7 +129,7 @@
           <entry key="Image" value="18" />
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="2" />
-          <entry key="PHP" value="518" />
+          <entry key="PHP" value="520" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="RNG Compact" value="1" />
         </counts>
@@ -142,50 +139,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/user_search.php">
+        <entry file="file://$PROJECT_DIR$/admin/son_module.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+            <state relative-caret-position="548">
+              <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/moment_update.php">
+        <entry file="file://$PROJECT_DIR$/show_detail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inc/mysql.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="53" column="25" lean-forward="true" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/user_list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-              <folding>
-                <element signature="e#205#211#0" expanded="true" />
-                <element signature="e#211#217#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/inc/header.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="51" column="53" lean-forward="true" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
+            <state relative-caret-position="1869">
+              <caret line="151" column="10" lean-forward="true" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -206,7 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/admin/father_module_add.php" />
         <option value="$PROJECT_DIR$/admin/father_module_delete.php" />
         <option value="$PROJECT_DIR$/admin/father_module_update.php" />
         <option value="$PROJECT_DIR$/admin/manage_delete.php" />
@@ -217,7 +182,6 @@
         <option value="$PROJECT_DIR$/admin/resource_add.php" />
         <option value="$PROJECT_DIR$/admin/resource_delete.php" />
         <option value="$PROJECT_DIR$/admin/resource_update.php" />
-        <option value="$PROJECT_DIR$/admin/son_module.php" />
         <option value="$PROJECT_DIR$/admin/son_module_add.php" />
         <option value="$PROJECT_DIR$/admin/son_module_delete.php" />
         <option value="$PROJECT_DIR$/admin/son_module_update.php" />
@@ -257,6 +221,8 @@
         <option value="$PROJECT_DIR$/admin/user_list.php" />
         <option value="$PROJECT_DIR$/admin/inc/header.inc.php" />
         <option value="$PROJECT_DIR$/admin/user_search.php" />
+        <option value="$PROJECT_DIR$/show_detail.php" />
+        <option value="$PROJECT_DIR$/admin/son_module.php" />
       </list>
     </option>
   </component>
@@ -291,11 +257,6 @@
               <item name="IBBS" type="b2602c69:ProjectViewProjectNode" />
               <item name="IBBS" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IBBS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IBBS" type="462c0819:PsiDirectoryNode" />
-              <item name="inc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -428,12 +389,12 @@
       <workItem from="1558408811208" duration="1985000" />
       <workItem from="1558507891247" duration="3118000" />
       <workItem from="1558614010717" duration="4010000" />
-      <workItem from="1558681758102" duration="857000" />
+      <workItem from="1558681758102" duration="1942000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289646000" />
+    <option name="totallyTimeSpent" value="290731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -453,7 +414,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50080776" side_tool="true" weight="0.35303265" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49919224" weight="0.41524106" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49919224" weight="0.4150685" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -488,20 +449,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/manage_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/father_module.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/moments/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
@@ -809,13 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/moment_update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/mysql.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
@@ -841,10 +781,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/moment_update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="13" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/user_search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/show_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1869">
+          <caret line="151" column="10" lean-forward="true" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/son_module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
         </state>
       </provider>
     </entry>
