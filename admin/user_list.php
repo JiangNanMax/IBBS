@@ -26,12 +26,6 @@ $template['css'] = array('css/index.css');
                 <th>操作</th>
             </tr>
 
-            <tr>
-                <td>JiangNanMax[id:1]</td>
-                <td>2019/05/20</td>
-                <td><a href="#">[访问]</a>&nbsp;&nbsp;<a href="#">[删除]</a></td>
-            </tr>
-
             <?php
             $query = 'select * from ibbs_member';
             $result = execute($conn, $query);
@@ -44,7 +38,7 @@ $template['css'] = array('css/index.css');
 $html=<<<JN
                 <tr>
                     <td>{$data['username']}&nbsp;[id:&nbsp;{$data['id']}]</td>
-                    <td>{$data['create_time']}</td>
+                    <td>{$data['register_time']}</td>
                     <td><a href="#">[访问]</a>&nbsp;&nbsp;<a href="$delete_url">[删除]</a></td>
                 </tr>
 JN;

@@ -32,7 +32,8 @@ $template['css'] = array('css/index.css');
         $_POST = escape($conn, $_POST);
         $username = trim($_POST['username']);
         $query = "select * from ibbs_member where username like '%{$username}%'";
-        $count_all = get_num($conn, $query);
+        $result = execute($conn, $query);
+        $count_all = mysqli_num_rows($result);
         $result = execute($conn, $query);
     ?>
         <div class="title">搜索结果 - 共找到<?php echo $count_all; ?>个匹配的用户</div>
@@ -54,7 +55,7 @@ $template['css'] = array('css/index.css');
 $html=<<<JN
                 <tr>
                     <td>{$data['username']}&nbsp;[id:&nbsp;{$data['id']}]</td>
-                    <td>{$data['create_time']}</td>
+                    <td>{$data['register_time']}</td>
                     <td><a href="#">[访问]</a>&nbsp;&nbsp;<a href="$delete_url">[删除]</a></td>
                 </tr>
 JN;
