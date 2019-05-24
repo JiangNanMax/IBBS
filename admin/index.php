@@ -29,14 +29,8 @@ $count_son_module = get_num($conn,$query);
 $query="select count(*) from ibbs_content";
 $count_content = get_num($conn, $query);
 
-$query = "select count(*) from ibbs_reply";
-$count_reply = get_num($conn, $query);
-
 $query = "select count(*) from ibbs_member";
 $count_member = get_num($conn, $query);
-
-$query = "select count(*) from ibbs_manage";
-$count_manage = get_num($conn, $query);
 
 if($data_manage['level'] == '0') {
     $data_manage['level'] = '超级管理员';
@@ -59,9 +53,7 @@ if($data_manage['level'] == '0') {
             <li>|- 父版块(<?php echo $count_father_module?>)
                 子版块(<?php echo $count_son_module?>)
                 帖子(<?php echo $count_content?>)
-                回复(<?php echo $count_reply?>)
                 用户(<?php echo $count_member?>)
-                管理员(<?php echo $count_manage?>)
             </li>
         </ul>
     </div>

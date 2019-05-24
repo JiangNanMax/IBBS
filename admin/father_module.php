@@ -35,7 +35,7 @@ include_once 'inc/is_manage_login.inc.php';
 $html=<<<JN
         <tr>
             <td>{$data['module_name']}&nbsp;[id:&nbsp;{$data['id']}]</td>
-            <td><a href="../list_father.php?id={$data['id']}">[访问]</a>&nbsp;&nbsp;<a href="father_module_update.php?id={$data['id']}">[编辑]</a>&nbsp;&nbsp;<a href="$delete_url">[删除]</a></td>
+            <td><a target="_blank" href="../list_father.php?id={$data['id']}">[访问]</a>&nbsp;&nbsp;<a href="father_module_update.php?id={$data['id']}">[编辑]</a>&nbsp;&nbsp;<a href="$delete_url">[删除]</a></td>
         </tr>
 JN;
                 echo $html;
