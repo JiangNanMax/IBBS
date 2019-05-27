@@ -24,6 +24,8 @@ if(!isset($_GET['id']) || !is_numeric($_GET['id'])){
 $query = "select * from ibbs_content where id={$_GET['id']}";
 $result_content = execute($conn, $query);
 if(mysqli_num_rows($result_content) == 1){
+    //echo 'ok';
+    //exit();
     $data_content = mysqli_fetch_assoc($result_content);
     $data_content['title'] = htmlspecialchars($data_content['title']);
     if(check_user($member_id, $data_content['member_id'], $is_manage_login)) {
@@ -64,7 +66,7 @@ if(mysqli_num_rows($result_content) == 1){
                 $result_father = execute($conn, $query);
                 while ($data_father=mysqli_fetch_assoc($result_father)){
                     echo "<optgroup label='{$data_father['module_name']}'>";
-                    $query="select * from sfk_son_module where father_module_id={$data_father['id']} order by sort desc";
+                    $query="select * from ibbs_son_module where father_module_id={$data_father['id']} order by sort desc";
                     $result_son=execute($conn, $query);
                     while ($data_son = mysqli_fetch_assoc($result_son)){
                         if($data_son['id'] == $data_content['module_id']){

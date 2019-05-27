@@ -27,7 +27,7 @@ $member_id = is_login($conn);
         $page_size = 5;
         $page = page($count_reply, $page_size, 5);
 
-        $query = "select * from ibbs_resource {$page['limit']}";
+        $query = "select * from ibbs_resource order by add_time desc {$page['limit']}";
         $result_resource = execute($conn, $query);
         while ($data_resource = mysqli_fetch_assoc($result_resource)) {
         $data_resource['title'] = nl2br(htmlspecialchars($data_resource['title']));

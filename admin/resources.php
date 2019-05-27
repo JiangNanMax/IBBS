@@ -34,7 +34,7 @@ $page = page($count_reply, $page_size, 5);
             <th>操作</th>
         </tr>
         <?php
-        $query = "select * from ibbs_resource {$page['limit']}";
+        $query = "select * from ibbs_resource order by add_time desc {$page['limit']}";
         $result = execute($conn, $query);
         while($data = mysqli_fetch_assoc($result)) {
             $url = urlencode("resource_delete.php?id={$data['id']}");
