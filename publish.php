@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     $query = "insert into ibbs_content(module_id,title,content,publish_time,member_id) values({$_POST['module_id']},'{$_POST['title']}','{$_POST['content']}',now(),{$member_id})";
     execute($conn, $query);
     if (mysqli_affected_rows($conn) == 1) {
-        skip('publish.php', 'ok', '发布成功！');
+        skip('list_son.php?id='.$_POST['module_id'], 'ok', '发布成功！');
     }
     else {
         skip('publish.php', 'error', '发布失败，请重试！');
